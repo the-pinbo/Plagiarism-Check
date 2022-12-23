@@ -1,0 +1,15 @@
+curl 'https://ieeexplore.ieee.org/rest/document/9978623/?logAccess=true' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Accept-Language: en-US,en;q=0.9' \
+  -H 'Connection: keep-alive' \
+  -H $'Cookie: datadome=L2-8W0N~960fKVel8kqJGPt~5hSSzxsWyTVh1P8vYTSWmPfU_oKrxvbnOrN6kxosErk6-qcpJ9YIHtdAmEgqGKMTYA3h~4DIUJUQ.vob0YLbGshKH8oVXRSXETu9OHt; fp=48b0535dfceb7cf7e940c93a38c7c35a; s_ecid=MCMID%7C07628172801079746764422877597706489420; _ga=GA1.1.2118521513.1670529056; _ga_YTTLX34YFF=GS1.1.1670529055.1.0.1670529057.0.0.0; _ga_SVYSL9TN3N=GS1.1.1670529056.1.0.1670529057.0.0.0; cookieconsent_status=dismiss; _gcl_au=1.1.1305355348.1670637844; nmstat=e283c1d5-1d60-6217-57d0-ec160437d779; _ga_DRSMCND71P=GS1.1.1670637844.1.1.1670640642.59.0.0; _ga_RN78LDXHRB=GS1.1.1670637844.1.1.1670640642.59.0.0; _ga_W7T9YQJQXP=GS1.1.1670637844.1.1.1670640642.0.0.0; _ga_H0YHKP362D=GS1.1.1670637844.1.1.1670640642.59.0.0; _ga_5Q6NV07QD5=GS1.1.1670810470.1.1.1670810983.0.0.0; WLSESSION=237134476.20480.0000; JSESSIONID=LAIUyDomyrvCudmezNqktGH5WV3ssZ5IM_vZeawTak_5V2_vzFVH\u0021380715771; ipCheck=202.131.142.179; AMCVS_8E929CC25A1FB2B30A495C97%40AdobeOrg=1; AMCV_8E929CC25A1FB2B30A495C97%40AdobeOrg=1687686476%7CMCIDTS%7C19265%7CMCMID%7C07628172801079746764422877597706489420%7CMCAID%7CNONE%7CMCOPTOUT-1671078345s%7CNONE%7CvVersion%7C3.0.0; s_cc=true; TS01b03060=012f35062303a95816a7cdfb5f5518ba1dcfb104afcad31458403ac613be586571a6fb515e935418fa05fffffa154aac3fe3f4a5b1; utag_main=v_id:01838ac327d7001de75f3941296c05081002c07900978$_sn:8$_se:27$_ss:0$_st:1671073574152$vapi_domain:ieee.org$ses_id:1671079545716%3Bexp-session$_pn:14%3Bexp-session; s_sq=ieeexplore.prod%3D%2526c.%2526a.%2526activitymap.%2526page%253DXplore%252520Journals%252520%252526%252520Magazines%252520Toc%2526link%253DOrganizational%252520Resource%252520Allocation%252520by%252520Mobile%252520Edge%252520Computing%252520in%252520the%252520Context%252520of%252520the%252520Internet%252520of%252520Things%2526region%253DpublicationIssueMainContent%252520global-margin-px%2526pageIDType%253D1%2526.activitymap%2526.a%2526.c%2526pid%253DXplore%252520Journals%252520%252526%252520Magazines%252520Toc%2526pidt%253D1%2526oid%253Dhttps%25253A%25252F%25252Fieeexplore.ieee.org%25252Fdocument%25252F9978623%25252F%2526ot%253DA; TSaeeec342027=080f8ceb8aab20008f88f2b8f1ce60f270e55b3a5ed13e69017503f99600b4ecf124fcb8b63f9a9508131b43681130009f2fddd4d24d82ccc88e30f2f149c1f058f8850adb66f2a0c311fd9160994a7dc949280299d6ae6e14ed10a5189b060c' \
+  -H 'DNT: 1' \
+  -H 'Referer: https://ieeexplore.ieee.org/document/9978623' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.46' \
+  -H 'sec-ch-ua: "Not?A_Brand";v="8", "Chromium";v="108", "Microsoft Edge";v="108"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  --compressed

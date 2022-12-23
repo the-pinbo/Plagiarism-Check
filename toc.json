@@ -1,0 +1,2934 @@
+{
+  "userInfo": {
+    "institute": false,
+    "member": false,
+    "individual": false,
+    "guest": false,
+    "subscribedContent": false,
+    "fileCabinetContent": false,
+    "fileCabinetUser": false,
+    "institutionalFileCabinetUser": false,
+    "showPatentCitations": true,
+    "showGet802Link": false
+  },
+  "records": [
+    {
+      "authors": [
+        {
+          "preferredName": "Changming Li",
+          "normalizedName": "C. Li",
+          "firstName": "Changming",
+          "lastName": "Li",
+          "searchablePreferredName": "Changming Li"
+        },
+        {
+          "preferredName": "Baojun Yu",
+          "normalizedName": "B. Yu",
+          "firstName": "Baojun",
+          "lastName": "Yu",
+          "searchablePreferredName": "Baojun Yu"
+        },
+        {
+          "preferredName": "Qianfu Su",
+          "normalizedName": "Q. Su",
+          "firstName": "Qianfu",
+          "lastName": "Su",
+          "searchablePreferredName": "Qianfu Su"
+        },
+        {
+          "preferredName": "Hongchen Zhang",
+          "normalizedName": "H. Zhang",
+          "firstName": "Hongchen",
+          "lastName": "Zhang",
+          "searchablePreferredName": "Hongchen Zhang"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "Energy consumption, delay weight, and the upper limit of base station information processing capacity in Scenario 2.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9978623/graphical_abstract/access-gagraphic-3228112.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9978623/graphical_abstract/access-gagraphic-3228112.jpg"
+      },
+      "pdfSize": "1351",
+      "startPage": "128579",
+      "endPage": "128589",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Organizational Resource Allocation by Mobile Edge Computing in the Context of the Internet of Things",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9978623/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9978623/",
+      "articleNumber": "9978623",
+      "doi": "10.1109/ACCESS.2022.3228112",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9978623",
+      "articleContentType": "Journals",
+      "abstract": "In recent years, the number of electronic devices and users has increased sharply with the rapid development and progress of electronic information technology. The motivation of this paper is to optimize the organization’s resource allocation strategy in the Internet of Things (IoT) environment. The optimal path planning and information processing efficiency are improved through Unmanned Aerial Ve...",
+      "highlightedTitle": "Organizational Resource Allocation by Mobile Edge Computing in the Context of the Internet of Things",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Jing Che",
+          "normalizedName": "J. Che",
+          "firstName": "Jing",
+          "lastName": "Che",
+          "searchablePreferredName": "Jing Che"
+        },
+        {
+          "preferredName": "Wenke Zang",
+          "normalizedName": "W. Zang",
+          "firstName": "Wenke",
+          "lastName": "Zang",
+          "searchablePreferredName": "Wenke Zang"
+        },
+        {
+          "preferredName": "Jingwen Xiong",
+          "normalizedName": "J. Xiong",
+          "firstName": "Jingwen",
+          "lastName": "Xiong",
+          "searchablePreferredName": "Jingwen Xiong"
+        },
+        {
+          "preferredName": "Xiyu Liu",
+          "normalizedName": "X. Liu",
+          "firstName": "Xiyu",
+          "lastName": "Liu",
+          "searchablePreferredName": "Xiyu Liu"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "Potential and density contour maps of Jain dataset.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9978604/graphical_abstract/access-gagraphic-3227936.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9978604/graphical_abstract/access-gagraphic-3227936.jpg"
+      },
+      "pdfSize": "4757",
+      "startPage": "128604",
+      "endPage": "128621",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Density Peaks Clustering Based on Potential Model and Diffusion Strength",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9978604/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9978604/",
+      "articleNumber": "9978604",
+      "doi": "10.1109/ACCESS.2022.3227936",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9978604",
+      "articleContentType": "Journals",
+      "abstract": "Density peaks clustering (DPC) is a simple and efficient density-based clustering algorithm without complex iterative procedures. However, DPC needs to manually choose clustering centers via a decision graph, which often can’t identify real centers and breaks the continuous flow of the algorithm. In addition, DPC is highly sensitive to the cut-off distance and suffers from the domino chain reactio...",
+      "highlightedTitle": "Density Peaks Clustering Based on Potential Model and Diffusion Strength",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Yan Wang",
+          "normalizedName": "Y. Wang",
+          "firstName": "Yan",
+          "lastName": "Wang",
+          "searchablePreferredName": "Yan Wang"
+        },
+        {
+          "preferredName": "Yonghan Liu",
+          "normalizedName": "Y. Liu",
+          "firstName": "Yonghan",
+          "lastName": "Liu",
+          "searchablePreferredName": "Yonghan Liu"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "We obtained initial user reviews through network research and interviews at first. Summarized the evaluation system indicators of the platform through grounded theory, and obtained the weight of relevant indicators Then took three CG art communication platforms as samples, compared and verified the user evaluation system. Finally, we summarized the process framework of user experience evaluation.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9978613/graphical_abstract/access-gagraphic-3227931.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9978613/graphical_abstract/access-gagraphic-3227931.jpg"
+      },
+      "pdfSize": "2274",
+      "startPage": "128742",
+      "endPage": "128753",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Evaluation System of CG Art Communication Platform Based on User Experience",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9978613/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9978613/",
+      "articleNumber": "9978613",
+      "doi": "10.1109/ACCESS.2022.3227931",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9978613",
+      "articleContentType": "Journals",
+      "abstract": "With the rapid development of computer technology in recent years, CG art has gradually entered the ranks of mainstream visual art and received more attention. CG art refers to digital visual technology works created by computer, graphic design software, digital photography technology and computer-aided drawing software. The communication platform of CG art is mainly online, while the research on ...",
+      "highlightedTitle": "Evaluation System of CG Art Communication Platform Based on User Experience",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Eid Alkhaldi",
+          "normalizedName": "E. Alkhaldi",
+          "firstName": "Eid",
+          "lastName": "Alkhaldi",
+          "searchablePreferredName": "Eid Alkhaldi"
+        },
+        {
+          "preferredName": "Ezzatollah Salari",
+          "normalizedName": "E. Salari",
+          "firstName": "Ezzatollah",
+          "lastName": "Salari",
+          "searchablePreferredName": "Ezzatollah Salari"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "A randomly generated ensemble topology by CGP which represent the ensemble topology and weights evolution by dCGPANN.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9978635/graphical_abstract/access-gagraphic-3228176.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9978635/graphical_abstract/access-gagraphic-3228176.jpg"
+      },
+      "pdfSize": "1776",
+      "startPage": "128790",
+      "endPage": "128799",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Ensemble Optimization for Invasive Ductal Carcinoma (IDC) Classification Using Differential Cartesian Genetic Programming",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9978635/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9978635/",
+      "articleNumber": "9978635",
+      "doi": "10.1109/ACCESS.2022.3228176",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9978635",
+      "articleContentType": "Journals",
+      "abstract": "The high cost of acquiring annotated histological slides for breast specimens entails exploiting an ensemble of models appropriately trained on small datasets. Histological Image Classification ensembles strive to accurately detect abnormal tissues in the breast samples by determining the correlation between the predictions of its weak learners. Nonetheless, the state-of-the-art ensemble methods, ...",
+      "highlightedTitle": "Ensemble Optimization for Invasive Ductal Carcinoma (IDC) Classification Using Differential Cartesian Genetic Programming",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Xianglin Bao",
+          "normalizedName": "X. Bao",
+          "firstName": "Xianglin",
+          "lastName": "Bao",
+          "searchablePreferredName": "Xianglin Bao"
+        },
+        {
+          "preferredName": "Xiaofeng Xu",
+          "normalizedName": "X. Xu",
+          "firstName": "Xiaofeng",
+          "lastName": "Xu",
+          "searchablePreferredName": "Xiaofeng Xu"
+        },
+        {
+          "preferredName": "Ping Zhang",
+          "normalizedName": "P. Zhang",
+          "firstName": "Ping",
+          "lastName": "Zhang",
+          "searchablePreferredName": "Ping Zhang"
+        },
+        {
+          "preferredName": "Tao Liu",
+          "normalizedName": "T. Liu",
+          "firstName": "Tao",
+          "lastName": "Liu",
+          "searchablePreferredName": "Tao Liu"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "Blindcoin protocol entities and communication.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9978631/graphical_abstract/access-gagraphic-3228109.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9978631/graphical_abstract/access-gagraphic-3228109.jpg"
+      },
+      "pdfSize": "9388",
+      "startPage": "128847",
+      "endPage": "128873",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Comprehensive Formal Modeling and Automatic Vulnerability Detection for a Bitcoin-Compatible Mixing Protocol",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9978631/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9978631/",
+      "articleNumber": "9978631",
+      "doi": "10.1109/ACCESS.2022.3228109",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9978631",
+      "articleContentType": "Journals",
+      "abstract": "Blindcoin applies a Bitcoin-compatible mixing protocol with a blind signature scheme to improve the design of the popular Mixcoin. Given the openness of Bitcoin and the decentralization of the P2P network, it is imperative to formally analyze whether the malicious can break the security goals of the Blindcoin protocol. This work proposes a symbolic model for Blindcoin and conducts comprehensive fo...",
+      "highlightedTitle": "Comprehensive Formal Modeling and Automatic Vulnerability Detection for a Bitcoin-Compatible Mixing Protocol",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Miao Zhang",
+          "normalizedName": "M. Zhang",
+          "firstName": "Miao",
+          "lastName": "Zhang",
+          "searchablePreferredName": "Miao Zhang"
+        },
+        {
+          "preferredName": "Zhiwei Wen",
+          "normalizedName": "Z. Wen",
+          "firstName": "Zhiwei",
+          "lastName": "Wen",
+          "searchablePreferredName": "Zhiwei Wen"
+        },
+        {
+          "preferredName": "Le Zhou",
+          "normalizedName": "L. Zhou",
+          "firstName": "Le",
+          "lastName": "Zhou",
+          "searchablePreferredName": "Le Zhou"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "Soft sensor development for multi-rate dynamic processes.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9978612/graphical_abstract/access-gagraphic-3228048.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9978612/graphical_abstract/access-gagraphic-3228048.jpg"
+      },
+      "pdfSize": "1137",
+      "startPage": "128994",
+      "endPage": "129003",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "A Multi-Rate Probabilistic Slow Feature Regression Model for Dynamic Feature Learning and Industrial Soft Sensor Development",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9978612/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9978612/",
+      "articleNumber": "9978612",
+      "doi": "10.1109/ACCESS.2022.3228048",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9978612",
+      "articleContentType": "Journals",
+      "abstract": "In practical process industries, the measurements coming from different sources are collected at different sampling rates, thereby soft sensors developed using uniformly sampled measurements may result in poor prediction performance. Besides, industrial processes are inherently stochastic and most of them present dynamic characteristic. To cope with these issues, a multi-rate probabilistic slow fe...",
+      "highlightedTitle": "A Multi-Rate Probabilistic Slow Feature Regression Model for Dynamic Feature Learning and Industrial Soft Sensor Development",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Diaaeldin Abdelrahman",
+          "normalizedName": "D. Abdelrahman",
+          "firstName": "Diaaeldin",
+          "lastName": "Abdelrahman",
+          "searchablePreferredName": "Diaaeldin Abdelrahman"
+        },
+        {
+          "preferredName": "Mohamed Atef",
+          "normalizedName": "M. Atef",
+          "firstName": "Mohamed",
+          "lastName": "Atef",
+          "searchablePreferredName": "Mohamed Atef"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "Recent research reported different findings about CTLE-based optical receivers. Some research papers concluded that CTLEs boost high-frequency noise compared to a full-bandwidth design. Other publications reported that high-frequency noise remains unaffected while white noise is significantly reduced. This work aims to solve this discrepancy by presenting an accurate analysis for CTLE-based optical receivers considering noise, gain, and jitter.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9978293/graphical_abstract/access-gagraphic-3227934.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9978293/graphical_abstract/access-gagraphic-3227934.jpg"
+      },
+      "pdfSize": "2089",
+      "startPage": "129019",
+      "endPage": "129028",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Accurate Characterization for Continuous-Time Linear Equalization in CMOS Optical Receivers",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9978293/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9978293/",
+      "articleNumber": "9978293",
+      "doi": "10.1109/ACCESS.2022.3227934",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9978293",
+      "articleContentType": "Journals",
+      "abstract": "Recently published CMOS optical receivers consist of a limited-bandwidth first-stage transimpedance amplifier (TIA) followed by an equalizer. Limiting the TIA’s bandwidth improves the gain and reduces the noise but introduces a significant inter-symbol interference (ISI) that is dealt with by the subsequent equalizer. Continuous-time linear equalizer (CTLE) is a commonly used equalizer in both ele...",
+      "highlightedTitle": "Accurate Characterization for Continuous-Time Linear Equalization in CMOS Optical Receivers",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Xinyu Dou",
+          "normalizedName": "X. Dou",
+          "firstName": "Xinyu",
+          "lastName": "Dou",
+          "searchablePreferredName": "Xinyu Dou"
+        },
+        {
+          "preferredName": "Tengxiao Lyu",
+          "normalizedName": "T. Lyu",
+          "firstName": "Tengxiao",
+          "lastName": "Lyu",
+          "searchablePreferredName": "Tengxiao Lyu"
+        },
+        {
+          "preferredName": "Baojun Fan",
+          "normalizedName": "B. Fan",
+          "firstName": "Baojun",
+          "lastName": "Fan",
+          "searchablePreferredName": "Baojun Fan"
+        },
+        {
+          "preferredName": "Dequn Liang",
+          "normalizedName": "D. Liang",
+          "firstName": "Dequn",
+          "lastName": "Liang",
+          "searchablePreferredName": "Dequn Liang"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "Based on the proposed SCDS-DCSK technology, all sub-carriers or sub-channels have the same frequency. Therefore, the whole system occupies the bandwidth of a single sub-channel. In this way, a large amount of maritime communication resources can be saved for accommodating more communication nodes and the spectral efficiency is significantly improved.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9975317/graphical_abstract/access-gagraphic-3227625.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9975317/graphical_abstract/access-gagraphic-3227625.jpg"
+      },
+      "pdfSize": "2622",
+      "startPage": "128456",
+      "endPage": "128468",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "A Single-Carrier Delay-and-Superposition Based High Spectral Efficiency Differential Chaos Shift Keying for Maritime Internet of Vessels",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9975317/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9975317/",
+      "articleNumber": "9975317",
+      "doi": "10.1109/ACCESS.2022.3227625",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9975317",
+      "articleContentType": "Journals",
+      "abstract": "The fast growing Internet of Vessels (IoV) requires maritime communications to be more spectral efficient to make full use of the scarce maritime spectral resource, provide a high data transmission rate and support massive communication nodes to access the network. However, the spectral efficiency of most existing maritime communications are still relatively low, and consequently maritime communic...",
+      "highlightedTitle": "A Single-Carrier Delay-and-Superposition Based High Spectral Efficiency Differential Chaos Shift Keying for Maritime Internet of Vessels",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Youngki Park",
+          "normalizedName": "Y. Park",
+          "firstName": "Youngki",
+          "lastName": "Park",
+          "searchablePreferredName": "Youngki Park"
+        },
+        {
+          "preferredName": "Youhyun Shin",
+          "normalizedName": "Y. Shin",
+          "firstName": "Youhyun",
+          "lastName": "Shin",
+          "searchablePreferredName": "Youhyun Shin"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "The figure on the left shows a word cloud for the abstract of the paper [9] created using the Python programming language and the WordCloud library [10]. The figure on the right shows a word cloud created using the Scratch programming language and our approach based on the same text data used in the figure on the left.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9976056/graphical_abstract/access-gagraphic-3227765.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9976056/graphical_abstract/access-gagraphic-3227765.jpg"
+      },
+      "pdfSize": "3256",
+      "startPage": "128484",
+      "endPage": "128497",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Text Processing Education Using a Block-Based Programming Language",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9976056/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9976056/",
+      "articleNumber": "9976056",
+      "doi": "10.1109/ACCESS.2022.3227765",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9976056",
+      "articleContentType": "Journals",
+      "abstract": "In this paper, we present a novel approach to teach text processing for primary and secondary school students using a block-based programming language such as Scratch. Our main idea is to have students (1) build “basic building blocks” for text processing and then (2) to use them to create our example text processing applications. Here, we slightly modified Scratch to make it easy for students to ...",
+      "highlightedTitle": "Text Processing Education Using a Block-Based Programming Language",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Shady Elbassuoni",
+          "normalizedName": "S. Elbassuoni",
+          "firstName": "Shady",
+          "lastName": "Elbassuoni",
+          "searchablePreferredName": "Shady Elbassuoni"
+        },
+        {
+          "preferredName": "Hala Ghattas",
+          "normalizedName": "H. Ghattas",
+          "firstName": "Hala",
+          "lastName": "Ghattas",
+          "searchablePreferredName": "Hala Ghattas"
+        },
+        {
+          "preferredName": "Jalila El Ati",
+          "normalizedName": "J. E. Ati",
+          "firstName": "Jalila El",
+          "lastName": "Ati",
+          "searchablePreferredName": "Jalila El Ati"
+        },
+        {
+          "preferredName": "Zoulfikar Shmayssani",
+          "normalizedName": "Z. Shmayssani",
+          "firstName": "Zoulfikar",
+          "lastName": "Shmayssani",
+          "searchablePreferredName": "Zoulfikar Shmayssani"
+        },
+        {
+          "preferredName": "Sarah Katerji",
+          "normalizedName": "S. Katerji",
+          "firstName": "Sarah",
+          "lastName": "Katerji",
+          "searchablePreferredName": "Sarah Katerji"
+        },
+        {
+          "preferredName": "Yorgo Zoughbi",
+          "normalizedName": "Y. Zoughbi",
+          "firstName": "Yorgo",
+          "lastName": "Zoughbi",
+          "searchablePreferredName": "Yorgo Zoughbi"
+        },
+        {
+          "preferredName": "Aline Semaan",
+          "normalizedName": "A. Semaan",
+          "firstName": "Aline",
+          "lastName": "Semaan",
+          "searchablePreferredName": "Aline Semaan"
+        },
+        {
+          "preferredName": "Christelle Akl",
+          "normalizedName": "C. Akl",
+          "firstName": "Christelle",
+          "lastName": "Akl",
+          "searchablePreferredName": "Christelle Akl"
+        },
+        {
+          "preferredName": "Houda Ben Gharbia",
+          "normalizedName": "H. B. Gharbia",
+          "firstName": "Houda Ben",
+          "lastName": "Gharbia",
+          "searchablePreferredName": "Houda Ben Gharbia"
+        },
+        {
+          "preferredName": "Sonia Sassi",
+          "normalizedName": "S. Sassi",
+          "firstName": "Sonia",
+          "lastName": "Sassi",
+          "searchablePreferredName": "Sonia Sassi"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "DeepNOVA takes as input an image containing food items and passes it to the food detection model, which localizes each food item using a bounding box. The localized food items are then extracted using their bounding boxes and each food item image is passed to the NOVA classifier, which classifies it into one or more of the four NOVA groups.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9975313/graphical_abstract/access-gagraphic-3227769.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9975313/graphical_abstract/access-gagraphic-3227769.jpg"
+      },
+      "pdfSize": "2113",
+      "startPage": "128523",
+      "endPage": "128535",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "DeepNOVA: A Deep Learning NOVA Classifier for Food Images",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9975313/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9975313/",
+      "articleNumber": "9975313",
+      "doi": "10.1109/ACCESS.2022.3227769",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9975313",
+      "articleContentType": "Journals",
+      "abstract": "Assessing the healthiness of food items in images has gained attention in both the computer vision and the nutrition fields. However, such task is generally a difficult one as food images are captured in various settings and thus are usually non-homogeneous. Moreover, assessing how healthy a food item is requires nutritional expertise and knowledge of the constituents of the food item and how it i...",
+      "highlightedTitle": "DeepNOVA: A Deep Learning NOVA Classifier for Food Images",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Geunhwan Kim",
+          "normalizedName": "G. Kim",
+          "firstName": "Geunhwan",
+          "lastName": "Kim",
+          "searchablePreferredName": "Geunhwan Kim"
+        },
+        {
+          "preferredName": "Youngmin Choo",
+          "normalizedName": "Y. Choo",
+          "firstName": "Youngmin",
+          "lastName": "Choo",
+          "searchablePreferredName": "Youngmin Choo"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "Autoencoder is pre-trained using normal and abnormal data samples both. In the main training process, BiSAD uses two encoders. Normal clutter data samples (blue dots) and abnormal target data samples (red dots) are concentrated and penalized according to manifold learning. Simultaneously, BiSAD is trained so that the centroids of the two spheres move away from each other.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9976054/graphical_abstract/access-gagraphic-3227646.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9976054/graphical_abstract/access-gagraphic-3227646.jpg"
+      },
+      "pdfSize": "3195",
+      "startPage": "128590",
+      "endPage": "128603",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Bi-Sphere Anomaly Detection With Learnable Centroid for Active Sonar Classification",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9976054/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9976054/",
+      "articleNumber": "9976054",
+      "doi": "10.1109/ACCESS.2022.3227646",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9976054",
+      "articleContentType": "Journals",
+      "abstract": "Machine learning (ML)-based approaches are desirable for discriminating targets from clutter signals to enhance the performance of active sonar systems. However, a small dataset and imbalanced data samples between the target and clutter hinder ML applications in active sonar classification. Anomaly detection (AD), which effectively exploits the imbalance, is adopted to enhance the generalization o...",
+      "highlightedTitle": "Bi-Sphere Anomaly Detection With Learnable Centroid for Active Sonar Classification",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Mujahed Abdulqader",
+          "normalizedName": "M. Abdulqader",
+          "firstName": "Mujahed",
+          "lastName": "Abdulqader",
+          "searchablePreferredName": "Mujahed Abdulqader"
+        },
+        {
+          "preferredName": "Abdallah Namoun",
+          "normalizedName": "A. Namoun",
+          "firstName": "Abdallah",
+          "lastName": "Namoun",
+          "searchablePreferredName": "Abdallah Namoun"
+        },
+        {
+          "preferredName": "Yazed Alsaawy",
+          "normalizedName": "Y. Alsaawy",
+          "firstName": "Yazed",
+          "lastName": "Alsaawy",
+          "searchablePreferredName": "Yazed Alsaawy"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "Five-Phase Research Methodology for A Unified Fake Online Reviews Detection Model Using Deception Theories.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9975326/graphical_abstract/access-gagraphic-3227631.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9975326/graphical_abstract/access-gagraphic-3227631.jpg"
+      },
+      "pdfSize": "5180",
+      "startPage": "128622",
+      "endPage": "128655",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Fake Online Reviews: A Unified Detection Model Using Deception Theories",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9975326/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9975326/",
+      "articleNumber": "9975326",
+      "doi": "10.1109/ACCESS.2022.3227631",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9975326",
+      "articleContentType": "Journals",
+      "abstract": "Online reviews influence consumers’ purchasing decisions. However, identifying fake online reviews automatically remains a complex problem, and current detection approaches are inefficient in preventing the spread of fake reviews. The literature on fake reviews detection lacks a comprehensive and interpretable theory-based model with high performance, which enables us to understand the phenomenon ...",
+      "highlightedTitle": "Fake Online Reviews: A Unified Detection Model Using Deception Theories",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "S. M. Rezaul Hasan",
+          "normalizedName": "S. M. R. Hasan",
+          "firstName": "S. M. Rezaul",
+          "lastName": "Hasan",
+          "searchablePreferredName": "S. M. Rezaul Hasan"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "The fabricated temperature compensated VCRO (part no: MOSIS V89E-AJ) assembled in an OCP_QFN_7X7_48A SMT leadless package and mounted in a Yamaichi 0.5mm pitch 48-way through hole QFN test-socket. To facilitate I/O access for measurements a PCB was fabricated and the test-socket containing the chip was mounted and soldered to it.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9975319/graphical_abstract/access-gagraphic-3227566.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9975319/graphical_abstract/access-gagraphic-3227566.jpg"
+      },
+      "pdfSize": "1420",
+      "startPage": "128664",
+      "endPage": "128669",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "A Process-Based Temperature Compensated On-Chip CMOS VHF VCRO in 130-nm Si-Ge BiCMOS by Implementing an Empirical Control Equation",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9975319/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9975319/",
+      "articleNumber": "9975319",
+      "doi": "10.1109/ACCESS.2022.3227566",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9975319",
+      "articleContentType": "Journals",
+      "abstract": "This paper presents a low-power CMOS temperature and process compensated 150.9 MHz Very-high-frequency (VHF) voltage-controlled-ring-oscillator (VCRO) for on-chip integration. The design employs a CMOS temperature-sensor and novel feedback control circuitry to generate the internal control-voltage for the VCRO which ensures oscillation in the vicinity of the desired frequency despite variations in...",
+      "highlightedTitle": "A Process-Based Temperature Compensated On-Chip CMOS VHF VCRO in 130-nm Si-Ge BiCMOS by Implementing an Empirical Control Equation",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Minki Chun",
+          "normalizedName": "M. Chun",
+          "firstName": "Minki",
+          "lastName": "Chun",
+          "searchablePreferredName": "Minki Chun"
+        },
+        {
+          "preferredName": "Hyeonhak Jeong",
+          "normalizedName": "H. Jeong",
+          "firstName": "Hyeonhak",
+          "lastName": "Jeong",
+          "searchablePreferredName": "Hyeonhak Jeong"
+        },
+        {
+          "preferredName": "Hyunmin Lee",
+          "normalizedName": "H. Lee",
+          "firstName": "Hyunmin",
+          "lastName": "Lee",
+          "searchablePreferredName": "Hyunmin Lee"
+        },
+        {
+          "preferredName": "Taewon Yoo",
+          "normalizedName": "T. Yoo",
+          "firstName": "Taewon",
+          "lastName": "Yoo",
+          "searchablePreferredName": "Taewon Yoo"
+        },
+        {
+          "preferredName": "Hyunggu Jung",
+          "normalizedName": "H. Jung",
+          "firstName": "Hyunggu",
+          "lastName": "Jung",
+          "searchablePreferredName": "Hyunggu Jung"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "Training process of Korean food image classification model. (A) Collect Korean food images from the AI-Hub. (B) Image pre-processing to reduce the complexity of the model network, increase the classification accuracy, and prevent overfitting. (C) Load pre-trained feature extraction network and add last classifier layers. (D) Initial training and fine-tuning the trained model.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9976036/graphical_abstract/access-gagraphic-3227796.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9976036/graphical_abstract/access-gagraphic-3227796.jpg"
+      },
+      "pdfSize": "2938",
+      "startPage": "128732",
+      "endPage": "128741",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Development of Korean Food Image Classification Model Using Public Food Image Dataset and Deep Learning Methods",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9976036/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9976036/",
+      "articleNumber": "9976036",
+      "doi": "10.1109/ACCESS.2022.3227796",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9976036",
+      "articleContentType": "Journals",
+      "abstract": "Food image classification is useful in diet management apps for personal health management. Various methods for classifying food images in a particular country have been proposed in multiple studies. However, knowledge of Korean food image classification is limited. The objective of this study was to train a classification model for Korean food images. To train the classification model, we collect...",
+      "highlightedTitle": "Development of Korean Food Image Classification Model Using Public Food Image Dataset and Deep Learning Methods",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Md. Sakir Hossain",
+          "normalizedName": "M. S. Hossain",
+          "firstName": "Md. Sakir",
+          "lastName": "Hossain",
+          "searchablePreferredName": "Md. Sakir Hossain"
+        },
+        {
+          "preferredName": "Naim Hasan",
+          "normalizedName": "N. Hasan",
+          "firstName": "Naim",
+          "lastName": "Hasan",
+          "searchablePreferredName": "Naim Hasan"
+        },
+        {
+          "preferredName": "Md. Abdus Samad",
+          "normalizedName": "M. A. Samad",
+          "firstName": "Md. Abdus",
+          "lastName": "Samad",
+          "searchablePreferredName": "Md. Abdus Samad"
+        },
+        {
+          "preferredName": "Hossain Md. Shakhawat",
+          "normalizedName": "H. M. Shakhawat",
+          "firstName": "Hossain Md.",
+          "lastName": "Shakhawat",
+          "searchablePreferredName": "Hossain Md. Shakhawat"
+        },
+        {
+          "preferredName": "Joydeep Karmoker",
+          "normalizedName": "J. Karmoker",
+          "firstName": "Joydeep",
+          "lastName": "Karmoker",
+          "searchablePreferredName": "Joydeep Karmoker"
+        },
+        {
+          "preferredName": "Foysol Ahmed",
+          "normalizedName": "F. Ahmed",
+          "firstName": "Foysol",
+          "lastName": "Ahmed",
+          "searchablePreferredName": "Foysol Ahmed"
+        },
+        {
+          "preferredName": "K. F. M. Nafiz Fuad",
+          "normalizedName": "K. F. M. N. Fuad",
+          "firstName": "K. F. M. Nafiz",
+          "lastName": "Fuad",
+          "searchablePreferredName": "K. F. M. Nafiz Fuad"
+        },
+        {
+          "preferredName": "Kwonhue Choi",
+          "normalizedName": "K. Choi",
+          "firstName": "Kwonhue",
+          "lastName": "Choi",
+          "searchablePreferredName": "Kwonhue Choi"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "This article proposes a novel feature selection method using particle swarm optimization to detect Android ransomware from traffic analysis. The proposed method detects both ransomware and ransomware categories. Tree-based classifiers are exploited. The proposed method converges quickly and improves the accuracy of existing techniques by about 2.26-3.70%. Furthermore, it reduces about 92% of features, leading to faster detection.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9976057/graphical_abstract/access-gagraphic-3227579.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9976057/graphical_abstract/access-gagraphic-3227579.jpg"
+      },
+      "pdfSize": "1749",
+      "startPage": "128754",
+      "endPage": "128763",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Android Ransomware Detection From Traffic Analysis Using Metaheuristic Feature Selection",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9976057/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9976057/",
+      "articleNumber": "9976057",
+      "doi": "10.1109/ACCESS.2022.3227579",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9976057",
+      "articleContentType": "Journals",
+      "abstract": "Among the prevalent cyberattacks on Android devices, a ransomware attack is the most common and damaging. Although there are many solutions for detecting Android ransomware attacks, existing solutions have limited detection accuracy and high computational complexity. This paper proposes a new Android ransomware detection method based on traffic analysis to address the limitations. We exploit parti...",
+      "highlightedTitle": "Android Ransomware Detection From Traffic Analysis Using Metaheuristic Feature Selection",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Miguel Romero",
+          "normalizedName": "M. Romero",
+          "firstName": "Miguel",
+          "lastName": "Romero",
+          "searchablePreferredName": "Miguel Romero"
+        },
+        {
+          "preferredName": "Carolina Mañoso",
+          "normalizedName": "C. Mañoso",
+          "firstName": "Carolina",
+          "lastName": "Mañoso",
+          "searchablePreferredName": "Carolina Mañoso"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "The Fractional-order Generalized Predictive Control Strategy using Fractional Constraints.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9975294/graphical_abstract/access-gagraphic-3227864.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9975294/graphical_abstract/access-gagraphic-3227864.jpg"
+      },
+      "pdfSize": "1977",
+      "startPage": "128779",
+      "endPage": "128789",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Fractional Generalized Predictive Control Strategy With Fractional Constraints Handling",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9975294/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9975294/",
+      "articleNumber": "9975294",
+      "doi": "10.1109/ACCESS.2022.3227864",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9975294",
+      "articleContentType": "Journals",
+      "abstract": "The control strategies based on the methodology known as Model–based Predictive Control (MPC) have been developed and widely adopted to control real plants. This is mainly due to their intrinsic ability to handle constrains and their capacity to predict and optimize the future behavior of the process using a dynamical model of the plant. On the other hand, the mathematical tool known as fractional...",
+      "highlightedTitle": "Fractional Generalized Predictive Control Strategy With Fractional Constraints Handling",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Florentina Yuni Arini",
+          "normalizedName": "F. Y. Arini",
+          "firstName": "Florentina Yuni",
+          "lastName": "Arini",
+          "searchablePreferredName": "Florentina Yuni Arini"
+        },
+        {
+          "preferredName": "Khamron Sunat",
+          "normalizedName": "K. Sunat",
+          "firstName": "Khamron",
+          "lastName": "Sunat",
+          "searchablePreferredName": "Khamron Sunat"
+        },
+        {
+          "preferredName": "Chitsutha Soomlek",
+          "normalizedName": "C. Soomlek",
+          "firstName": "Chitsutha",
+          "lastName": "Soomlek",
+          "searchablePreferredName": "Chitsutha Soomlek"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "The logical relationships of Aristotle's square of opposition on four basic categorial prepositions (i.e., contrary, contradictory, subcontrary, and subaltern) present in Joint Opposite Selection (JOS) produces a mutual reinforcement. We propose an enhancement of Golden Jackal Optimization (GJO) with JOS named GJO-JOS. The experimental results confirmed that GJO-JOS effectively generated equilibrium in the balance mechanism.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9975297/graphical_abstract/access-gagraphic-3227510.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9975297/graphical_abstract/access-gagraphic-3227510.jpg"
+      },
+      "pdfSize": "13280",
+      "startPage": "128800",
+      "endPage": "128823",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Golden Jackal Optimization With Joint Opposite Selection: An Enhanced Nature-Inspired Optimization Algorithm for Solving Optimization Problems",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9975297/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9975297/",
+      "articleNumber": "9975297",
+      "doi": "10.1109/ACCESS.2022.3227510",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9975297",
+      "articleContentType": "Journals",
+      "abstract": "This paper presents the logical relationships of Aristotle’s square of opposition on four basic categorial prepositions (i.e., contrary, contradictory, subcontrary, and subaltern) of Joint Opposite Selection (JOS). JOS brings a mutual reinforcement by a joint of the two opposition strategies Dynamic Opposite (DO) and Selective Leading Opposition (SLO). The DO and SLO improve the balance of explora...",
+      "highlightedTitle": "Golden Jackal Optimization With Joint Opposite Selection: An Enhanced Nature-Inspired Optimization Algorithm for Solving Optimization Problems",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Hang Wei",
+          "normalizedName": "H. Wei",
+          "firstName": "Hang",
+          "lastName": "Wei",
+          "searchablePreferredName": "Hang Wei"
+        },
+        {
+          "preferredName": "Zulin Wang",
+          "normalizedName": "Z. Wang",
+          "firstName": "Zulin",
+          "lastName": "Wang",
+          "searchablePreferredName": "Zulin Wang"
+        },
+        {
+          "preferredName": "Gengxin Hua",
+          "normalizedName": "G. Hua",
+          "firstName": "Gengxin",
+          "lastName": "Hua",
+          "searchablePreferredName": "Gengxin Hua"
+        },
+        {
+          "preferredName": "Jinjing Sun",
+          "normalizedName": "J. Sun",
+          "firstName": "Jinjing",
+          "lastName": "Sun",
+          "searchablePreferredName": "Jinjing Sun"
+        },
+        {
+          "preferredName": "Yunfu Zhao",
+          "normalizedName": "Y. Zhao",
+          "firstName": "Yunfu",
+          "lastName": "Zhao",
+          "searchablePreferredName": "Yunfu Zhao"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "The Complete Architecture of Automatic Group-based Structured Pruning.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9975798/graphical_abstract/access-gagraphic-3227619.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9975798/graphical_abstract/access-gagraphic-3227619.jpg"
+      },
+      "pdfSize": "1765",
+      "startPage": "128824",
+      "endPage": "128834",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Automatic Group-Based Structured Pruning for Deep Convolutional Networks",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9975798/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9975798/",
+      "articleNumber": "9975798",
+      "doi": "10.1109/ACCESS.2022.3227619",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9975798",
+      "articleContentType": "Journals",
+      "abstract": "Structured pruning methods have been used in several convolutional neural networks (CNNs). However, group-based structured pruning is a challenging task. In previous methods, the number of groups is manually determined for all layers, which is suboptimal. Moreover, which kernels should be appropriately removed? Model accuracy may be significantly reduced when a large number of kernels are deleted....",
+      "highlightedTitle": "Automatic Group-Based Structured Pruning for Deep Convolutional Networks",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "André Coelho",
+          "normalizedName": "A. Coelho",
+          "firstName": "André",
+          "lastName": "Coelho",
+          "searchablePreferredName": "André Coelho"
+        },
+        {
+          "preferredName": "João Rodrigues",
+          "normalizedName": "J. Rodrigues",
+          "firstName": "João",
+          "lastName": "Rodrigues",
+          "searchablePreferredName": "João Rodrigues"
+        },
+        {
+          "preferredName": "Helder Fontes",
+          "normalizedName": "H. Fontes",
+          "firstName": "Helder",
+          "lastName": "Fontes",
+          "searchablePreferredName": "Helder Fontes"
+        },
+        {
+          "preferredName": "Rui Campos",
+          "normalizedName": "R. Campos",
+          "firstName": "Rui",
+          "lastName": "Campos",
+          "searchablePreferredName": "Rui Campos"
+        },
+        {
+          "preferredName": "Manuel Ricardo",
+          "normalizedName": "M. Ricardo",
+          "firstName": "Manuel",
+          "lastName": "Ricardo",
+          "searchablePreferredName": "Manuel Ricardo"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "The SurFABle algorithm makes the joint placement and allocation of communications resources in slicing-aware flying access and backhaul networks. SurFABle allows Flying Access Points (FAPs) to provide a wireless access network to ground users, and Flying Gateways (FGWs) to establish a wireless backhaul network with the FAPs, while meeting the performance requirements of any number and type of network slices.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9975290/graphical_abstract/access-gagraphic-3227653.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9975290/graphical_abstract/access-gagraphic-3227653.jpg"
+      },
+      "pdfSize": "5466",
+      "startPage": "128923",
+      "endPage": "128942",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "An Algorithm for Placing and Allocating Communications Resources Based on Slicing-Aware Flying Access and Backhaul Networks",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9975290/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9975290/",
+      "articleNumber": "9975290",
+      "doi": "10.1109/ACCESS.2022.3227653",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9975290",
+      "articleContentType": "Journals",
+      "abstract": "Flying networks, composed of Unmanned Aerial Vehicles (UAVs) acting as mobile Base Stations and Access Points, have emerged to provide on-demand wireless connectivity, especially due to their positioning capability. Still, existing solutions are focused on improving aggregate network performance using a best-effort approach. This may compromise the use of multiple services with different performan...",
+      "highlightedTitle": "An Algorithm for Placing and Allocating Communications Resources Based on Slicing-Aware Flying Access and Backhaul Networks",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Ali Ajder",
+          "normalizedName": "A. Ajder",
+          "firstName": "Ali",
+          "lastName": "Ajder",
+          "searchablePreferredName": "Ali Ajder"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "Calculation the sag for non-uniform accreted ice in overhead power lines.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9975314/graphical_abstract/access-gagraphic-3227648.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9975314/graphical_abstract/access-gagraphic-3227648.jpg"
+      },
+      "pdfSize": "1133",
+      "startPage": "128951",
+      "endPage": "128958",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Analysis of Non-Uniform Accreted Ice in Overhead Power Lines Using SAP2000",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9975314/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9975314/",
+      "articleNumber": "9975314",
+      "doi": "10.1109/ACCESS.2022.3227648",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9975314",
+      "articleContentType": "Journals",
+      "abstract": "The design principles of overhead power lines cover the effect of external loads in the atmosphere (ice load and wind load) on the layout of power transmission systems. These additional loads are closely related to the geographical and meteorological characteristics of the land, so each country projects the additional loads on the power line design by considering its conditions. The ice load, whic...",
+      "highlightedTitle": "Analysis of Non-Uniform Accreted Ice in Overhead Power Lines Using SAP2000",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Minwoo Choi",
+          "normalizedName": "M. Choi",
+          "firstName": "Minwoo",
+          "lastName": "Choi",
+          "searchablePreferredName": "Minwoo Choi"
+        },
+        {
+          "preferredName": "Hoseok Moon",
+          "normalizedName": "H. Moon",
+          "firstName": "Hoseok",
+          "lastName": "Moon",
+          "searchablePreferredName": "Hoseok Moon"
+        },
+        {
+          "preferredName": "Sangwoo Han",
+          "normalizedName": "S. Han",
+          "firstName": "Sangwoo",
+          "lastName": "Han",
+          "searchablePreferredName": "Sangwoo Han"
+        },
+        {
+          "preferredName": "Yongchan Choi",
+          "normalizedName": "Y. Choi",
+          "firstName": "Yongchan",
+          "lastName": "Choi",
+          "searchablePreferredName": "Yongchan Choi"
+        },
+        {
+          "preferredName": "Minho Lee",
+          "normalizedName": "M. Lee",
+          "firstName": "Minho",
+          "lastName": "Lee",
+          "searchablePreferredName": "Minho Lee"
+        },
+        {
+          "preferredName": "Namsuk Cho",
+          "normalizedName": "N. Cho",
+          "firstName": "Namsuk",
+          "lastName": "Cho",
+          "searchablePreferredName": "Namsuk Cho"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "This is an environment for learning drone CGFs. Automation research on drone CGF is essential, because drones are highly valuable as reconnaissance and attacking weapons. Basically, the leader drone and the follower drone learn how to find and attack the enemy within the operational area, while the follower drones additionally learn to maintain a certain distance from the leader drone.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9976053/graphical_abstract/access-gagraphic-3227797.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9976053/graphical_abstract/access-gagraphic-3227797.jpg"
+      },
+      "pdfSize": "2938",
+      "startPage": "128970",
+      "endPage": "128982",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Experimental and Computational Study on the Ground Forces CGF Automation of Wargame Models Using Reinforcement Learning",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9976053/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9976053/",
+      "articleNumber": "9976053",
+      "doi": "10.1109/ACCESS.2022.3227797",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9976053",
+      "articleContentType": "Journals",
+      "abstract": "Wargame is an important tool that enables training units to develop various strategies by allowing them to experience unexpected situations. There are three methodologies that determine the behavior of the Computer Generated Forces(CGF) in wargame—rule-based, agent-based, and learning-based methodologies. The military determines the behaviors of the CGF mainly based on the rules because a doctrine...",
+      "highlightedTitle": "Experimental and Computational Study on the Ground Forces CGF Automation of Wargame Models Using Reinforcement Learning",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Tassos Dimitriou",
+          "normalizedName": "T. Dimitriou",
+          "firstName": "Tassos",
+          "lastName": "Dimitriou",
+          "searchablePreferredName": "Tassos Dimitriou"
+        },
+        {
+          "preferredName": "Antonis Michalas",
+          "normalizedName": "A. Michalas",
+          "firstName": "Antonis",
+          "lastName": "Michalas",
+          "searchablePreferredName": "Antonis Michalas"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "The figure shows a typical crowd-sensing architecture. After registering to the system (Step 1) and obtaining details about the sensing task (Step 2), users move to the target area (Step 3) to start collecting data. Our protocol emphasizes on Steps 4 and 5 of the above process, where users collect payments for the data they submit to the system provider. The data are sent encrypted and the decryption key can only be released if and only if an appropriate payment is made. The blockchain is used to safeguard the fairness of the transaction, placing no trust on the service provider or any other third party. Contrary to prior works that make heavy use of the Blockchain network to exchange the sensed data in addition to the rewards, most of our computations take place offchain. This greatly reduces cost and enhances the efficiency of our protocol.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9976049/graphical_abstract/access-gagraphic-3227633.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9976049/graphical_abstract/access-gagraphic-3227633.jpg"
+      },
+      "pdfSize": "1470",
+      "startPage": "129004",
+      "endPage": "129018",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Incentivizing Participation in Crowd-Sensing Applications Through Fair and Private Bitcoin Rewards",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9976049/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9976049/",
+      "articleNumber": "9976049",
+      "doi": "10.1109/ACCESS.2022.3227633",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9976049",
+      "articleContentType": "Journals",
+      "abstract": "In this work we develop a rewarding framework that can be used to enhance existing crowd-sensing applications. Although a core requirement of such systems is user engagement, people may be reluctant to participate because sensitive information about them may be leaked or inferred from submitted data. The use of monetary rewards can help incentivize participation, thereby increasing not only the am...",
+      "highlightedTitle": "Incentivizing Participation in Crowd-Sensing Applications Through Fair and Private Bitcoin Rewards",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "M. Magdin",
+          "normalizedName": "M. Magdin",
+          "firstName": "M.",
+          "lastName": "Magdin",
+          "searchablePreferredName": "M. Magdin"
+        },
+        {
+          "preferredName": "J. Kapusta",
+          "normalizedName": "J. Kapusta",
+          "firstName": "J.",
+          "lastName": "Kapusta",
+          "searchablePreferredName": "J. Kapusta"
+        },
+        {
+          "preferredName": "Š. Koprda",
+          "normalizedName": "Š. Koprda",
+          "firstName": "Š.",
+          "lastName": "Koprda",
+          "searchablePreferredName": "Š. Koprda"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "Classification of emotions using behavioral characteristics.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9975322/graphical_abstract/access-gagraphic-3227627.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9975322/graphical_abstract/access-gagraphic-3227627.jpg"
+      },
+      "pdfSize": "2512",
+      "startPage": "129029",
+      "endPage": "129041",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Investigation of Behavioral Characteristic Parameters Intended for Emotional State Classification",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9975322/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9975322/",
+      "articleNumber": "9975322",
+      "doi": "10.1109/ACCESS.2022.3227627",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9975322",
+      "articleContentType": "Journals",
+      "abstract": "In the present, we can use more than 200 different methods and algorithms for automatic recognition systems, the basis of which is the recognition of a face in an image, subsequent extraction of areas of interest and classification of individual parameters using neural networks or other classifications. Currently, one of the most discussed research topics connecting the fields of psychology and ar...",
+      "highlightedTitle": "Investigation of Behavioral Characteristic Parameters Intended for Emotional State Classification",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Sena Goral",
+          "normalizedName": "S. Goral",
+          "firstName": "Sena",
+          "lastName": "Goral",
+          "searchablePreferredName": "Sena Goral"
+        },
+        {
+          "preferredName": "Utku Kose",
+          "normalizedName": "U. Kose",
+          "firstName": "Utku",
+          "lastName": "Kose",
+          "searchablePreferredName": "Utku Kose"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "Development of A CapsNet and Fuzzy Logic Decision Support System for Diagnosing the Scoliosis and Planning Treatments via Schroth Method.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9975279/graphical_abstract/access-gagraphic-3227763.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9975279/graphical_abstract/access-gagraphic-3227763.jpg"
+      },
+      "pdfSize": "4239",
+      "startPage": "129055",
+      "endPage": "129078",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Development of a CapsNet and Fuzzy Logic Decision Support System for Diagnosing the Scoliosis and Planning Treatments via Schroth Method",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9975279/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9975279/",
+      "articleNumber": "9975279",
+      "doi": "10.1109/ACCESS.2022.3227763",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9975279",
+      "articleContentType": "Journals",
+      "abstract": "Scoliosis is a disease caused by the spine curving. It is treatable but physiotherapists may do different measurements for curvature angles. That’s a problem affecting the treatment planning. This study aims to develop a Deep Learning-based decision support system, which diagnoses scoliosis and plans treatments via Schroth method. The system has an interpretable and explainable CapsNet model proce...",
+      "highlightedTitle": "Development of a CapsNet and Fuzzy Logic Decision Support System for Diagnosing the Scoliosis and Planning Treatments via Schroth Method",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    },
+    {
+      "authors": [
+        {
+          "preferredName": "Chetana Das",
+          "normalizedName": "C. Das",
+          "firstName": "Chetana",
+          "lastName": "Das",
+          "searchablePreferredName": "Chetana Das"
+        },
+        {
+          "preferredName": "Anika Anis Mumu",
+          "normalizedName": "A. A. Mumu",
+          "firstName": "Anika Anis",
+          "lastName": "Mumu",
+          "searchablePreferredName": "Anika Anis Mumu"
+        },
+        {
+          "preferredName": "Md. Firoj Ali",
+          "normalizedName": "M. F. Ali",
+          "firstName": "Md. Firoj",
+          "lastName": "Ali",
+          "searchablePreferredName": "Md. Firoj Ali"
+        },
+        {
+          "preferredName": "Subrata K. Sarker",
+          "normalizedName": "S. K. Sarker",
+          "firstName": "Subrata K.",
+          "lastName": "Sarker",
+          "searchablePreferredName": "Subrata K. Sarker"
+        },
+        {
+          "preferredName": "S. M. Muyeen",
+          "normalizedName": "S. M. Muyeen",
+          "firstName": "S. M.",
+          "lastName": "Muyeen",
+          "searchablePreferredName": "S. M. Muyeen"
+        },
+        {
+          "preferredName": "Sajal K. Das",
+          "normalizedName": "S. K. Das",
+          "firstName": "Sajal K.",
+          "lastName": "Das",
+          "searchablePreferredName": "Sajal K. Das"
+        },
+        {
+          "preferredName": "Prangon Das",
+          "normalizedName": "P. Das",
+          "firstName": "Prangon",
+          "lastName": "Das",
+          "searchablePreferredName": "Prangon Das"
+        },
+        {
+          "preferredName": "Md. Mehedi Hasan",
+          "normalizedName": "M. M. Hasan",
+          "firstName": "Md. Mehedi",
+          "lastName": "Hasan",
+          "searchablePreferredName": "Md. Mehedi Hasan"
+        },
+        {
+          "preferredName": "Zinat Tasneem",
+          "normalizedName": "Z. Tasneem",
+          "firstName": "Zinat",
+          "lastName": "Tasneem",
+          "searchablePreferredName": "Zinat Tasneem"
+        },
+        {
+          "preferredName": "Md. Manirul Islam",
+          "normalizedName": "M. M. Islam",
+          "firstName": "Md. Manirul",
+          "lastName": "Islam",
+          "searchablePreferredName": "Md. Manirul Islam"
+        },
+        {
+          "preferredName": "Md. Robiul Islam",
+          "normalizedName": "M. R. Islam",
+          "firstName": "Md. Robiul",
+          "lastName": "Islam",
+          "searchablePreferredName": "Md. Robiul Islam"
+        },
+        {
+          "preferredName": "Faisal R. Badal",
+          "normalizedName": "F. R. Badal",
+          "firstName": "Faisal R.",
+          "lastName": "Badal",
+          "searchablePreferredName": "Faisal R. Badal"
+        },
+        {
+          "preferredName": "Md. Hafiz Ahamed",
+          "normalizedName": "M. H. Ahamed",
+          "firstName": "Md. Hafiz",
+          "lastName": "Ahamed",
+          "searchablePreferredName": "Md. Hafiz Ahamed"
+        },
+        {
+          "preferredName": "Sarafat Hussain Abhi",
+          "normalizedName": "S. H. Abhi",
+          "firstName": "Sarafat Hussain",
+          "lastName": "Abhi",
+          "searchablePreferredName": "Sarafat Hussain Abhi"
+        }
+      ],
+      "patentCitationCount": 0,
+      "accessType": { "type": "open-access", "message": "Open Access" },
+      "publicationNumber": "6287639",
+      "showHtml": true,
+      "rightslinkFlag": false,
+      "publicationLink": "/xpl/RecentIssue.jsp?punumber=6287639",
+      "graphicalAbstract": {
+        "summary": "IoRT collaborated DTwT framework for the future surgical sector.",
+        "type": "graphic",
+        "file": "/ielx7/6287639/9668973/9975799/graphical_abstract/access-gagraphic-3227644.jpg",
+        "coverImage": "/ielx7/6287639/9668973/9975799/graphical_abstract/access-gagraphic-3227644.jpg"
+      },
+      "pdfSize": "2993",
+      "startPage": "129079",
+      "endPage": "129104",
+      "publicationDate": "2022",
+      "ephemera": false,
+      "vj": false,
+      "articleTitle": "Toward IoRT Collaborative Digital Twin Technology Enabled Future Surgical Sector: Technical Innovations, Opportunities and Challenges",
+      "showVideo": false,
+      "showAlgorithm": false,
+      "showDataset": false,
+      "downloadCount": 0,
+      "htmlLink": "/document/9975799/",
+      "publicationYear": "2022",
+      "volume": "10",
+      "documentLink": "/document/9975799/",
+      "articleNumber": "9975799",
+      "doi": "10.1109/ACCESS.2022.3227644",
+      "citationCount": 0,
+      "isNumber": "9668973",
+      "publisher": "IEEE",
+      "handleProduct": false,
+      "showCheckbox": true,
+      "redline": false,
+      "contentType": "IEEE Journals",
+      "publicationTitle": "IEEE Access",
+      "displayPublicationTitle": "IEEE Access",
+      "pdfLink": "/stamp/stamp.jsp?tp=&arnumber=9975799",
+      "articleContentType": "Journals",
+      "abstract": "In today’s world, it is anticipated that DTw and IoRT will transform the idea of digital healthcare and advancement of it what was previously unknown. DTw is (physical or virtual) machines or computer-based models capable of mimicking or “twinning” the lives of actual entities such as objects, humans, or human-related features. Since the advent of digital and smart healthcare, the world has swiftl...",
+      "highlightedTitle": "Toward IoRT Collaborative Digital Twin Technology Enabled Future Surgical Sector: Technical Innovations, Opportunities and Challenges",
+      "isStandard": false,
+      "displayContentType": "Journal Article",
+      "docIdentifier": "IEEE Journals",
+      "isEarlyAccess": false,
+      "isMagazine": false,
+      "isJournal": false,
+      "isBook": false,
+      "course": false,
+      "isBookWithoutChapters": false,
+      "isConference": false,
+      "isJournalAndMagazine": true
+    }
+  ],
+  "showStandardDictionary": false,
+  "searchType": "basic",
+  "facets": [
+    {
+      "id": "Author",
+      "name": "Author",
+      "numRecords": -1,
+      "children": [
+        {
+          "id": "Author:Hassan Haes Alhelou",
+          "name": "Hassan Haes Alhelou",
+          "numRecords": 23,
+          "active": "true"
+        },
+        {
+          "id": "Author:Baseem Khan",
+          "name": "Baseem Khan",
+          "numRecords": 23,
+          "active": "true"
+        },
+        {
+          "id": "Author:Sudeep Tanwar",
+          "name": "Sudeep Tanwar",
+          "numRecords": 17,
+          "active": "true"
+        },
+        {
+          "id": "Author:Wei Wang",
+          "name": "Wei Wang",
+          "numRecords": 16,
+          "active": "true"
+        },
+        {
+          "id": "Author:Ravi Sharma",
+          "name": "Ravi Sharma",
+          "numRecords": 15,
+          "active": "true"
+        },
+        {
+          "id": "Author:Ketan Kotecha",
+          "name": "Ketan Kotecha",
+          "numRecords": 15,
+          "active": "true"
+        },
+        {
+          "id": "Author:Muhammad Asif",
+          "name": "Muhammad Asif",
+          "numRecords": 15,
+          "active": "true"
+        },
+        {
+          "id": "Author:Gulshan Sharma",
+          "name": "Gulshan Sharma",
+          "numRecords": 15,
+          "active": "true"
+        },
+        {
+          "id": "Author:Khaled Salah",
+          "name": "Khaled Salah",
+          "numRecords": 13,
+          "active": "true"
+        },
+        {
+          "id": "Author:Saleh Mobayen",
+          "name": "Saleh Mobayen",
+          "numRecords": 13,
+          "active": "true"
+        },
+        {
+          "id": "Author:Yang Liu",
+          "name": "Yang Liu",
+          "numRecords": 13,
+          "active": "true"
+        },
+        {
+          "id": "Author:Lei Zhang",
+          "name": "Lei Zhang",
+          "numRecords": 13,
+          "active": "true"
+        },
+        {
+          "id": "Author:Heikki Handroos",
+          "name": "Heikki Handroos",
+          "numRecords": 12,
+          "active": "true"
+        },
+        {
+          "id": "Author:Yanjun Xiao",
+          "name": "Yanjun Xiao",
+          "numRecords": 12,
+          "active": "true"
+        },
+        {
+          "id": "Author:Raja Jayaraman",
+          "name": "Raja Jayaraman",
+          "numRecords": 12,
+          "active": "true"
+        },
+        {
+          "id": "Author:Afef Fekih",
+          "name": "Afef Fekih",
+          "numRecords": 12,
+          "active": "true"
+        },
+        {
+          "id": "Author:Heung-No Lee",
+          "name": "Heung-No Lee",
+          "numRecords": 11,
+          "active": "true"
+        },
+        {
+          "id": "Author:Pitshou N. Bokoro",
+          "name": "Pitshou N. Bokoro",
+          "numRecords": 11,
+          "active": "true"
+        },
+        {
+          "id": "Author:Josep M. Guerrero",
+          "name": "Josep M. Guerrero",
+          "numRecords": 11,
+          "active": "true"
+        },
+        {
+          "id": "Author:S. M. Muyeen",
+          "name": "S. M. Muyeen",
+          "numRecords": 11,
+          "active": "true"
+        },
+        {
+          "id": "Author:Ajith Abraham",
+          "name": "Ajith Abraham",
+          "numRecords": 11,
+          "active": "true"
+        },
+        {
+          "id": "Author:Faisal Khan",
+          "name": "Faisal Khan",
+          "numRecords": 11,
+          "active": "true"
+        },
+        {
+          "id": "Author:Mostafa M. Fouda",
+          "name": "Mostafa M. Fouda",
+          "numRecords": 10,
+          "active": "true"
+        },
+        {
+          "id": "Author:Nadeem Javaid",
+          "name": "Nadeem Javaid",
+          "numRecords": 10,
+          "active": "true"
+        },
+        {
+          "id": "Author:Yang Yang",
+          "name": "Yang Yang",
+          "numRecords": 10,
+          "active": "true"
+        }
+      ],
+      "active": "true"
+    },
+    {
+      "id": "Affiliation",
+      "name": "Affiliation",
+      "numRecords": -1,
+      "children": [
+        {
+          "id": "Affiliation:Department of Electrical and Computer Engineering, Sungkyunkwan University, Suwon, South Korea",
+          "name": "Department of Electrical and Computer Engineering, Sungkyunkwan University, Suwon, South Korea",
+          "numRecords": 24,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Department of Electrical Engineering, Qatar University, Doha, Qatar",
+          "name": "Department of Electrical Engineering, Qatar University, Doha, Qatar",
+          "numRecords": 22,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Department of Computer Science, COMSATS University Islamabad, Islamabad, Pakistan",
+          "name": "Department of Computer Science, COMSATS University Islamabad, Islamabad, Pakistan",
+          "numRecords": 21,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:School of Electrical Engineering, Korea University, Seoul, South Korea",
+          "name": "School of Electrical Engineering, Korea University, Seoul, South Korea",
+          "numRecords": 20,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:University of Chinese Academy of Sciences, Beijing, China",
+          "name": "University of Chinese Academy of Sciences, Beijing, China",
+          "numRecords": 18,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Faculty of Electrical Engineering and Computing, University of Zagreb, Zagreb, Croatia",
+          "name": "Faculty of Electrical Engineering and Computing, University of Zagreb, Zagreb, Croatia",
+          "numRecords": 17,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Department of Electrical Engineering, Faculty of Engineering, Aswan University, Aswan, Egypt",
+          "name": "Department of Electrical Engineering, Faculty of Engineering, Aswan University, Aswan, Egypt",
+          "numRecords": 16,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Department of Information Technology, College of Computer and Information Sciences, Princess Nourah bint Abdulrahman University, Riyadh, Saudi Arabia",
+          "name": "Department of Information Technology, College of Computer and Information Sciences, Princess Nourah bint Abdulrahman University, Riyadh, Saudi Arabia",
+          "numRecords": 16,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Department of Electrical Engineering, College of Engineering, Taif University, Taif, Saudi Arabia",
+          "name": "Department of Electrical Engineering, College of Engineering, Taif University, Taif, Saudi Arabia",
+          "numRecords": 15,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Centre for Inter-Disciplinary Research and Innovation, University of Petroleum and Energy Studies, Dehradun, India",
+          "name": "Centre for Inter-Disciplinary Research and Innovation, University of Petroleum and Energy Studies, Dehradun, India",
+          "numRecords": 15,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:School of Electronic and Electrical Engineering, Kyungpook National University, Daegu, South Korea",
+          "name": "School of Electronic and Electrical Engineering, Kyungpook National University, Daegu, South Korea",
+          "numRecords": 15,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Department of Electrical and Electronic Engineering Science, University of Johannesburg, Johannesburg, South Africa",
+          "name": "Department of Electrical and Electronic Engineering Science, University of Johannesburg, Johannesburg, South Africa",
+          "numRecords": 15,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:School of Electronics Engineering, Kyungpook National University, Daegu, South Korea",
+          "name": "School of Electronics Engineering, Kyungpook National University, Daegu, South Korea",
+          "numRecords": 15,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:School of Mechanical Engineering, Hebei University of Technology, Tianjin, China",
+          "name": "School of Mechanical Engineering, Hebei University of Technology, Tianjin, China",
+          "numRecords": 15,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Department of Electronic Engineering, Hanyang University, Seoul, South Korea",
+          "name": "Department of Electronic Engineering, Hanyang University, Seoul, South Korea",
+          "numRecords": 14,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Department of Computer Engineering, College of Computers and Information Technology, Taif University, Taif, Saudi Arabia",
+          "name": "Department of Computer Engineering, College of Computers and Information Technology, Taif University, Taif, Saudi Arabia",
+          "numRecords": 14,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Department of Computer Science and Engineering, Institute of Technology, Nirma University, Ahmedabad, Gujarat, India",
+          "name": "Department of Computer Science and Engineering, Institute of Technology, Nirma University, Ahmedabad, Gujarat, India",
+          "numRecords": 14,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Department of Electrical and Computer Engineering, University of Louisiana at Lafayette, Lafayette, LA, USA",
+          "name": "Department of Electrical and Computer Engineering, University of Louisiana at Lafayette, Lafayette, LA, USA",
+          "numRecords": 14,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:School of Electrical Engineering and Computer Science, Gwangju Institute of Science and Technology, Gwangju, South Korea",
+          "name": "School of Electrical Engineering and Computer Science, Gwangju Institute of Science and Technology, Gwangju, South Korea",
+          "numRecords": 14,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Department of Electrical Engineering, Indian Institute of Technology Madras, Chennai, India",
+          "name": "Department of Electrical Engineering, Indian Institute of Technology Madras, Chennai, India",
+          "numRecords": 14,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:School of Electrical and Electronics Engineering, Chung-Ang University, Seoul, South Korea",
+          "name": "School of Electrical and Electronics Engineering, Chung-Ang University, Seoul, South Korea",
+          "numRecords": 14,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Department of Electrical and Computer Engineering, Hawassa University, Hawassa, Ethiopia",
+          "name": "Department of Electrical and Computer Engineering, Hawassa University, Hawassa, Ethiopia",
+          "numRecords": 14,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Department of Electrical Engineering, Faculty of Engineering at Shoubra, Benha University, Cairo, Egypt",
+          "name": "Department of Electrical Engineering, Faculty of Engineering at Shoubra, Benha University, Cairo, Egypt",
+          "numRecords": 14,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Department of Electrical Engineering and Automation, Aalto University, Espoo, Finland",
+          "name": "Department of Electrical Engineering and Automation, Aalto University, Espoo, Finland",
+          "numRecords": 13,
+          "active": "true"
+        },
+        {
+          "id": "Affiliation:Department of Computer Science and Engineering, Korea University, Seoul, South Korea",
+          "name": "Department of Computer Science and Engineering, Korea University, Seoul, South Korea",
+          "numRecords": 12,
+          "active": "true"
+        }
+      ],
+      "active": "true"
+    },
+    {
+      "id": "SupplementalItem",
+      "name": "Supplemental Items",
+      "numRecords": -1,
+      "children": [
+        {
+          "id": "SupplementalItem:Media",
+          "name": "Media",
+          "numRecords": 172,
+          "active": "true"
+        },
+        {
+          "id": "SupplementalItem:Datasets",
+          "name": "Datasets",
+          "numRecords": 107,
+          "active": "true"
+        },
+        {
+          "id": "SupplementalItem:Code",
+          "name": "Code",
+          "numRecords": 11,
+          "active": "true"
+        }
+      ],
+      "active": "true"
+    },
+    {
+      "id": "SpecialSection",
+      "name": "Topics",
+      "numRecords": -1,
+      "children": [
+        {
+          "id": "SpecialSection:Advances on High Performance Wireless Networks for Automation and IIoT",
+          "name": "Advances on High Performance Wireless Networks for Automation and IIoT",
+          "numRecords": 1,
+          "active": "true"
+        },
+        {
+          "id": "SpecialSection:Behavioral Biometrics for Ehealth and Well-Being",
+          "name": "Behavioral Biometrics for Ehealth and Well-Being",
+          "numRecords": 1,
+          "active": "true"
+        },
+        {
+          "id": "SpecialSection:Collaborative Intelligence for Internet of Vehicles",
+          "name": "Collaborative Intelligence for Internet of Vehicles",
+          "numRecords": 1,
+          "active": "true"
+        },
+        {
+          "id": "SpecialSection:Deep Learning for Internet of Things",
+          "name": "Deep Learning for Internet of Things",
+          "numRecords": 3,
+          "active": "true"
+        },
+        {
+          "id": "SpecialSection:Intelligent Big Data Analytics for Internet of Things, Services and People",
+          "name": "Intelligent Big Data Analytics for Internet of Things, Services and People",
+          "numRecords": 1,
+          "active": "true"
+        },
+        {
+          "id": "SpecialSection:Internet of Space: Networking Architectures and Protocols to Support Space-Based Internet Services",
+          "name": "Internet of Space: Networking Architectures and Protocols to Support Space-Based Internet Services",
+          "numRecords": 10,
+          "active": "true"
+        },
+        {
+          "id": "SpecialSection:Key Enabling Technologies for Prosumer Energy Management",
+          "name": "Key Enabling Technologies for Prosumer Energy Management",
+          "numRecords": 3,
+          "active": "true"
+        },
+        {
+          "id": "SpecialSection:Metal Additive Manufacturing",
+          "name": "Metal Additive Manufacturing",
+          "numRecords": 3,
+          "active": "true"
+        },
+        {
+          "id": "SpecialSection:Positioning and Navigation in Challenging Environments",
+          "name": "Positioning and Navigation in Challenging Environments",
+          "numRecords": 9,
+          "active": "true"
+        },
+        {
+          "id": "SpecialSection:Power Electronics Emerging Technologies for Sustainable Energy Conservation",
+          "name": "Power Electronics Emerging Technologies for Sustainable Energy Conservation",
+          "numRecords": 3,
+          "active": "true"
+        },
+        {
+          "id": "SpecialSection:Privacy Preservation for Large-Scale User Data in Social Networks",
+          "name": "Privacy Preservation for Large-Scale User Data in Social Networks",
+          "numRecords": 1,
+          "active": "true"
+        },
+        {
+          "id": "SpecialSection:Reconfigurable Intelligent Surface Aided Communication for 6G and Beyond",
+          "name": "Reconfigurable Intelligent Surface Aided Communication for 6G and Beyond",
+          "numRecords": 1,
+          "active": "true"
+        },
+        {
+          "id": "SpecialSection:Towards Smart Cities with IoT Based on Crowdsensing",
+          "name": "Towards Smart Cities with IoT Based on Crowdsensing",
+          "numRecords": 1,
+          "active": "true"
+        }
+      ],
+      "active": "true"
+    },
+    {
+      "id": "SubjectCategory",
+      "name": "Subject Category",
+      "numRecords": -1,
+      "children": [
+        {
+          "id": "SubjectCategory:Computational and artificial intelligence",
+          "name": "Computational and artificial intelligence",
+          "numRecords": 3379,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Computers and information processing",
+          "name": "Computers and information processing",
+          "numRecords": 2837,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Communications technology",
+          "name": "Communications technology",
+          "numRecords": 1463,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Signal processing",
+          "name": "Signal processing",
+          "numRecords": 1014,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Power engineering and energy",
+          "name": "Power engineering and energy",
+          "numRecords": 994,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Industry applications",
+          "name": "Industry applications",
+          "numRecords": 889,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Control systems",
+          "name": "Control systems",
+          "numRecords": 846,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Vehicular and wireless technologies",
+          "name": "Vehicular and wireless technologies",
+          "numRecords": 667,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Imaging",
+          "name": "Imaging",
+          "numRecords": 637,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Biomedical Engineering",
+          "name": "Biomedical Engineering",
+          "numRecords": 616,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Systems engineering and theory",
+          "name": "Systems engineering and theory",
+          "numRecords": 529,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Robotics and automation",
+          "name": "Robotics and automation",
+          "numRecords": 525,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Circuits and systems",
+          "name": "Circuits and systems",
+          "numRecords": 516,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Sensors",
+          "name": "Sensors",
+          "numRecords": 504,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Power electronics",
+          "name": "Power electronics",
+          "numRecords": 471,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Antennas and propagation",
+          "name": "Antennas and propagation",
+          "numRecords": 415,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Systems, man, and cybernetics",
+          "name": "Systems, man, and cybernetics",
+          "numRecords": 397,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Mathematics",
+          "name": "Mathematics",
+          "numRecords": 382,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Intelligent transportation systems",
+          "name": "Intelligent transportation systems",
+          "numRecords": 353,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Information theory",
+          "name": "Information theory",
+          "numRecords": 336,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Mechanical Engineering",
+          "name": "Mechanical Engineering",
+          "numRecords": 301,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Science - general",
+          "name": "Science - general",
+          "numRecords": 295,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Reliability",
+          "name": "Reliability",
+          "numRecords": 285,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Engineering management",
+          "name": "Engineering management",
+          "numRecords": 281,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Instrumentation and measurement",
+          "name": "Instrumentation and measurement",
+          "numRecords": 279,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Microwave theory and techniques",
+          "name": "Microwave theory and techniques",
+          "numRecords": 256,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Aerospace and electronic systems",
+          "name": "Aerospace and electronic systems",
+          "numRecords": 245,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Industrial electronics",
+          "name": "Industrial electronics",
+          "numRecords": 215,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Geoscience and remote sensing",
+          "name": "Geoscience and remote sensing",
+          "numRecords": 187,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Social implications of technology",
+          "name": "Social implications of technology",
+          "numRecords": 172,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Education",
+          "name": "Education",
+          "numRecords": 157,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Photonics",
+          "name": "Photonics",
+          "numRecords": 120,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Magnetics",
+          "name": "Magnetics",
+          "numRecords": 118,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Electronic design automation and methodology",
+          "name": "Electronic design automation and methodology",
+          "numRecords": 114,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Electron devices",
+          "name": "Electron devices",
+          "numRecords": 111,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Consumer electronics",
+          "name": "Consumer electronics",
+          "numRecords": 95,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Oceanic engineering and marine technology",
+          "name": "Oceanic engineering and marine technology",
+          "numRecords": 94,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Electromagnetic compatibility and interference",
+          "name": "Electromagnetic compatibility and interference",
+          "numRecords": 92,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Components, packaging, and manufacturing technology",
+          "name": "Components, packaging, and manufacturing technology",
+          "numRecords": 85,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Solid state circuits",
+          "name": "Solid state circuits",
+          "numRecords": 84,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Dielectrics and electrical insulation",
+          "name": "Dielectrics and electrical insulation",
+          "numRecords": 69,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Prognostics",
+          "name": "Prognostics",
+          "numRecords": 63,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Materials, elements, and compounds",
+          "name": "Materials, elements, and compounds",
+          "numRecords": 60,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Nanotechnology",
+          "name": "Nanotechnology",
+          "numRecords": 46,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Broadcast technology",
+          "name": "Broadcast technology",
+          "numRecords": 45,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Product safety engineering",
+          "name": "Product safety engineering",
+          "numRecords": 30,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Resonance",
+          "name": "Resonance",
+          "numRecords": 28,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Professional communication",
+          "name": "Professional communication",
+          "numRecords": 20,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Ultrasonics, ferroelectrics, and frequency control",
+          "name": "Ultrasonics, ferroelectrics, and frequency control",
+          "numRecords": 20,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Nuclear and plasma sciences",
+          "name": "Nuclear and plasma sciences",
+          "numRecords": 16,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Superconductivity",
+          "name": "Superconductivity",
+          "numRecords": 8,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Communications Technology",
+          "name": "Communications Technology",
+          "numRecords": 2,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:5G Wireless Technologies",
+          "name": "5G Wireless Technologies",
+          "numRecords": 1,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Aerospace and Electronic Systems",
+          "name": "Aerospace and Electronic Systems",
+          "numRecords": 1,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Big Data",
+          "name": "Big Data",
+          "numRecords": 1,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Circuits and Systems",
+          "name": "Circuits and Systems",
+          "numRecords": 1,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Internet of Things",
+          "name": "Internet of Things",
+          "numRecords": 1,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:Smart Technologies",
+          "name": "Smart Technologies",
+          "numRecords": 1,
+          "active": "true"
+        },
+        {
+          "id": "SubjectCategory:biomedical engineering",
+          "name": "biomedical engineering",
+          "numRecords": 1,
+          "active": "true"
+        }
+      ],
+      "active": "true"
+    }
+  ],
+  "totalPages": 369,
+  "startRecord": 0,
+  "subscribedContentApplied": false,
+  "promoApplied": false,
+  "endRecord": 25,
+  "totalRecords": 9207
+}
