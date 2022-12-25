@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+   <accessType>CCBY - IEEE is not the copyright holder of this material. Please follow the instructions via https://creativecommons.org/licenses/by/4.0/ to obtain full-text articles and stipulations in the API documentation.</accessType>
+   <div xmlns:ieee="http://www.ieeexplore.ieee.org" id="BodyWrapper" class="ArticlePage">
+      <div id="article">
+         <div class="section" id="sec1">
+            <div class="header article-hdr">
+               <div class="kicker">SECTION I.</div>
+               <h2>Introduction</h2>
+            </div>
+            <p>
+               As one of the most important subject in computer science, artificial intelligence has been developed fast in the last years and has been successfully applied in various areas and applications
+               <a ref-type="bibr" anchor="ref1" id="context_ref_1_1">[1]</a>
+               ,
+               <a ref-type="bibr" anchor="ref2" id="context_ref_2_1">[2]</a>
+               , such as pattern recognition, computer vision, intelligence control etc
+               <a ref-type="bibr" anchor="ref3" id="context_ref_3_1">[3]</a>
+               ,
+               <a ref-type="bibr" anchor="ref4" id="context_ref_4_1">[4]</a>
+               ,
+               <a ref-type="bibr" anchor="ref5" id="context_ref_5_1">[5]</a>
+               . For artificial intelligence, artificial neural networks play key roles in achieving such outstanding performance
+               <a ref-type="bibr" anchor="ref6" id="context_ref_6_1">[6]</a>
+               ,
+               <a ref-type="bibr" anchor="ref7" id="context_ref_7_1">[7]</a>
+               . Multilayer perceptrons (MLPs), which are typical feedforward neural networks, also have been widely applied in artificial intelligence
+               <a ref-type="bibr" anchor="ref8" id="context_ref_8_1">[8]</a>
+               ,
+               <a ref-type="bibr" anchor="ref9" id="context_ref_9_1">[9]</a>
+               . The main advantages of multilayer perceptrons are that they are easy to handle and can approximate any continuous function arbitrary well.
+            </p>
+            <p>
+               However, different with the regular learning machines, when researchers used MLPs to different applications, they found that there were some strange behaviours in the learning process of MLPs
+               <a ref-type="bibr" anchor="ref10" id="context_ref_10_1">[10]</a>
+               . For example, there are many local minima, the learning process may become very slow and the so-called plateau phenomenon can often be observed (an example is shown in
+               <a ref-type="fig" anchor="fig1" class="fulltext-link">Fig. 1</a>
+               )
+               <a ref-type="bibr" anchor="ref11" id="context_ref_11_1">[11]</a>
+               . In view of the wide applications of MLPs, the reasons why the training processes often suffer from such difficulties have attracted many researchers’ attentions. Research results indicate that these singular behaviours are because of the network structure of feedforward neural networks which have hidden layers. Due to the existence of hidden layers, there exist subspaces in the parameter space of feedforward neural networks where the Fisher information matrix (FIM) is singular on such subspaces
+               <a ref-type="bibr" anchor="ref12" id="context_ref_12_1">[12]</a>
+               ,
+               <a ref-type="bibr" anchor="ref13" id="context_ref_13_1">[13]</a>
+               . These subspaces mainly cause the above singular learning behaviours of MLPs, thus we call these subspaces as singularities.
+               <div class="figure figure-full" id="fig1">
+                  <!--
+          Workaround for combined images.Eg.- 1000116 Fig. 5
+        -->
+                  <div class="img-wrap">
+                     <a href="/mediastore_new/IEEE/content/media/6287639/9668973/9973293/li1-3227427-large.gif" data-fig-id="fig1">
+                        <img src="/mediastore_new/IEEE/content/media/6287639/9668973/9973293/li1-3227427-small.gif" alt="FIGURE 1. - Plateau phenomenon occurred in the learning process of MLPs." />
+                        <div class="zoom" title="View Larger Image" />
+                     </a>
+                  </div>
+                  <div class="figcaption">
+                     <b class="title">FIGURE 1.</b>
+                     <fig>
+                        <p>Plateau phenomenon occurred in the learning process of MLPs.</p>
+                     </fig>
+                  </div>
+                  <p class="links">
+                     <a href="/document/9973293/all-figures" class="all">Show All</a>
+                  </p>
+               </div>
+            </p>
+            <p>
+               As the FIM degenerates on singularities, the subspaces become Riemann manifolds, not Euclidean spaces in the case of regular learning machines, which leads to three problems
+               <a ref-type="bibr" anchor="ref11" id="context_ref_11_1">[11]</a>
+               ,
+               <a ref-type="bibr" anchor="ref14" id="context_ref_14_1">[14]</a>
+               : 1) invalidation of the classic paradigm of Cramer-Rao theorem; 2) failure to determine approximate network structure. For example, for the commonly used model selection criteria, such as Akaike information criterion (AIC), Bayes information criterion (BIC) and minimum description length (MDL), researchers find that these criteria often fail to determine approximate network structure; 3) non Fisher-efficiency of standard gradient descent method. Instead of gradient descent direction, the Riemann gradient (natural gradient) descent direction becomes the steepest descent direction
+               <a ref-type="bibr" anchor="ref15" id="context_ref_15_1">[15]</a>
+               , then using standard gradient descent method to train neural networks will face many difficulties on the singularities. Therefore, it is very worthy to investigate the learning dynamics near singularities in MLPs.
+            </p>
+            <p>Given that FIM plays fundamental and vital role in investigating the singular learning dynamics of MLPs, obtaining the analytical form of FIM has two important significances: 1) make us convenient to detailed analyze the mechanism of singular learning dynamics; 2) make it easier to design better learning algorithms to overcome the serious influence of singularities. Thus the main contribution of this paper is to obtain the analytical form of FIM for the bipolar-error-function-based MLPs with general Gaussian input. Further we also show the potential of analytical form to design better algorithms.</p>
+            <p>
+               The rest of this paper is organized as follows. A brief review of related work is presented in
+               <a ref-type="sec" anchor="sec2" class="fulltext-link">section 2</a>
+               . In
+               <a ref-type="sec" anchor="sec3" class="fulltext-link">section 3</a>
+               , the analytical form of FIM is obtained. In
+               <a ref-type="sec" anchor="sec4" class="fulltext-link">section 4</a>
+               , we verify the validity of the obtained results through simulation studies.
+               <a ref-type="sec" anchor="sec5" class="fulltext-link">Section 5</a>
+               states conclusions and discussions.
+            </p>
+         </div>
+         <div class="section" id="sec2">
+            <div class="header article-hdr">
+               <div class="kicker">SECTION II.</div>
+               <h2>Related Work</h2>
+            </div>
+            <p>In this section, we provide a brief overview of previous work on the mechanism of singular learning dynamics.</p>
+            <p>
+               By investigating the geometric structure of MLPs,
+               <a ref-type="bibr" anchor="ref16" id="context_ref_16_2">[16]</a>
+               proved that the global minimum of the smaller model could be a local minimum or a saddle point of the larger model and illustrated various singularities in detail. For layered networks, by taking general mathematical analysis,
+               <a ref-type="bibr" anchor="ref17" id="context_ref_17_2">[17]</a>
+               obtained universal learning trajectories near the overlap singularity. Further researchers aimed to take more detailed theoretical analysis on the learning dynamics near singularities. However, the widely used activation functions, such as log-sigmoid function
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\dfrac {1}{1+e^{-\lambda x}}$</tex-math>
+               </inline-formula>
+               and hyperbolic tangent function
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\tanh (x)$</tex-math>
+               </inline-formula>
+               , can not be integrated, which limits researchers to take quantitative analysis of learning dynamics. In order to overcome this problem, the error functions
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\phi (x) = \dfrac {1}{\sqrt {2\pi }}\displaystyle \int _{-\infty }^{x}\exp \left ({-\frac {1}{2}t^{2}}\right)\mathrm {d}t$</tex-math>
+               </inline-formula>
+               and
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\phi (x) = \sqrt {\dfrac {2}{\pi }}\displaystyle \int _{0}^{x}\exp \left ({-\frac {1}{2}t^{2}}\right)\mathrm {d}t$</tex-math>
+               </inline-formula>
+               , were chosen as the activation function of MLPs in unipolar and bipolar case, respectively
+               <a ref-type="bibr" anchor="ref11" id="context_ref_11_2">[11]</a>
+               ,
+               <a ref-type="bibr" anchor="ref18" id="context_ref_18_2">[18]</a>
+               . Then different cases of MLPs with different type of activation functions, including toy model case
+               <a ref-type="bibr" anchor="ref19" id="context_ref_19_2">[19]</a>
+               , regular case
+               <a ref-type="bibr" anchor="ref20" id="context_ref_20_2">[20]</a>
+               ,
+               <a ref-type="bibr" anchor="ref21" id="context_ref_21_2">[21]</a>
+               , and unrealizable case
+               <a ref-type="bibr" anchor="ref22" id="context_ref_22_2">[22]</a>
+               , have been investigated and diverse results have also been obtained.
+               <a ref-type="bibr" anchor="ref23" id="context_ref_23_2">[23]</a>
+               obtained the analytical form of FIM in RBF networks and investigated to what extent RBF networks would be influenced by singularities.
+            </p>
+            <p>
+               Since the Riemann gradient (natural gradient) descent direction becomes the steepest descent direction on the singularities, the natural gradient method was proposed to overcome the serious influence of singualarities
+               <a ref-type="bibr" anchor="ref24" id="context_ref_24_2">[24]</a>
+               . As it is very hard to obtain the explicit form of FIM and its inverse, researchers proposed adaptive natural gradient algorithms where the inverse FIM is calculated by directly using approximation formula
+               <a ref-type="bibr" anchor="ref25" id="context_ref_25_2">[25]</a>
+               ,
+               <a ref-type="bibr" anchor="ref26" id="context_ref_26_2">[26]</a>
+               ,
+               <a ref-type="bibr" anchor="ref27" id="context_ref_27_2">[27]</a>
+               and applied natural gradient method in big data fields and deep neural networks
+               <a ref-type="bibr" anchor="ref28" id="context_ref_28_2">[28]</a>
+               ,
+               <a ref-type="bibr" anchor="ref29" id="context_ref_29_2">[29]</a>
+               ,
+               <a ref-type="bibr" anchor="ref30" id="context_ref_30_2">[30]</a>
+               .
+            </p>
+            <p>
+               Due to the non-integrated property of hyperbolic tangent function, we cannot obtain the analytical form of FIM. In this paper, we choose the bipolar error function
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\phi (x) = \sqrt {\dfrac {2}{\pi }}\displaystyle \int _{0}^{x}\exp \left ({-\frac {1}{2}t^{2}}\right)\mathrm {d}t$</tex-math>
+               </inline-formula>
+               as the the activation function of MLPs, and obtain the analytical form of FIM.
+            </p>
+         </div>
+         <div class="section" id="sec3">
+            <div class="header article-hdr">
+               <div class="kicker">SECTION III.</div>
+               <h2>Analytical Form of Fisher Information Matrix</h2>
+            </div>
+            <p>In this section, the learning paradigm of MLPs is introduced at first and then the analytical form of FIM is obtained.</p>
+            <p>
+               The bipolar-activation-function based multilayer perceptrons with one hidden layer are defined as follows:
+               <disp-formula id="deqn1" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{equation*} f(\boldsymbol {x},\boldsymbol {\theta })=\sum \limits _{i=1}^{k}{w_{i}\phi (\boldsymbol {x},\boldsymbol {J}_{i})},\tag{1}\end{equation*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{equation*} f(\boldsymbol {x},\boldsymbol {\theta })=\sum \limits _{i=1}^{k}{w_{i}\phi (\boldsymbol {x},\boldsymbol {J}_{i})},\tag{1}\end{equation*}</span>
+                  </span>
+               </disp-formula>
+               where
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\boldsymbol {x}$</tex-math>
+               </inline-formula>
+               is the input,
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$k$</tex-math>
+               </inline-formula>
+               is the hidden node number,
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\boldsymbol {J}_{i}$</tex-math>
+               </inline-formula>
+               and
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$w_{i}$</tex-math>
+               </inline-formula>
+               are the weight from input layer to hidden node
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$i$</tex-math>
+               </inline-formula>
+               and weight from hidden node
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$i$</tex-math>
+               </inline-formula>
+               to output layer, respectively.
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\phi (\cdot)$</tex-math>
+               </inline-formula>
+               is a bipolar activation function. Then
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\boldsymbol {\theta }=\{\boldsymbol {J}_{1}, \cdots, \boldsymbol {J}_{k}, {w}_{1}, \cdots, {w}_{k}\}$</tex-math>
+               </inline-formula>
+               represents all the parameters of the model. In order to obtain the analytical form of FIM and overcome the non-integrated property of hyperbolic tangent function, in this paper, we choose the bipolar error function as the activation function, namely
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\phi (\boldsymbol {x},\boldsymbol {J}_{i})=\sqrt {\dfrac {2}{\pi }}\displaystyle \int _{0}^{\boldsymbol {J}_{i}^{T}\boldsymbol {x}}\exp \left ({-\frac {1}{2}t^{2}}\right)\mathrm {d}t$</tex-math>
+               </inline-formula>
+               .
+            </p>
+            <p>
+               For the regression mission, an unknown teacher function is needed to be approximated:
+               <disp-formula id="deqn2" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{equation*} y=f_{0}(\boldsymbol {x})+\varepsilon,\tag{2}\end{equation*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{equation*} y=f_{0}(\boldsymbol {x})+\varepsilon,\tag{2}\end{equation*}</span>
+                  </span>
+               </disp-formula>
+               which generates a number of observed data
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$(\boldsymbol {x}_{1},y_{1}), \cdots,~(\boldsymbol {x}_{t}, y_{t})$</tex-math>
+               </inline-formula>
+               . The additive noise
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\varepsilon $</tex-math>
+               </inline-formula>
+               usually subjects to a Gaussian distribution with mean 0 and variance
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\sigma _{0}^{2}$</tex-math>
+               </inline-formula>
+               .
+            </p>
+            <p>
+               Generally the input
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\boldsymbol {x}$</tex-math>
+               </inline-formula>
+               is assumed to be subject to Gaussian distribution, in this paper, we investigate the general Gaussian input case, i.e. probability density function of
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\boldsymbol {x}$</tex-math>
+               </inline-formula>
+               is:
+               <disp-formula id="deqn3" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{align*} q(\boldsymbol {x})=(\sqrt {2\pi })^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\exp \left ({-\frac {1}{2}(\boldsymbol {x}-\boldsymbol {\mu })^{T}\boldsymbol {\Sigma }^{-1}(\boldsymbol {x}-\boldsymbol {\mu })}\right), \\{}\tag{3}\end{align*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} q(\boldsymbol {x})=(\sqrt {2\pi })^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\exp \left ({-\frac {1}{2}(\boldsymbol {x}-\boldsymbol {\mu })^{T}\boldsymbol {\Sigma }^{-1}(\boldsymbol {x}-\boldsymbol {\mu })}\right), \\{}\tag{3}\end{align*}</span>
+                  </span>
+               </disp-formula>
+               where
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$n$</tex-math>
+               </inline-formula>
+               is the input dimension,
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\boldsymbol {\mu }$</tex-math>
+               </inline-formula>
+               is the expectation value and
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\boldsymbol {\Sigma }$</tex-math>
+               </inline-formula>
+               is the covariance matrix.
+            </p>
+            <p>
+               We choose the square loss function to measure the error:
+               <disp-formula id="deqn4" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{equation*} l(y,\boldsymbol {x},\boldsymbol {\theta })=\frac {1}{2}(y-f(\boldsymbol {x},\boldsymbol {\theta }))^{2},\tag{4}\end{equation*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{equation*} l(y,\boldsymbol {x},\boldsymbol {\theta })=\frac {1}{2}(y-f(\boldsymbol {x},\boldsymbol {\theta }))^{2},\tag{4}\end{equation*}</span>
+                  </span>
+               </disp-formula>
+               and use the gradient descent method to minimize the loss:
+               <disp-formula id="deqn5" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{equation*} \boldsymbol {\theta }_{t+1} = \boldsymbol {\theta }_{t} - \eta \frac {\partial l(y_{t},\boldsymbol {x}_{t},\boldsymbol {\theta }_{t})}{\partial \boldsymbol {\theta }_{t}},\tag{5}\end{equation*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{equation*} \boldsymbol {\theta }_{t+1} = \boldsymbol {\theta }_{t} - \eta \frac {\partial l(y_{t},\boldsymbol {x}_{t},\boldsymbol {\theta }_{t})}{\partial \boldsymbol {\theta }_{t}},\tag{5}\end{equation*}</span>
+                  </span>
+               </disp-formula>
+               where
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\eta $</tex-math>
+               </inline-formula>
+               is the learning rate.
+            </p>
+            <p>
+               The FIM is defined as follows
+               <a ref-type="bibr" anchor="ref11" id="context_ref_11_3">[11]</a>
+               :
+               <disp-formula id="deqn6" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{equation*} \boldsymbol {F}(\boldsymbol {\theta }) = \left \langle{ \frac {\partial f(\boldsymbol {x}, \boldsymbol {\theta })}{\partial \boldsymbol {\theta }}\frac {\partial f(\boldsymbol {x}, \boldsymbol {\theta })}{\partial \boldsymbol {\theta }^{T}}}\right \rangle,\tag{6}\end{equation*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{equation*} \boldsymbol {F}(\boldsymbol {\theta }) = \left \langle{ \frac {\partial f(\boldsymbol {x}, \boldsymbol {\theta })}{\partial \boldsymbol {\theta }}\frac {\partial f(\boldsymbol {x}, \boldsymbol {\theta })}{\partial \boldsymbol {\theta }^{T}}}\right \rangle,\tag{6}\end{equation*}</span>
+                  </span>
+               </disp-formula>
+               where
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\langle \cdot \rangle $</tex-math>
+               </inline-formula>
+               denotes the expectation with respect to the teacher distribution. The teacher distribution is given by:
+               <disp-formula id="deqn7" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{equation*} p_{0}(y,\boldsymbol {x})=q(\boldsymbol {x})\frac {1}{\sqrt {2\pi }\sigma _{0}}\exp \left ({-\frac {(y-f_{0}(\boldsymbol {x}))^{2} }{2\sigma _{0}^{2}}}\right).\tag{7}\end{equation*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{equation*} p_{0}(y,\boldsymbol {x})=q(\boldsymbol {x})\frac {1}{\sqrt {2\pi }\sigma _{0}}\exp \left ({-\frac {(y-f_{0}(\boldsymbol {x}))^{2} }{2\sigma _{0}^{2}}}\right).\tag{7}\end{equation*}</span>
+                  </span>
+               </disp-formula>
+            </p>
+            <p>
+               Then we introduce the types of singularities. As shown in
+               <a ref-type="bibr" anchor="ref11" id="context_ref_11_3">[11]</a>
+               , besides of the overlap singularity and elimination singularity in the parameter space of unipolar-activation-function-based MLPs, there also exists opposite singularity for the bipolar-activation-function-based MLPs
+               <a ref-type="disp-formula" anchor="deqn1" href="#deqn1" class="fulltext-link">(1)</a>
+               , thus there are total three types of singularities:
+               <ol>
+                  <li>
+                     <p>
+                        Opposite singularity:
+                        <disp-formula id="deqn8" class="display-formula">
+                           <tex-math notation="LaTeX">\begin{equation*} \mathcal {R}_{1} = \{\boldsymbol {\theta }|\boldsymbol {J}_{i}=-\boldsymbol {J}_{j}\},\tag{8}\end{equation*}</tex-math>
+                           <span class="formula">
+                              <span class="link">View Source</span>
+                              <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                              <span class="tex tex2jax_ignore" style="display:none;">\begin{equation*} \mathcal {R}_{1} = \{\boldsymbol {\theta }|\boldsymbol {J}_{i}=-\boldsymbol {J}_{j}\},\tag{8}\end{equation*}</span>
+                           </span>
+                        </disp-formula>
+                     </p>
+                  </li>
+                  <li>
+                     <p>
+                        Overlap singularity:
+                        <disp-formula id="deqn9" class="display-formula">
+                           <tex-math notation="LaTeX">\begin{equation*} \mathcal {R}_{2} = \{\boldsymbol {\theta }|\boldsymbol {J}_{i}=\boldsymbol {J}_{j}\},\tag{9}\end{equation*}</tex-math>
+                           <span class="formula">
+                              <span class="link">View Source</span>
+                              <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                              <span class="tex tex2jax_ignore" style="display:none;">\begin{equation*} \mathcal {R}_{2} = \{\boldsymbol {\theta }|\boldsymbol {J}_{i}=\boldsymbol {J}_{j}\},\tag{9}\end{equation*}</span>
+                           </span>
+                        </disp-formula>
+                     </p>
+                  </li>
+                  <li>
+                     <p>
+                        Elimination singularity:
+                        <disp-formula id="deqn10" class="display-formula">
+                           <tex-math notation="LaTeX">\begin{equation*} \mathcal {R}_{3} = \{\boldsymbol {\theta }|w_{i}=0\}.\tag{10}\end{equation*}</tex-math>
+                           <span class="formula">
+                              <span class="link">View Source</span>
+                              <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                              <span class="tex tex2jax_ignore" style="display:none;">\begin{equation*} \mathcal {R}_{3} = \{\boldsymbol {\theta }|w_{i}=0\}.\tag{10}\end{equation*}</span>
+                           </span>
+                        </disp-formula>
+                     </p>
+                  </li>
+               </ol>
+            </p>
+            <p>
+               Now we aim to obtain the explicit expression of FIM. For the Gaussian input case, the covariation matrix
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\boldsymbol {\Sigma }$</tex-math>
+               </inline-formula>
+               plays a center role and the value of
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\boldsymbol {\mu }$</tex-math>
+               </inline-formula>
+               does not essentially influence on the analytical process, without loss of generality,
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\boldsymbol {\mu }$</tex-math>
+               </inline-formula>
+               is adopted as
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\boldsymbol {0}$</tex-math>
+               </inline-formula>
+               in this paper.
+            </p>
+            <p>
+               Before we give the analytical form of FIM, we firstly obtain the explicit expressions of
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\left \langle{ \dfrac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}}\dfrac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{j})}{\partial \boldsymbol {J}_{j}^{T}}}\right \rangle $</tex-math>
+               </inline-formula>
+               ,
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\left \langle{ \dfrac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}}\phi (\boldsymbol {x},\boldsymbol {J}_{j})}\right \rangle $</tex-math>
+               </inline-formula>
+               , and
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\left \langle{ \phi (\boldsymbol {x},\boldsymbol {J}_{i})\phi (\boldsymbol {x},\boldsymbol {J}_{j})}\right \rangle $</tex-math>
+               </inline-formula>
+               , which play key role in obtaining the analytical form of FIM. For simplicity, we note:
+               <disp-formula id="deqn11-deqn13" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{align*} \boldsymbol {Q}_{1}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\left \langle{ \frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}}\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{j})}{\partial \boldsymbol {J}_{j}^{T}}}\right \rangle. \tag{11}\\ \boldsymbol {Q}_{2}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\left \langle{ \frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}}\phi (\boldsymbol {x},\boldsymbol {J}_{j})}\right \rangle. \tag{12}\\ Q_{3}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\left \langle{ \phi (\boldsymbol {x},\boldsymbol {J}_{i})\phi (\boldsymbol {x},\boldsymbol {J}_{j})}\right \rangle.\tag{13}\end{align*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {Q}_{1}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\left \langle{ \frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}}\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{j})}{\partial \boldsymbol {J}_{j}^{T}}}\right \rangle. \tag{11}\\ \boldsymbol {Q}_{2}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\left \langle{ \frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}}\phi (\boldsymbol {x},\boldsymbol {J}_{j})}\right \rangle. \tag{12}\\ Q_{3}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\left \langle{ \phi (\boldsymbol {x},\boldsymbol {J}_{i})\phi (\boldsymbol {x},\boldsymbol {J}_{j})}\right \rangle.\tag{13}\end{align*}</span>
+                  </span>
+               </disp-formula>
+            </p>
+            <p>
+               Then in
+               <a ref-type="lemma" anchor="lemma1" class="fulltext-link">Lemma 1</a>
+               , we give the explicit expressions of
+               <a ref-type="disp-formula" anchor="deqn11-deqn13" href="#deqn11-deqn13" class="fulltext-link">Eqs. (11)–(13)</a>
+               .
+            </p>
+            <p>
+               <div class="section_2" id="lemma1">
+                  <h4>Lemma 1:</h4>
+                  <p>
+                     The explicit expressions of
+                     <inline-formula id="">
+                        <tex-math notation="LaTeX">$\boldsymbol {Q}_{1}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})$</tex-math>
+                     </inline-formula>
+                     ,
+                     <inline-formula id="">
+                        <tex-math notation="LaTeX">$\boldsymbol {Q}_{2}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})$</tex-math>
+                     </inline-formula>
+                     and
+                     <inline-formula id="">
+                        <tex-math notation="LaTeX">$Q_{3}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})$</tex-math>
+                     </inline-formula>
+                     are given as follows:
+                     <disp-formula id="deqn14-deqn16" class="display-formula">
+                        <tex-math notation="LaTeX">\begin{align*} \boldsymbol {Q}_{1}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\frac {2}{\pi }|\boldsymbol {\Sigma }|^{-\frac {1}{2}}|\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})|^{\frac {1}{2}}\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j}), \tag{14}\\ \boldsymbol {Q}_{2}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\frac {2}{\pi }|\boldsymbol {\Sigma }|^{-\frac {1}{2}}|\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})|^{\frac {1}{2}}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j}, \tag{15}\\ Q_{3}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\frac {2}{\pi }\arcsin \frac {\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}{\sqrt {1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}\sqrt {1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}},\tag{16}\end{align*}</tex-math>
+                        <span class="formula">
+                           <span class="link">View Source</span>
+                           <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                           <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {Q}_{1}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\frac {2}{\pi }|\boldsymbol {\Sigma }|^{-\frac {1}{2}}|\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})|^{\frac {1}{2}}\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j}), \tag{14}\\ \boldsymbol {Q}_{2}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\frac {2}{\pi }|\boldsymbol {\Sigma }|^{-\frac {1}{2}}|\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})|^{\frac {1}{2}}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j}, \tag{15}\\ Q_{3}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\frac {2}{\pi }\arcsin \frac {\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}{\sqrt {1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}\sqrt {1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}},\tag{16}\end{align*}</span>
+                        </span>
+                     </disp-formula>
+                     where:
+                     <disp-formula id="deqn17-deqn20" class="display-formula">
+                        <tex-math notation="LaTeX">\begin{align*} \boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;(\boldsymbol {\Sigma }^{-1}+\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}+\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T})^{-1} =\boldsymbol {\Sigma }\\&amp;-\boldsymbol {\Sigma }\left ({\frac {(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}+(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T}}{(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})-(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}}\right. \\&amp;\left.{-\frac {\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}(\boldsymbol {J}_{i}\boldsymbol {J}_{j}^{T}+\boldsymbol {J}_{j}\boldsymbol {J}_{i}^{T})}{(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})-(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}}\right)\boldsymbol {\Sigma }, \\{}\tag{17}\\ |\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j}|=&amp;\frac {|\boldsymbol {\Sigma }|}{(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})-(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}, \tag{18}\\ \boldsymbol {B}(\boldsymbol {J}_{i})=&amp;\boldsymbol {\Sigma }^{-1}+\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}, \tag{19}\\ \boldsymbol {B}(\boldsymbol {J}_{i})^{-1}=&amp;\left ({\boldsymbol {\Sigma }^{-1}+\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}}\right)^{-1}=\boldsymbol {\Sigma }-\frac {\boldsymbol {\Sigma }\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }}{1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}.\tag{20}\end{align*}</tex-math>
+                        <span class="formula">
+                           <span class="link">View Source</span>
+                           <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                           <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;(\boldsymbol {\Sigma }^{-1}+\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}+\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T})^{-1} =\boldsymbol {\Sigma }\\&amp;-\boldsymbol {\Sigma }\left ({\frac {(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}+(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T}}{(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})-(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}}\right. \\&amp;\left.{-\frac {\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}(\boldsymbol {J}_{i}\boldsymbol {J}_{j}^{T}+\boldsymbol {J}_{j}\boldsymbol {J}_{i}^{T})}{(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})-(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}}\right)\boldsymbol {\Sigma }, \\{}\tag{17}\\ |\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j}|=&amp;\frac {|\boldsymbol {\Sigma }|}{(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})-(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}, \tag{18}\\ \boldsymbol {B}(\boldsymbol {J}_{i})=&amp;\boldsymbol {\Sigma }^{-1}+\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}, \tag{19}\\ \boldsymbol {B}(\boldsymbol {J}_{i})^{-1}=&amp;\left ({\boldsymbol {\Sigma }^{-1}+\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}}\right)^{-1}=\boldsymbol {\Sigma }-\frac {\boldsymbol {\Sigma }\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }}{1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}.\tag{20}\end{align*}</span>
+                        </span>
+                     </disp-formula>
+                  </p>
+                  <p>
+                     <div class="section_2" id="">
+                        <h4>Proof:</h4>
+                        <p>We present the calculation processing in Appendix.</p>
+                     </div>
+                  </p>
+               </div>
+            </p>
+            <p>
+               Now we can give the analytical form of FIM in
+               <a ref-type="theorem" anchor="theorem1" class="fulltext-link">Theorem 1</a>
+               .
+            </p>
+            <p>
+               <div class="section_2" id="theorem1">
+                  <h4>Theorem 1:</h4>
+                  <p>
+                     The analytical form of FIM
+                     <inline-formula id="">
+                        <tex-math notation="LaTeX">$\boldsymbol {F}(\boldsymbol {\theta })$</tex-math>
+                     </inline-formula>
+                     is given by:
+                     <disp-formula id="" class="display-formula">
+                        <tex-math notation="LaTeX">\begin{align*} \boldsymbol {F}(\boldsymbol {\theta })=\left \langle{ \frac {\partial f(\boldsymbol {x}, \boldsymbol {\theta })}{\partial \boldsymbol {\theta }}\frac {\partial f(\boldsymbol {x}, \boldsymbol {\theta })}{\partial \boldsymbol {\theta }^{T}}}\right \rangle =\begin{bmatrix} \boldsymbol {F}_{1}(\boldsymbol {\theta }) &amp;\quad \boldsymbol {F}_{2}(\boldsymbol {\theta })\\ \boldsymbol {F}_{3}(\boldsymbol {\theta }) &amp;\quad \boldsymbol {F}_{4}(\boldsymbol {\theta }) \end{bmatrix},\end{align*}</tex-math>
+                        <span class="formula">
+                           <span class="link">View Source</span>
+                           <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                           <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {F}(\boldsymbol {\theta })=\left \langle{ \frac {\partial f(\boldsymbol {x}, \boldsymbol {\theta })}{\partial \boldsymbol {\theta }}\frac {\partial f(\boldsymbol {x}, \boldsymbol {\theta })}{\partial \boldsymbol {\theta }^{T}}}\right \rangle =\begin{bmatrix} \boldsymbol {F}_{1}(\boldsymbol {\theta }) &amp;\quad \boldsymbol {F}_{2}(\boldsymbol {\theta })\\ \boldsymbol {F}_{3}(\boldsymbol {\theta }) &amp;\quad \boldsymbol {F}_{4}(\boldsymbol {\theta }) \end{bmatrix},\end{align*}</span>
+                        </span>
+                     </disp-formula>
+                     where:
+                     <disp-formula id="deqn21-deqn24" class="display-formula">
+                        <tex-math notation="LaTeX">\begin{align*} \boldsymbol {F}_{1}(\boldsymbol {\theta })=&amp;\begin{bmatrix} w_{1}^{2}\boldsymbol {Q}_{1}(\boldsymbol {J}_{1},\boldsymbol {J}_{1}) &amp;\quad \cdots &amp;\quad w_{1}w_{k}\boldsymbol {Q}_{1}(\boldsymbol {J}_{1},\boldsymbol {J}_{k})\\ w_{1}w_{2}\boldsymbol {Q}_{1}(\boldsymbol {J}_{1},\boldsymbol {J}_{2})^{T} &amp;\quad \cdots &amp; \quad w_{2}w_{k}\boldsymbol {Q}_{1}(\boldsymbol {J}_{2},\boldsymbol {J}_{k})\\ \vdots &amp;\quad \vdots &amp;\quad \vdots \\ w_{1}w_{k}\boldsymbol {Q}_{1}(\boldsymbol {J}_{1},\boldsymbol {J}_{k})^{T} &amp;\quad \cdots &amp; \quad w_{k}^{2}\boldsymbol {Q}_{1}(\boldsymbol {J}_{k},\boldsymbol {J}_{k}) \end{bmatrix}, \\{}\tag{21}\\ \boldsymbol {F}_{2}(\boldsymbol {\theta })=&amp;\begin{bmatrix} w_{1}\boldsymbol {Q}_{2}(\boldsymbol {J}_{1},\boldsymbol {J}_{1}) &amp;\quad \cdots &amp;\quad w_{1}\boldsymbol {Q}_{2}(\boldsymbol {J}_{1},\boldsymbol {J}_{k})\\ w_{2}\boldsymbol {Q}_{2}(\boldsymbol {J}_{1},\boldsymbol {J}_{2}) &amp;\quad \cdots &amp;\quad w_{2}\boldsymbol {Q}_{2}(\boldsymbol {J}_{2},\boldsymbol {J}_{k})\\ \vdots &amp;\quad \vdots &amp;\quad \vdots \\ w_{k}\boldsymbol {Q}_{2}(\boldsymbol {J}_{1},\boldsymbol {J}_{k}) &amp;\quad \cdots &amp;\quad w_{k}\boldsymbol {Q}_{2}(\boldsymbol {J}_{k},\boldsymbol {J}_{k}) \end{bmatrix}, \tag{22}\\ \boldsymbol {F}_{3}(\boldsymbol {\theta })=&amp;\boldsymbol {F}_{2}(\boldsymbol {\theta })^{T}, \tag{23}\\ \boldsymbol {F}_{4}(\boldsymbol {\theta })=&amp;\begin{bmatrix} {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{1}) &amp;\quad {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{2}) &amp;\quad \cdots &amp;\quad {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{k})\\ {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{2}) &amp;\quad {Q}_{3}(\boldsymbol {J}_{2},\boldsymbol {J}_{2}) &amp;\quad \cdots &amp;\quad Q_{3}(\boldsymbol {J}_{2},\boldsymbol {J}_{k})\\ \vdots &amp;\quad \vdots &amp;\quad &amp;\quad \vdots \\ {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{k}) &amp;\quad {Q}_{3}(\boldsymbol {J}_{2},\boldsymbol {J}_{k}) &amp;\quad \cdots &amp;\quad {Q}_{3}(\boldsymbol {J}_{k},\boldsymbol {J}_{k}) \end{bmatrix}. \\{}\tag{24}\end{align*}</tex-math>
+                        <span class="formula">
+                           <span class="link">View Source</span>
+                           <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                           <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {F}_{1}(\boldsymbol {\theta })=&amp;\begin{bmatrix} w_{1}^{2}\boldsymbol {Q}_{1}(\boldsymbol {J}_{1},\boldsymbol {J}_{1}) &amp;\quad \cdots &amp;\quad w_{1}w_{k}\boldsymbol {Q}_{1}(\boldsymbol {J}_{1},\boldsymbol {J}_{k})\\ w_{1}w_{2}\boldsymbol {Q}_{1}(\boldsymbol {J}_{1},\boldsymbol {J}_{2})^{T} &amp;\quad \cdots &amp; \quad w_{2}w_{k}\boldsymbol {Q}_{1}(\boldsymbol {J}_{2},\boldsymbol {J}_{k})\\ \vdots &amp;\quad \vdots &amp;\quad \vdots \\ w_{1}w_{k}\boldsymbol {Q}_{1}(\boldsymbol {J}_{1},\boldsymbol {J}_{k})^{T} &amp;\quad \cdots &amp; \quad w_{k}^{2}\boldsymbol {Q}_{1}(\boldsymbol {J}_{k},\boldsymbol {J}_{k}) \end{bmatrix}, \\{}\tag{21}\\ \boldsymbol {F}_{2}(\boldsymbol {\theta })=&amp;\begin{bmatrix} w_{1}\boldsymbol {Q}_{2}(\boldsymbol {J}_{1},\boldsymbol {J}_{1}) &amp;\quad \cdots &amp;\quad w_{1}\boldsymbol {Q}_{2}(\boldsymbol {J}_{1},\boldsymbol {J}_{k})\\ w_{2}\boldsymbol {Q}_{2}(\boldsymbol {J}_{1},\boldsymbol {J}_{2}) &amp;\quad \cdots &amp;\quad w_{2}\boldsymbol {Q}_{2}(\boldsymbol {J}_{2},\boldsymbol {J}_{k})\\ \vdots &amp;\quad \vdots &amp;\quad \vdots \\ w_{k}\boldsymbol {Q}_{2}(\boldsymbol {J}_{1},\boldsymbol {J}_{k}) &amp;\quad \cdots &amp;\quad w_{k}\boldsymbol {Q}_{2}(\boldsymbol {J}_{k},\boldsymbol {J}_{k}) \end{bmatrix}, \tag{22}\\ \boldsymbol {F}_{3}(\boldsymbol {\theta })=&amp;\boldsymbol {F}_{2}(\boldsymbol {\theta })^{T}, \tag{23}\\ \boldsymbol {F}_{4}(\boldsymbol {\theta })=&amp;\begin{bmatrix} {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{1}) &amp;\quad {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{2}) &amp;\quad \cdots &amp;\quad {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{k})\\ {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{2}) &amp;\quad {Q}_{3}(\boldsymbol {J}_{2},\boldsymbol {J}_{2}) &amp;\quad \cdots &amp;\quad Q_{3}(\boldsymbol {J}_{2},\boldsymbol {J}_{k})\\ \vdots &amp;\quad \vdots &amp;\quad &amp;\quad \vdots \\ {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{k}) &amp;\quad {Q}_{3}(\boldsymbol {J}_{2},\boldsymbol {J}_{k}) &amp;\quad \cdots &amp;\quad {Q}_{3}(\boldsymbol {J}_{k},\boldsymbol {J}_{k}) \end{bmatrix}. \\{}\tag{24}\end{align*}</span>
+                        </span>
+                     </disp-formula>
+                  </p>
+                  <p>
+                     <div class="section_2" id="">
+                        <h4>Proof:</h4>
+                        <p>
+                           Firstly we define:
+                           <disp-formula id="deqn25-deqn26" class="display-formula">
+                              <tex-math notation="LaTeX">\begin{align*}&amp;\hspace {-1pc}\boldsymbol {F}_{1}(\boldsymbol {\theta }) \\=&amp;\begin{bmatrix} \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{1}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{1}^{T}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{1}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}^{T}}}\right \rangle \\[3.5mm] \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{2}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{1}^{T}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{2}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}^{T}}}\right \rangle \\ \vdots &amp;\quad \vdots &amp;\quad \vdots \\ \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{1}^{T}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}^{T}}}\right \rangle \\ \end{bmatrix}, \\{}\tag{25}\\&amp;\hspace {-1pc}\boldsymbol {F}_{2}(\boldsymbol {\theta }) \\=&amp;\begin{bmatrix} \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{1}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{1}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{1}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}}\right \rangle \\[3.5mm] \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{2}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{1}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{2}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}}\right \rangle \\ \vdots &amp;\quad \vdots &amp; \quad \vdots \\ \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{1}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}}\right \rangle \\ \end{bmatrix}, \\{}\tag{26}\end{align*}</tex-math>
+                              <span class="formula">
+                                 <span class="link">View Source</span>
+                                 <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                                 <span class="tex tex2jax_ignore" style="display:none;">\begin{align*}&amp;\hspace {-1pc}\boldsymbol {F}_{1}(\boldsymbol {\theta }) \\=&amp;\begin{bmatrix} \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{1}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{1}^{T}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{1}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}^{T}}}\right \rangle \\[3.5mm] \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{2}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{1}^{T}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{2}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}^{T}}}\right \rangle \\ \vdots &amp;\quad \vdots &amp;\quad \vdots \\ \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{1}^{T}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}^{T}}}\right \rangle \\ \end{bmatrix}, \\{}\tag{25}\\&amp;\hspace {-1pc}\boldsymbol {F}_{2}(\boldsymbol {\theta }) \\=&amp;\begin{bmatrix} \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{1}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{1}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{1}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}}\right \rangle \\[3.5mm] \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{2}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{1}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{2}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}}\right \rangle \\ \vdots &amp;\quad \vdots &amp; \quad \vdots \\ \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{1}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}}\right \rangle \\ \end{bmatrix}, \\{}\tag{26}\end{align*}</span>
+                              </span>
+                           </disp-formula>
+                           <disp-formula id="deqn27-deqn28" class="display-formula">
+                              <tex-math notation="LaTeX">\begin{align*}&amp;\hspace {-1pc}\boldsymbol {F}_{3}(\boldsymbol {\theta }) \\=&amp;\begin{bmatrix} \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{1}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{ \partial \boldsymbol {J}_{1}^{T}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{1}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}^{T}}}\right \rangle \\[3.5mm] \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{2}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{ \partial \boldsymbol {J}_{1}^{T}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{2}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}^{T}}}\right \rangle \\ \vdots &amp;\quad \vdots &amp;\quad \vdots \\ \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{ \partial \boldsymbol {J}_{1}^{T}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}^{T}}}\right \rangle \end{bmatrix}, \\{}\tag{27}\\&amp;\hspace {-1pc}\boldsymbol {F}_{4}(\boldsymbol {\theta }) \\=&amp;\begin{bmatrix} \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{1}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{ \partial w_{1}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{1}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}}\right \rangle \\[3mm] \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{2}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{ \partial w_{1}}}\right \rangle &amp;\quad \cdots &amp; \quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{2}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}}\right \rangle \\ \vdots &amp; \vdots &amp; \vdots \\ \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{ \partial w_{1}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}}\right \rangle \end{bmatrix}, \\{}\tag{28}\end{align*}</tex-math>
+                              <span class="formula">
+                                 <span class="link">View Source</span>
+                                 <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                                 <span class="tex tex2jax_ignore" style="display:none;">\begin{align*}&amp;\hspace {-1pc}\boldsymbol {F}_{3}(\boldsymbol {\theta }) \\=&amp;\begin{bmatrix} \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{1}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{ \partial \boldsymbol {J}_{1}^{T}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{1}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}^{T}}}\right \rangle \\[3.5mm] \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{2}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{ \partial \boldsymbol {J}_{1}^{T}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{2}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}^{T}}}\right \rangle \\ \vdots &amp;\quad \vdots &amp;\quad \vdots \\ \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{ \partial \boldsymbol {J}_{1}^{T}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial \boldsymbol {J}_{k}^{T}}}\right \rangle \end{bmatrix}, \\{}\tag{27}\\&amp;\hspace {-1pc}\boldsymbol {F}_{4}(\boldsymbol {\theta }) \\=&amp;\begin{bmatrix} \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{1}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{ \partial w_{1}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{1}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}}\right \rangle \\[3mm] \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{2}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{ \partial w_{1}}}\right \rangle &amp;\quad \cdots &amp; \quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{2}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}}\right \rangle \\ \vdots &amp; \vdots &amp; \vdots \\ \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{ \partial w_{1}}}\right \rangle &amp;\quad \cdots &amp;\quad \left \langle{ \dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}\dfrac {\partial f(\boldsymbol {x},\boldsymbol {\theta })}{\partial w_{k}}}\right \rangle \end{bmatrix}, \\{}\tag{28}\end{align*}</span>
+                              </span>
+                           </disp-formula>
+                        </p>
+                        <p>
+                           then from
+                           <a ref-type="disp-formula" anchor="deqn1" href="#deqn1" class="fulltext-link">Eq. (1)</a>
+                           and
+                           <a ref-type="disp-formula" anchor="deqn6" href="#deqn6" class="fulltext-link">Eq. (6)</a>
+                           , we have
+                           <disp-formula id="deqn29" class="display-formula">
+                              <tex-math notation="LaTeX">\begin{align*} \boldsymbol {F}(\boldsymbol {\theta })=\begin{bmatrix} \boldsymbol {F}_{1}(\boldsymbol {\theta }) &amp;\quad \boldsymbol {F}_{2}(\boldsymbol {\theta })\\ \boldsymbol {F}_{3}(\boldsymbol {\theta }) &amp;\quad \boldsymbol {F}_{4}(\boldsymbol {\theta }) \end{bmatrix}.\tag{29}\end{align*}</tex-math>
+                              <span class="formula">
+                                 <span class="link">View Source</span>
+                                 <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                                 <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {F}(\boldsymbol {\theta })=\begin{bmatrix} \boldsymbol {F}_{1}(\boldsymbol {\theta }) &amp;\quad \boldsymbol {F}_{2}(\boldsymbol {\theta })\\ \boldsymbol {F}_{3}(\boldsymbol {\theta }) &amp;\quad \boldsymbol {F}_{4}(\boldsymbol {\theta }) \end{bmatrix}.\tag{29}\end{align*}</span>
+                              </span>
+                           </disp-formula>
+                        </p>
+                        <p>
+                           For
+                           <a ref-type="disp-formula" anchor="deqn27-deqn28" href="#deqn27-deqn28" class="fulltext-link">Eqs. (25)–(28)</a>
+                           , by using the results in
+                           <a ref-type="lemma" anchor="lemma1" class="fulltext-link">Lemma 1</a>
+                           , we have:
+                           <disp-formula id="deqn30-deqn33" class="display-formula">
+                              <tex-math notation="LaTeX">\begin{align*} \boldsymbol {F}_{1}(\boldsymbol {\theta })=&amp;\begin{bmatrix} w_{1}^{2}\boldsymbol {Q}_{1}(\boldsymbol {J}_{1},\boldsymbol {J}_{1}) &amp;\quad \cdots &amp;\quad w_{1}w_{k}\boldsymbol {Q}_{1}(\boldsymbol {J}_{1},\boldsymbol {J}_{k})\\ w_{1}w_{2}\boldsymbol {Q}_{1}(\boldsymbol {J}_{1},\boldsymbol {J}_{2})^{T} &amp;\quad \cdots &amp;\quad w_{2}w_{k}\boldsymbol {Q}_{1}(\boldsymbol {J}_{2},\boldsymbol {J}_{k})\\ \vdots &amp;\quad \vdots &amp;\quad \vdots \\ w_{1}w_{k}\boldsymbol {Q}_{1}(\boldsymbol {J}_{1},\boldsymbol {J}_{k})^{T} &amp;\quad \cdots &amp;\quad w_{k}^{2}\boldsymbol {Q}_{1}(\boldsymbol {J}_{k},\boldsymbol {J}_{k}) \end{bmatrix}, \\{}\tag{30}\\ \boldsymbol {F}_{2}(\boldsymbol {\theta })=&amp;\begin{bmatrix} w_{1}\boldsymbol {Q}_{2}(\boldsymbol {J}_{1},\boldsymbol {J}_{1}) &amp;\quad \cdots &amp;\quad w_{1}\boldsymbol {Q}_{2}(\boldsymbol {J}_{1},\boldsymbol {J}_{k})\\ w_{2}\boldsymbol {Q}_{2}(\boldsymbol {J}_{1},\boldsymbol {J}_{2}) &amp;\quad \cdots &amp;\quad w_{2}\boldsymbol {Q}_{2}(\boldsymbol {J}_{2},\boldsymbol {J}_{k})\\ \vdots &amp;\quad \vdots &amp;\quad \vdots \\ w_{k}\boldsymbol {Q}_{2}(\boldsymbol {J}_{1},\boldsymbol {J}_{k}) &amp;\quad \cdots &amp;\quad w_{k}\boldsymbol {Q}_{2}(\boldsymbol {J}_{k},\boldsymbol {J}_{k}) \end{bmatrix}, \tag{31}\\ \boldsymbol {F}_{3}(\boldsymbol {\theta })=&amp;\boldsymbol {F}_{2}(\boldsymbol {\theta })^{T}, \tag{32}\\ \boldsymbol {F}_{4}(\boldsymbol {\theta })=&amp;\begin{bmatrix} {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{1}) &amp;\quad \cdots &amp;\quad {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{k})\\ {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{2}) &amp;\quad \cdots &amp;\quad Q_{3}(\boldsymbol {J}_{2},\boldsymbol {J}_{k})\\ \vdots &amp;\quad \vdots &amp;\quad &amp;\quad \vdots \\ {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{k}) &amp; \quad \cdots &amp;\quad {Q}_{3}(\boldsymbol {J}_{k},\boldsymbol {J}_{k}) \end{bmatrix}.\tag{33}\end{align*}</tex-math>
+                              <span class="formula">
+                                 <span class="link">View Source</span>
+                                 <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                                 <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {F}_{1}(\boldsymbol {\theta })=&amp;\begin{bmatrix} w_{1}^{2}\boldsymbol {Q}_{1}(\boldsymbol {J}_{1},\boldsymbol {J}_{1}) &amp;\quad \cdots &amp;\quad w_{1}w_{k}\boldsymbol {Q}_{1}(\boldsymbol {J}_{1},\boldsymbol {J}_{k})\\ w_{1}w_{2}\boldsymbol {Q}_{1}(\boldsymbol {J}_{1},\boldsymbol {J}_{2})^{T} &amp;\quad \cdots &amp;\quad w_{2}w_{k}\boldsymbol {Q}_{1}(\boldsymbol {J}_{2},\boldsymbol {J}_{k})\\ \vdots &amp;\quad \vdots &amp;\quad \vdots \\ w_{1}w_{k}\boldsymbol {Q}_{1}(\boldsymbol {J}_{1},\boldsymbol {J}_{k})^{T} &amp;\quad \cdots &amp;\quad w_{k}^{2}\boldsymbol {Q}_{1}(\boldsymbol {J}_{k},\boldsymbol {J}_{k}) \end{bmatrix}, \\{}\tag{30}\\ \boldsymbol {F}_{2}(\boldsymbol {\theta })=&amp;\begin{bmatrix} w_{1}\boldsymbol {Q}_{2}(\boldsymbol {J}_{1},\boldsymbol {J}_{1}) &amp;\quad \cdots &amp;\quad w_{1}\boldsymbol {Q}_{2}(\boldsymbol {J}_{1},\boldsymbol {J}_{k})\\ w_{2}\boldsymbol {Q}_{2}(\boldsymbol {J}_{1},\boldsymbol {J}_{2}) &amp;\quad \cdots &amp;\quad w_{2}\boldsymbol {Q}_{2}(\boldsymbol {J}_{2},\boldsymbol {J}_{k})\\ \vdots &amp;\quad \vdots &amp;\quad \vdots \\ w_{k}\boldsymbol {Q}_{2}(\boldsymbol {J}_{1},\boldsymbol {J}_{k}) &amp;\quad \cdots &amp;\quad w_{k}\boldsymbol {Q}_{2}(\boldsymbol {J}_{k},\boldsymbol {J}_{k}) \end{bmatrix}, \tag{31}\\ \boldsymbol {F}_{3}(\boldsymbol {\theta })=&amp;\boldsymbol {F}_{2}(\boldsymbol {\theta })^{T}, \tag{32}\\ \boldsymbol {F}_{4}(\boldsymbol {\theta })=&amp;\begin{bmatrix} {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{1}) &amp;\quad \cdots &amp;\quad {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{k})\\ {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{2}) &amp;\quad \cdots &amp;\quad Q_{3}(\boldsymbol {J}_{2},\boldsymbol {J}_{k})\\ \vdots &amp;\quad \vdots &amp;\quad &amp;\quad \vdots \\ {Q}_{3}(\boldsymbol {J}_{1},\boldsymbol {J}_{k}) &amp; \quad \cdots &amp;\quad {Q}_{3}(\boldsymbol {J}_{k},\boldsymbol {J}_{k}) \end{bmatrix}.\tag{33}\end{align*}</span>
+                              </span>
+                           </disp-formula>
+                        </p>
+                        <p>Till now, the analytical form of FIM has been obtained.</p>
+                     </div>
+                  </p>
+               </div>
+            </p>
+         </div>
+         <div class="section" id="sec4">
+            <div class="header article-hdr">
+               <div class="kicker">SECTION IV.</div>
+               <h2>Simulation Experiments</h2>
+            </div>
+            <p>
+               In this section, we take three experiments to illustrate the validity and importance of the obtained results. From
+               <a ref-type="disp-formula" anchor="deqn21-deqn24" href="#deqn21-deqn24" class="fulltext-link">Eq. (21)</a>
+               , we can see that we only need to know the student parameters to obtain the FIM during training process. Thus the type of teacher model does not play a significant role. For convenience and without loss of generality, we investigate the case that the teacher model also has the form of MLPs, i.e.
+               <a ref-type="disp-formula" anchor="deqn2" href="#deqn2" class="fulltext-link">Eq. (2)</a>
+               can be rewritten as:
+               <disp-formula id="deqn34" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{equation*} y=f_{0}(\boldsymbol {x})=f(\boldsymbol {x},\boldsymbol {\theta }_{0})+\varepsilon =\sum \limits _{i=1}^{M}v_{i}\phi (\boldsymbol {x},\boldsymbol {t}_{i})+\varepsilon,\tag{34}\end{equation*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{equation*} y=f_{0}(\boldsymbol {x})=f(\boldsymbol {x},\boldsymbol {\theta }_{0})+\varepsilon =\sum \limits _{i=1}^{M}v_{i}\phi (\boldsymbol {x},\boldsymbol {t}_{i})+\varepsilon,\tag{34}\end{equation*}</span>
+                  </span>
+               </disp-formula>
+               where
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$M$</tex-math>
+               </inline-formula>
+               is the hidden unit number.
+            </p>
+            <p>
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\boldsymbol {\theta _{0}}=\{\boldsymbol {t}_{1},\cdots,\boldsymbol {t}_{M},v_{1},\cdots,v_{M}\}$</tex-math>
+               </inline-formula>
+               represents all the teacher parameters. As can be noticed, this assumption is based on the universal approximation ability and is reasonable.
+            </p>
+            <p>
+               Now we introduce three indexes which are very important to show the experiment results:
+               <ol>
+                  <li>
+                     <p>inverse condition value of FIM</p>
+                     <p>This index is used to judge whether the FIM is singular. When the matrix is nearly singular, the condition value will become very large, i.e. the inverse of condition value will become near 0;</p>
+                  </li>
+                  <li>
+                     <p>
+                        <inline-formula id="">
+                           <tex-math notation="LaTeX">$h_{1}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=\frac {1}{2}\|\boldsymbol {J}_{i}-\boldsymbol {J}_{j}\|^{2}$</tex-math>
+                        </inline-formula>
+                     </p>
+                     <p>
+                        This index is used to judge whether two hidden units
+                        <inline-formula id="">
+                           <tex-math notation="LaTeX">$\boldsymbol {J}_{i}$</tex-math>
+                        </inline-formula>
+                        and
+                        <inline-formula id="">
+                           <tex-math notation="LaTeX">$\boldsymbol {J}_{j}$</tex-math>
+                        </inline-formula>
+                        overlap. If MLPs has been affected by overlap singularity,
+                        <inline-formula id="">
+                           <tex-math notation="LaTeX">$\boldsymbol {J}_{i}=\boldsymbol {J}_{j}$</tex-math>
+                        </inline-formula>
+                        , then
+                        <inline-formula id="">
+                           <tex-math notation="LaTeX">$h_{1}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=0$</tex-math>
+                        </inline-formula>
+                        ;
+                     </p>
+                  </li>
+                  <li>
+                     <p>
+                        <inline-formula id="">
+                           <tex-math notation="LaTeX">$h_{2}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=\frac {1}{2}\|\boldsymbol {J}_{i}+\boldsymbol {J}_{j}\|^{2}$</tex-math>
+                        </inline-formula>
+                     </p>
+                     <p>
+                        This index is used to judge whether MLPs have been affected by opposite singularity. If MLPs has been affected by opposite singularity,
+                        <inline-formula id="">
+                           <tex-math notation="LaTeX">$\boldsymbol {J}_{i}=-\boldsymbol {J}_{j}$</tex-math>
+                        </inline-formula>
+                        , then
+                        <inline-formula id="">
+                           <tex-math notation="LaTeX">$h_{2}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=0$</tex-math>
+                        </inline-formula>
+                        .
+                     </p>
+                  </li>
+               </ol>
+            </p>
+            <p>
+               Then we will take two experiments to visually represent the learning dynamics of MLPs, which will verify the correctness of
+               <a ref-type="theorem" anchor="theorem1" class="fulltext-link">Theorem 1</a>
+               and illustrate the potential to design better algorithms based on the obtained analytical form of FIM. For given teacher parameters, by choosing the initial student parameters, we use gradient descent method to accomplish the training processes. In the following figures of experiment results, ’
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\circ $</tex-math>
+               </inline-formula>
+               ’ and ’
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\times $</tex-math>
+               </inline-formula>
+               ’ represent the initial state and final state, respectively.
+            </p>
+            <div class="section_2" id="sec4a">
+               <h3>A. Learning Trajectories in Error Function Based MLPs</h3>
+               <p>
+                  This experiment is taken to verify the correctness of the obtained analytical form of FIM, i.e. on the singularity, the FIM is singular and otherwise the FIM is regular. We choose the teacher and student model to both have 6 hidden units, i.e.
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$M=6$</tex-math>
+                  </inline-formula>
+                  and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$k=6$</tex-math>
+                  </inline-formula>
+                  . The additional noise is
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$\varepsilon \sim N(0,0.05)$</tex-math>
+                  </inline-formula>
+                  and the covariance matrix of Gaussian input is
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$\begin{aligned} \boldsymbol {\Sigma }=\begin{bmatrix}0.8 &amp;\,\, 0.3\\ 0.3 &amp;\,\, 0.6\end{bmatrix} \end{aligned}$</tex-math>
+                  </inline-formula>
+                  . The learning rate is chosen as
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$\eta =0.002$</tex-math>
+                  </inline-formula>
+                  . Then we give the singular cases of learning dynamics which are affected by singularities and regular case, respectively.
+               </p>
+               <p>
+                  <i>Case 1 (Opposite Singularity):</i>
+                  the learning process is influenced by opposite singularity.
+               </p>
+               <p>
+                  In this case, the learning process is affected by opposite singularity. We choose the teacher parameters are:
+                  <disp-formula id="deqn35-deqn36" class="display-formula">
+                     <tex-math notation="LaTeX">\begin{align*} \boldsymbol {t}=&amp;\left [{\boldsymbol {t}_{1},~\boldsymbol {t}_{2},~\boldsymbol {t}_{3},\cdots,\boldsymbol {t}_{6}}\right] \\=&amp;\left [{ \begin{matrix} -1.5755 &amp;\quad -1.5637 &amp;\quad -0.5704 \\ 0.6475 &amp;\quad -1.8524 &amp;\quad 0.1433 \end{matrix}}\right. \\&amp;\qquad \qquad \qquad \left.{\begin{matrix} -0.1654 &amp;\quad 0.6669 &amp;\quad 1.8897\\ -0.6730 &amp;\quad 1.9557 &amp;\quad 1.0012 \end{matrix}}\right],\qquad \tag{35}\\ \boldsymbol {v}=&amp;[v_{1}, v_{2}, v_{3}, \cdots, v_{6}] \\=&amp;[1.3678,~1.3952,~0.3849, \\&amp;\qquad \qquad \qquad \,\,-0.8077,~1.3364,\,\,-1.0324].\tag{36}\end{align*}</tex-math>
+                     <span class="formula">
+                        <span class="link">View Source</span>
+                        <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                        <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {t}=&amp;\left [{\boldsymbol {t}_{1},~\boldsymbol {t}_{2},~\boldsymbol {t}_{3},\cdots,\boldsymbol {t}_{6}}\right] \\=&amp;\left [{ \begin{matrix} -1.5755 &amp;\quad -1.5637 &amp;\quad -0.5704 \\ 0.6475 &amp;\quad -1.8524 &amp;\quad 0.1433 \end{matrix}}\right. \\&amp;\qquad \qquad \qquad \left.{\begin{matrix} -0.1654 &amp;\quad 0.6669 &amp;\quad 1.8897\\ -0.6730 &amp;\quad 1.9557 &amp;\quad 1.0012 \end{matrix}}\right],\qquad \tag{35}\\ \boldsymbol {v}=&amp;[v_{1}, v_{2}, v_{3}, \cdots, v_{6}] \\=&amp;[1.3678,~1.3952,~0.3849, \\&amp;\qquad \qquad \qquad \,\,-0.8077,~1.3364,\,\,-1.0324].\tag{36}\end{align*}</span>
+                     </span>
+                  </disp-formula>
+               </p>
+               <p>
+                  The initial student parameters are:
+                  <disp-formula id="deqn37-deqn38" class="display-formula">
+                     <tex-math notation="LaTeX">\begin{align*} \boldsymbol {J}^{(0)}=&amp;\left [{\boldsymbol {J}_{1}^{(0)},~\boldsymbol {J}_{2}^{(0)},~\boldsymbol {J}_{3}^{(0)},\cdots,\boldsymbol {J}_{6}^{(0)}}\right] \\=&amp;\left [{ \begin{matrix} -1.6520 &amp;\quad -1.1852 &amp;\quad -0.9653 \\ -1.6410 &amp;\quad -0.2991 &amp;\quad 1.9378 \end{matrix}}\right. \\&amp;\qquad \quad \left.{\begin{matrix} 1.9594 &amp;\quad -0.4168 &amp;\quad -0.0718\\ -1.4052 &amp;\quad 0.4970 &amp;\quad -1.4433 \end{matrix}}\right],\quad ~\tag{37}\\ \boldsymbol {w}^{(0)}=&amp;[w_{1}^{(0)}, w_{2}^{(0)}, w_{3}^{(0)}, w_{4}^{(0)}, w_{5}^{(0)}, w_{6}^{(0)}] \\=&amp;[1.4240,\,0.7876,\,1.2879,\,1.2908,\,1.8043,\,1.2281]. \\{}\tag{38}\end{align*}</tex-math>
+                     <span class="formula">
+                        <span class="link">View Source</span>
+                        <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                        <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {J}^{(0)}=&amp;\left [{\boldsymbol {J}_{1}^{(0)},~\boldsymbol {J}_{2}^{(0)},~\boldsymbol {J}_{3}^{(0)},\cdots,\boldsymbol {J}_{6}^{(0)}}\right] \\=&amp;\left [{ \begin{matrix} -1.6520 &amp;\quad -1.1852 &amp;\quad -0.9653 \\ -1.6410 &amp;\quad -0.2991 &amp;\quad 1.9378 \end{matrix}}\right. \\&amp;\qquad \quad \left.{\begin{matrix} 1.9594 &amp;\quad -0.4168 &amp;\quad -0.0718\\ -1.4052 &amp;\quad 0.4970 &amp;\quad -1.4433 \end{matrix}}\right],\quad ~\tag{37}\\ \boldsymbol {w}^{(0)}=&amp;[w_{1}^{(0)}, w_{2}^{(0)}, w_{3}^{(0)}, w_{4}^{(0)}, w_{5}^{(0)}, w_{6}^{(0)}] \\=&amp;[1.4240,\,0.7876,\,1.2879,\,1.2908,\,1.8043,\,1.2281]. \\{}\tag{38}\end{align*}</span>
+                     </span>
+                  </disp-formula>
+               </p>
+               <p>
+                  The final student parameters are:
+                  <disp-formula id="deqn39-deqn40" class="display-formula">
+                     <tex-math notation="LaTeX">\begin{align*} \boldsymbol {J}=&amp;\left [{\boldsymbol {J}_{1},~\boldsymbol {J}_{2},~\boldsymbol {J}_{3},\cdots,\boldsymbol {J}_{6}}\right] \\=&amp;\left [{ \begin{matrix} -1.7850 &amp;\quad -1.6606 &amp;\quad 0.3827 \\ -1.3509 &amp;\quad 0.6381 &amp;\quad 1.5688 \end{matrix}}\right. \\&amp;\qquad \qquad \left.{\begin{matrix} 0.8872 &amp;\quad -0.7958 &amp;\quad 0.7886\\ -1.4834 &amp;\quad 0.9384 &amp;\quad -0.9560 \end{matrix}}\right],\qquad \tag{39}\\ \boldsymbol {w}=&amp;[w_{1}, w_{2}, w_{3}, w_{4}, w_{5}, w_{6}] \\=&amp;[{2.0482,~1.2480,~1.4727,~0.4057,~1.7249,~0.9203 }]. \\{}\tag{40}\end{align*}</tex-math>
+                     <span class="formula">
+                        <span class="link">View Source</span>
+                        <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                        <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {J}=&amp;\left [{\boldsymbol {J}_{1},~\boldsymbol {J}_{2},~\boldsymbol {J}_{3},\cdots,\boldsymbol {J}_{6}}\right] \\=&amp;\left [{ \begin{matrix} -1.7850 &amp;\quad -1.6606 &amp;\quad 0.3827 \\ -1.3509 &amp;\quad 0.6381 &amp;\quad 1.5688 \end{matrix}}\right. \\&amp;\qquad \qquad \left.{\begin{matrix} 0.8872 &amp;\quad -0.7958 &amp;\quad 0.7886\\ -1.4834 &amp;\quad 0.9384 &amp;\quad -0.9560 \end{matrix}}\right],\qquad \tag{39}\\ \boldsymbol {w}=&amp;[w_{1}, w_{2}, w_{3}, w_{4}, w_{5}, w_{6}] \\=&amp;[{2.0482,~1.2480,~1.4727,~0.4057,~1.7249,~0.9203 }]. \\{}\tag{40}\end{align*}</span>
+                     </span>
+                  </disp-formula>
+               </p>
+               <p>
+                  The experiment results are shown in
+                  <a ref-type="fig" anchor="fig2" class="fulltext-link">Fig. 2</a>
+                  , which represent the trajectories of log scale of inverse condition number of FIM, training error, output weights
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$\boldsymbol {w}$</tex-math>
+                  </inline-formula>
+                  and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$h_{2}(5,6)$</tex-math>
+                  </inline-formula>
+                  , respectively.
+                  <div class="figure figure-full" id="fig2">
+                     <!--
+          Workaround for combined images.Eg.- 1000116 Fig. 5
+        -->
+                     <div class="img-wrap">
+                        <a href="/mediastore_new/IEEE/content/media/6287639/9668973/9973293/li2-3227427-large.gif" data-fig-id="fig2">
+                           <img src="/mediastore_new/IEEE/content/media/6287639/9668973/9973293/li2-3227427-small.gif" alt="FIGURE 2. - Case 1 (Opposite singularity) in error function based MLPs." />
+                           <div class="zoom" title="View Larger Image" />
+                        </a>
+                     </div>
+                     <div class="figcaption">
+                        <b class="title">FIGURE 2.</b>
+                        <fig>
+                           <p>Case 1 (Opposite singularity) in error function based MLPs.</p>
+                        </fig>
+                     </div>
+                     <p class="links">
+                        <a href="/document/9973293/all-figures" class="all">Show All</a>
+                     </p>
+                  </div>
+               </p>
+               <p>
+                  From
+                  <a ref-type="fig" anchor="fig2" class="fulltext-link">Fig. 2(d)</a>
+                  , it can be seen that
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$h_{2}(5,6)$</tex-math>
+                  </inline-formula>
+                  fast becomes nearly 0 when the training process has started. When the training finishes, as shown in
+                  <a ref-type="disp-formula" anchor="deqn39-deqn40" href="#deqn39-deqn40" class="fulltext-link">Eq. (39)</a>
+                  which is the final state of student parameters, hidden units
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$\boldsymbol {J}_{5}$</tex-math>
+                  </inline-formula>
+                  and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$\boldsymbol {J}_{6}$</tex-math>
+                  </inline-formula>
+                  are nearly opposite. The learning process is affected by opposite singularity. Meanwhile, as can be seen in
+                  <a ref-type="fig" anchor="fig2" class="fulltext-link">Fig. 2(a)</a>
+                  , the inverse condition value of FIM is smaller than
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$10E-15$</tex-math>
+                  </inline-formula>
+                  till the end of the training process, which implies FIM becomes nearly singular. This is in accordance with theoretical analysis.
+               </p>
+               <p>
+                  <i>Case 2 (Overlap Singularity):</i>
+                  the learning process is affected by the overlap singularity.
+               </p>
+               <p>
+                  For this case, two hidden units overlap during the learning process and the learning dynamics are trapped in the overlap singularity. We choose the teacher parameters are:
+                  <disp-formula id="deqn41-deqn42" class="display-formula">
+                     <tex-math notation="LaTeX">\begin{align*} \boldsymbol {t}=&amp;\left [{ \begin{matrix} 1.5735 &amp;\quad 1.4947 &amp;\quad -0.6714 \\ 0.4842 &amp;\quad -0.3383 &amp;\quad 0.4107 \end{matrix}}\right. \\&amp;\qquad \qquad \left.{\begin{matrix} -1.4781 &amp; -0.8529 &amp; 1.8804\\ -1.5900 &amp; 1.2991 &amp; -1.8494 \end{matrix}}\right],\quad \tag{41}\\ \boldsymbol {v}=&amp;[1.1691,~0.2711,\,\,-0.9127, \\&amp;\qquad \qquad \,\,-0.0828,\,\,-1.0184,\,\,-0.8792].\tag{42}\end{align*}</tex-math>
+                     <span class="formula">
+                        <span class="link">View Source</span>
+                        <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                        <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {t}=&amp;\left [{ \begin{matrix} 1.5735 &amp;\quad 1.4947 &amp;\quad -0.6714 \\ 0.4842 &amp;\quad -0.3383 &amp;\quad 0.4107 \end{matrix}}\right. \\&amp;\qquad \qquad \left.{\begin{matrix} -1.4781 &amp; -0.8529 &amp; 1.8804\\ -1.5900 &amp; 1.2991 &amp; -1.8494 \end{matrix}}\right],\quad \tag{41}\\ \boldsymbol {v}=&amp;[1.1691,~0.2711,\,\,-0.9127, \\&amp;\qquad \qquad \,\,-0.0828,\,\,-1.0184,\,\,-0.8792].\tag{42}\end{align*}</span>
+                     </span>
+                  </disp-formula>
+               </p>
+               <p>
+                  The initial student parameters are:
+                  <disp-formula id="deqn43-deqn44" class="display-formula">
+                     <tex-math notation="LaTeX">\begin{align*} \boldsymbol {J}^{(0)}=&amp;\left [{ \begin{matrix} -0.4005 &amp;\quad -0.7154 &amp;\quad 0.5955 \\ -1.9145 &amp;\quad -0.1857 &amp;\quad -0.8117 \end{matrix}}\right. \\&amp;\qquad \qquad \left.{\begin{matrix} 1.8786 &amp;\quad -1.7056 &amp;\quad 1.7659\\ 0.0666 &amp;\quad -1.4145 &amp;\quad -1.6531 \end{matrix}}\right],\qquad \tag{43}\\ \boldsymbol {w}^{(0)}=&amp;[-1.9906,~1.8752,~0.0548, \\&amp;\qquad \qquad \qquad ~1.4312,~1.3508,\,\,-0.8365].\tag{44}\end{align*}</tex-math>
+                     <span class="formula">
+                        <span class="link">View Source</span>
+                        <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                        <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {J}^{(0)}=&amp;\left [{ \begin{matrix} -0.4005 &amp;\quad -0.7154 &amp;\quad 0.5955 \\ -1.9145 &amp;\quad -0.1857 &amp;\quad -0.8117 \end{matrix}}\right. \\&amp;\qquad \qquad \left.{\begin{matrix} 1.8786 &amp;\quad -1.7056 &amp;\quad 1.7659\\ 0.0666 &amp;\quad -1.4145 &amp;\quad -1.6531 \end{matrix}}\right],\qquad \tag{43}\\ \boldsymbol {w}^{(0)}=&amp;[-1.9906,~1.8752,~0.0548, \\&amp;\qquad \qquad \qquad ~1.4312,~1.3508,\,\,-0.8365].\tag{44}\end{align*}</span>
+                     </span>
+                  </disp-formula>
+               </p>
+               <p>
+                  The final student parameters are:
+                  <disp-formula id="deqn45-deqn46" class="display-formula">
+                     <tex-math notation="LaTeX">\begin{align*} \boldsymbol {J}=&amp;\left [{ \begin{matrix} -1.2387 &amp;\quad 0.6071 &amp; \quad 0.7770 \\ -1.5856 &amp;\quad -0.4755 &amp;\quad -1.4142 \end{matrix}}\right. \\&amp;\qquad \qquad \left.{\begin{matrix} 1.6056 &amp;\quad -1.2290 &amp;\quad 1.9885\\ 0.2559 &amp;\quad -1.6032 &amp;\quad -1.9087 \end{matrix}}\right],\qquad \tag{45}\\ \boldsymbol {w}=&amp;[-1.5883,~1.2941,~0.5979, \\&amp;\qquad \qquad \qquad ~1.2793,~1.3623,\,\,-0.6943].\tag{46}\end{align*}</tex-math>
+                     <span class="formula">
+                        <span class="link">View Source</span>
+                        <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                        <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {J}=&amp;\left [{ \begin{matrix} -1.2387 &amp;\quad 0.6071 &amp; \quad 0.7770 \\ -1.5856 &amp;\quad -0.4755 &amp;\quad -1.4142 \end{matrix}}\right. \\&amp;\qquad \qquad \left.{\begin{matrix} 1.6056 &amp;\quad -1.2290 &amp;\quad 1.9885\\ 0.2559 &amp;\quad -1.6032 &amp;\quad -1.9087 \end{matrix}}\right],\qquad \tag{45}\\ \boldsymbol {w}=&amp;[-1.5883,~1.2941,~0.5979, \\&amp;\qquad \qquad \qquad ~1.2793,~1.3623,\,\,-0.6943].\tag{46}\end{align*}</span>
+                     </span>
+                  </disp-formula>
+               </p>
+               <p>
+                  The experiment results are shown in
+                  <a ref-type="fig" anchor="fig3" class="fulltext-link">Fig. 3</a>
+                  , which represent the trajectories of log scale of inverse condition number of FIM, training error, output weights
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$\boldsymbol {w}$</tex-math>
+                  </inline-formula>
+                  and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$h_{1}(1,5)$</tex-math>
+                  </inline-formula>
+                  , respectively.
+                  <div class="figure figure-full" id="fig3">
+                     <!--
+          Workaround for combined images.Eg.- 1000116 Fig. 5
+        -->
+                     <div class="img-wrap">
+                        <a href="/mediastore_new/IEEE/content/media/6287639/9668973/9973293/li3-3227427-large.gif" data-fig-id="fig3">
+                           <img src="/mediastore_new/IEEE/content/media/6287639/9668973/9973293/li3-3227427-small.gif" alt="FIGURE 3. - Case 2 (Overlap singularity) in error function based MLPs." />
+                           <div class="zoom" title="View Larger Image" />
+                        </a>
+                     </div>
+                     <div class="figcaption">
+                        <b class="title">FIGURE 3.</b>
+                        <fig>
+                           <p>Case 2 (Overlap singularity) in error function based MLPs.</p>
+                        </fig>
+                     </div>
+                     <p class="links">
+                        <a href="/document/9973293/all-figures" class="all">Show All</a>
+                     </p>
+                  </div>
+               </p>
+               <p>
+                  From
+                  <a ref-type="fig" anchor="fig3" class="fulltext-link">Fig. 3(d)</a>
+                  and the final states of student parameters, we can see that
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$\boldsymbol {J}_{1}$</tex-math>
+                  </inline-formula>
+                  and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$\boldsymbol {J}_{5}$</tex-math>
+                  </inline-formula>
+                  nearly overlap, which implies that the learning process is affected by overlap singularity. As also can be seen in
+                  <a ref-type="fig" anchor="fig3" class="fulltext-link">Fig. 3(a)</a>
+                  , the inverse condition value of FIM decrease fast to nearly 0 and is finally smaller than
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$10E-15$</tex-math>
+                  </inline-formula>
+                  , thus the FIM becomes nearly singular till the end when the learning process has been affected by overlap singularity.
+               </p>
+               <p>
+                  <div class="section_2" id="">
+                     <h4>Remark 1:</h4>
+                     <p>
+                        It can be seen that the log scale of the inverse of condition value obviously fluctuates at the end of the learning process (
+                        <a ref-type="fig" anchor="fig3" class="fulltext-link">Figure 3(a)</a>
+                        ). We think this is mainly because the value is too small (smaller than
+                        <inline-formula id="">
+                           <tex-math notation="LaTeX">$10E-15$</tex-math>
+                        </inline-formula>
+                        ), and even a slight change of the parameters would cause the obvious fluctuation of the condition number of the Fisher information matrix due to the limit to the degree of accuracy of computer.
+                     </p>
+                  </div>
+               </p>
+               <p>
+                  <i>Case 3 (Elimination Singularity):</i>
+                  the learning process is affected by the elimination singularity.
+               </p>
+               <p>
+                  For this case, one output weight crosses 0 during the learning process and a plateau phenomenon can be obviously observed. We choose the teacher parameters are:
+                  <disp-formula id="deqn47-deqn48" class="display-formula">
+                     <tex-math notation="LaTeX">\begin{align*} \boldsymbol {t}=&amp;\left [{ \begin{matrix} -1.1997 &amp;\quad -1.0310 &amp;\quad -0.1054 \\ -0.3513 &amp;\quad 0.5353 &amp;\quad 1.5588 \end{matrix}}\right. \\&amp;\qquad \qquad \qquad \left.{\begin{matrix} 1.2778 &amp;\quad 1.8295 &amp;\quad 1.9685\\ 1.9941 &amp;\quad 0.2635 &amp;\quad 0.9331 \end{matrix}}\right],\quad ~\tag{47}\\ \boldsymbol {v}=&amp;[-0.2133,~0.3684,\,\,-1.1383, \\&amp;\qquad \qquad \qquad -0.6795,~1.8381,~1.3734].\tag{48}\end{align*}</tex-math>
+                     <span class="formula">
+                        <span class="link">View Source</span>
+                        <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                        <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {t}=&amp;\left [{ \begin{matrix} -1.1997 &amp;\quad -1.0310 &amp;\quad -0.1054 \\ -0.3513 &amp;\quad 0.5353 &amp;\quad 1.5588 \end{matrix}}\right. \\&amp;\qquad \qquad \qquad \left.{\begin{matrix} 1.2778 &amp;\quad 1.8295 &amp;\quad 1.9685\\ 1.9941 &amp;\quad 0.2635 &amp;\quad 0.9331 \end{matrix}}\right],\quad ~\tag{47}\\ \boldsymbol {v}=&amp;[-0.2133,~0.3684,\,\,-1.1383, \\&amp;\qquad \qquad \qquad -0.6795,~1.8381,~1.3734].\tag{48}\end{align*}</span>
+                     </span>
+                  </disp-formula>
+               </p>
+               <p>
+                  The initial student parameters are:
+                  <disp-formula id="deqn49-deqn50" class="display-formula">
+                     <tex-math notation="LaTeX">\begin{align*} \boldsymbol {J}^{(0)}=&amp;\left [{ \begin{matrix} -0.9311 &amp;\quad -1.4760 &amp;\quad 1.5680 \\ 1.9021 &amp;\quad -0.6705 &amp;\quad -0.4289 \end{matrix}}\right. \\&amp;\qquad \quad \left.{\begin{matrix} -1.9608 &amp;\quad -0.5129 &amp;\quad 1.2863\\ 0.0666 &amp;\quad -1.4145 &amp;\quad -1.6531 \end{matrix}}\right],\qquad \tag{49}\\ \boldsymbol {w}^{(0)}=&amp;[-1.2450,~ 0.4280, -1.0404, \\&amp;\qquad \qquad \quad 0.2285, -0.3309, -0.9585].\tag{50}\end{align*}</tex-math>
+                     <span class="formula">
+                        <span class="link">View Source</span>
+                        <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                        <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {J}^{(0)}=&amp;\left [{ \begin{matrix} -0.9311 &amp;\quad -1.4760 &amp;\quad 1.5680 \\ 1.9021 &amp;\quad -0.6705 &amp;\quad -0.4289 \end{matrix}}\right. \\&amp;\qquad \quad \left.{\begin{matrix} -1.9608 &amp;\quad -0.5129 &amp;\quad 1.2863\\ 0.0666 &amp;\quad -1.4145 &amp;\quad -1.6531 \end{matrix}}\right],\qquad \tag{49}\\ \boldsymbol {w}^{(0)}=&amp;[-1.2450,~ 0.4280, -1.0404, \\&amp;\qquad \qquad \quad 0.2285, -0.3309, -0.9585].\tag{50}\end{align*}</span>
+                     </span>
+                  </disp-formula>
+               </p>
+               <p>
+                  The final student parameters are:
+                  <disp-formula id="deqn51-deqn52" class="display-formula">
+                     <tex-math notation="LaTeX">\begin{align*} \boldsymbol {J}=&amp;\left [{ \begin{matrix} -2.1202 &amp;\quad -1.7697 &amp;\quad 1.2750 \\ 0.9605 &amp;\quad -1.5986 &amp;\quad -0.6385 \end{matrix}}\right. \\&amp;\qquad \quad \left.{\begin{matrix} -1.5695 &amp;\quad -1.4591 &amp;\quad 0.0598\\ 2.2159 &amp;\quad 0.2291 &amp;\quad 1.6207 \end{matrix}}\right],\qquad \tag{51}\\ \boldsymbol {w}=&amp;[-1.1747,\,\,-1.9794,\,\,-0.2814, \\&amp;\qquad \qquad \quad 0.4621,\,\,-0.2280,\,\,-1.0043].\tag{52}\end{align*}</tex-math>
+                     <span class="formula">
+                        <span class="link">View Source</span>
+                        <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                        <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {J}=&amp;\left [{ \begin{matrix} -2.1202 &amp;\quad -1.7697 &amp;\quad 1.2750 \\ 0.9605 &amp;\quad -1.5986 &amp;\quad -0.6385 \end{matrix}}\right. \\&amp;\qquad \quad \left.{\begin{matrix} -1.5695 &amp;\quad -1.4591 &amp;\quad 0.0598\\ 2.2159 &amp;\quad 0.2291 &amp;\quad 1.6207 \end{matrix}}\right],\qquad \tag{51}\\ \boldsymbol {w}=&amp;[-1.1747,\,\,-1.9794,\,\,-0.2814, \\&amp;\qquad \qquad \quad 0.4621,\,\,-0.2280,\,\,-1.0043].\tag{52}\end{align*}</span>
+                     </span>
+                  </disp-formula>
+               </p>
+               <p>
+                  The experiment results are shown in
+                  <a ref-type="fig" anchor="fig4" class="fulltext-link">Fig. 4</a>
+                  , which represent the trajectories of inverse condition number of FIM, training error, and output weights
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$\boldsymbol {w}$</tex-math>
+                  </inline-formula>
+                  , respectively.
+                  <div class="figure figure-full" id="fig4">
+                     <!--
+          Workaround for combined images.Eg.- 1000116 Fig. 5
+        -->
+                     <div class="img-wrap">
+                        <a href="/mediastore_new/IEEE/content/media/6287639/9668973/9973293/li4-3227427-large.gif" data-fig-id="fig4">
+                           <img src="/mediastore_new/IEEE/content/media/6287639/9668973/9973293/li4-3227427-small.gif" alt="FIGURE 4. - Case 3 (Elimination singularity) in error function based MLPs." />
+                           <div class="zoom" title="View Larger Image" />
+                        </a>
+                     </div>
+                     <div class="figcaption">
+                        <b class="title">FIGURE 4.</b>
+                        <fig>
+                           <p>Case 3 (Elimination singularity) in error function based MLPs.</p>
+                        </fig>
+                     </div>
+                     <p class="links">
+                        <a href="/document/9973293/all-figures" class="all">Show All</a>
+                     </p>
+                  </div>
+               </p>
+               <p>
+                  From
+                  <a ref-type="fig" anchor="fig4" class="fulltext-link">Fig. 4(c)</a>
+                  , we can see that
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$w_{6}$</tex-math>
+                  </inline-formula>
+                  crosses 0 in the learning process and the learning process is affected by elimination singularity. During the stage
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$w_{6}$</tex-math>
+                  </inline-formula>
+                  crosses 0, the plateau phenomenon can be obviously observed in
+                  <a ref-type="fig" anchor="fig4" class="fulltext-link">Fig. 4(b)</a>
+                  , and FIM also degenerates at this stage (
+                  <a ref-type="fig" anchor="fig4" class="fulltext-link">Fig. 4(a)</a>
+                  ). Then the student parameters escape the influence of elimination singularity and finally converge to the global minimum which can be seen from the final state of student parameters
+                  <a ref-type="disp-formula" anchor="deqn51-deqn52" href="#deqn51-deqn52" class="fulltext-link">(51)–(52)</a>
+                  , meanwhile, the FIM also becomes regular in the late stage in
+                  <a ref-type="fig" anchor="fig4" class="fulltext-link">Fig. 4(a)</a>
+                  as the learning dynamics are not influenced by elimination singularity.
+               </p>
+               <p>
+                  <i>Case 4 (Fast Convergence):</i>
+                  the learning process does not suffer from the influence of singularities
+               </p>
+               <p>
+                  For this case, the learning dynamics are not influenced by any singularity and fast converge to the optimal value. we choose the teacher parameters are:
+                  <disp-formula id="deqn53-deqn54" class="display-formula">
+                     <tex-math notation="LaTeX">\begin{align*} \boldsymbol {t}=&amp;\left [{ \begin{matrix} -1.7244 &amp;\quad -1.9571 &amp;\quad -0.2937 \\ 0.6628 &amp;\quad -1.9488 &amp;\quad -0.6609 \end{matrix}}\right. \\&amp;\qquad \qquad \qquad \left.{\begin{matrix} -0.6621 &amp;\quad 0.5371 &amp;\quad 1.2059\\ 1.9513 &amp;\quad 1.6839 &amp;\quad 0.2742 \end{matrix}}\right],\qquad \tag{53}\\ \boldsymbol {v}=&amp;[1.6296,\,\,-1.2374,~1.7883, \\&amp;\qquad \qquad \qquad 1.7996,\,\,-0.5046,\,\,-1.0187].\tag{54}\end{align*}</tex-math>
+                     <span class="formula">
+                        <span class="link">View Source</span>
+                        <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                        <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {t}=&amp;\left [{ \begin{matrix} -1.7244 &amp;\quad -1.9571 &amp;\quad -0.2937 \\ 0.6628 &amp;\quad -1.9488 &amp;\quad -0.6609 \end{matrix}}\right. \\&amp;\qquad \qquad \qquad \left.{\begin{matrix} -0.6621 &amp;\quad 0.5371 &amp;\quad 1.2059\\ 1.9513 &amp;\quad 1.6839 &amp;\quad 0.2742 \end{matrix}}\right],\qquad \tag{53}\\ \boldsymbol {v}=&amp;[1.6296,\,\,-1.2374,~1.7883, \\&amp;\qquad \qquad \qquad 1.7996,\,\,-0.5046,\,\,-1.0187].\tag{54}\end{align*}</span>
+                     </span>
+                  </disp-formula>
+               </p>
+               <p>
+                  The initial student parameters are:
+                  <disp-formula id="deqn55-deqn56" class="display-formula">
+                     <tex-math notation="LaTeX">\begin{align*} \boldsymbol {J}^{(0)}=&amp;\left [{ \begin{matrix} -1.8579 &amp;\quad -0.5237 &amp;\quad -0.5872 \\ -1.2815 &amp;\quad -0.8620 &amp;\quad -1.8846 \end{matrix}}\right. \\&amp;\qquad \quad \left.{\begin{matrix} -1.3052 &amp;\quad 1.8091 &amp;\quad 0.7872\\ -0.0195 &amp;\quad -1.0615 &amp;\quad -1.0158 \end{matrix}}\right],\qquad \tag{55}\\ \boldsymbol {w}^{(0)}=&amp;[1.6435,~1.7157,~1.3399, \\&amp;\qquad \quad \qquad \quad -1.0196,~0.4613,~0.5325].\tag{56}\end{align*}</tex-math>
+                     <span class="formula">
+                        <span class="link">View Source</span>
+                        <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                        <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {J}^{(0)}=&amp;\left [{ \begin{matrix} -1.8579 &amp;\quad -0.5237 &amp;\quad -0.5872 \\ -1.2815 &amp;\quad -0.8620 &amp;\quad -1.8846 \end{matrix}}\right. \\&amp;\qquad \quad \left.{\begin{matrix} -1.3052 &amp;\quad 1.8091 &amp;\quad 0.7872\\ -0.0195 &amp;\quad -1.0615 &amp;\quad -1.0158 \end{matrix}}\right],\qquad \tag{55}\\ \boldsymbol {w}^{(0)}=&amp;[1.6435,~1.7157,~1.3399, \\&amp;\qquad \quad \qquad \quad -1.0196,~0.4613,~0.5325].\tag{56}\end{align*}</span>
+                     </span>
+                  </disp-formula>
+               </p>
+               <p>
+                  The final student parameters are:
+                  <disp-formula id="deqn57-deqn58" class="display-formula">
+                     <tex-math notation="LaTeX">\begin{align*} \boldsymbol {J}=&amp;\left [{ \begin{matrix} -1.6574 &amp;\quad -0.4919 &amp;\quad -0.7439 \\ 0.2770 &amp;\quad -0.5973 &amp;\quad -1.3315 \end{matrix}}\right. \\&amp;\qquad \quad \left.{\begin{matrix} -1.9050 &amp;\quad 1.6764 &amp;\quad 0.7410\\ -1.8704 &amp;\quad -0.8679 &amp;\quad -2.0478 \end{matrix}}\right],\qquad \tag{57}\\ \boldsymbol {w}=&amp;[1.3381,~2.0474,~0.4835, \\&amp;\qquad \qquad -1.2688,\,\,-0.7970,\,\,-1.5295].\tag{58}\end{align*}</tex-math>
+                     <span class="formula">
+                        <span class="link">View Source</span>
+                        <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                        <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {J}=&amp;\left [{ \begin{matrix} -1.6574 &amp;\quad -0.4919 &amp;\quad -0.7439 \\ 0.2770 &amp;\quad -0.5973 &amp;\quad -1.3315 \end{matrix}}\right. \\&amp;\qquad \quad \left.{\begin{matrix} -1.9050 &amp;\quad 1.6764 &amp;\quad 0.7410\\ -1.8704 &amp;\quad -0.8679 &amp;\quad -2.0478 \end{matrix}}\right],\qquad \tag{57}\\ \boldsymbol {w}=&amp;[1.3381,~2.0474,~0.4835, \\&amp;\qquad \qquad -1.2688,\,\,-0.7970,\,\,-1.5295].\tag{58}\end{align*}</span>
+                     </span>
+                  </disp-formula>
+               </p>
+               <p>
+                  The experiment results are shown in
+                  <a ref-type="fig" anchor="fig5" class="fulltext-link">Fig. 5</a>
+                  , which represent the trajectories of the inverse condition number of FIM, training error and output weights
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$\boldsymbol {w}$</tex-math>
+                  </inline-formula>
+                  , respectively.
+                  <div class="figure figure-full" id="fig5">
+                     <!--
+          Workaround for combined images.Eg.- 1000116 Fig. 5
+        -->
+                     <div class="img-wrap">
+                        <a href="/mediastore_new/IEEE/content/media/6287639/9668973/9973293/li5-3227427-large.gif" data-fig-id="fig5">
+                           <img src="/mediastore_new/IEEE/content/media/6287639/9668973/9973293/li5-3227427-small.gif" alt="FIGURE 5. - Case 4 (Fast convergence) in error function based MLPs." />
+                           <div class="zoom" title="View Larger Image" />
+                        </a>
+                     </div>
+                     <div class="figcaption">
+                        <b class="title">FIGURE 5.</b>
+                        <fig>
+                           <p>Case 4 (Fast convergence) in error function based MLPs.</p>
+                        </fig>
+                     </div>
+                     <p class="links">
+                        <a href="/document/9973293/all-figures" class="all">Show All</a>
+                     </p>
+                  </div>
+               </p>
+               <p>
+                  As can be seen from
+                  <a ref-type="fig" anchor="fig5" class="fulltext-link">Fig. 5(b)</a>
+                  and the final student parameters, the learning dynamics quickly converge to the global minimum and have not been affected by any singularity. The FIM also remains regular during the entire training process.
+               </p>
+               <p>
+                  In the above 4 cases, we have shown the learning dynamics belong to singular cases and regular case, respectively. We can see that the FIM degenerates when the learning dynamics are affected by singularities and remains regular in other cases, which verifies the correctness of the obtained results in
+                  <a ref-type="theorem" anchor="theorem1" class="fulltext-link">Theorem 1</a>
+                  .
+               </p>
+               <p>
+                  <div class="section_2" id="">
+                     <h4>Remark 2:</h4>
+                     <p>
+                        Compared with bipolar error function, hyperbolic tangent function
+                        <inline-formula id="">
+                           <tex-math notation="LaTeX">$tanh(x)=\dfrac {e^{x}-e^{-x}}{e^{x}+e^{-x}}$</tex-math>
+                        </inline-formula>
+                        is the most widely used bipolar activation function in MLPs. Although the theoretical results in
+                        <a ref-type="theorem" anchor="theorem1" class="fulltext-link">Theorem 1</a>
+                        are obtained based on bipolar error function, we take another experiment to illustrate that the results are also valid for hyperbolic tangent function based MLPs. The experiment set up is the same as in
+                        <a ref-type="sec" anchor="sec4a" class="fulltext-link">section 4.1</a>
+                        . We choose the teacher parameters and initial student parameters just the same in
+                        <a ref-type="sec" anchor="sec4a" class="fulltext-link">section 4.1</a>
+                        . The only difference is that hyperbolic tangent function is used to replace the bipolar error function as the activation function in the teacher and student models. The experiment results are basically the same with the results shown in
+                        <a ref-type="sec" anchor="sec4a" class="fulltext-link">section 4.1</a>
+                        . Thus the analytical form of the FIM based on bipolar error function can also be applied to the hyperbolic tangent function based MLPs.
+                     </p>
+                  </div>
+               </p>
+            </div>
+            <div class="section_2" id="sec4b">
+               <h3>B. FIM Based Natural Gradient Descent Algorithm</h3>
+               <p>
+                  As the natural gradient descent direction becomes the steepest descent direction, researchers proposed natural gradient method to overcome the influence of singularities, the parameter modification formula is shown as follow:
+                  <disp-formula id="deqn59" class="display-formula">
+                     <tex-math notation="LaTeX">\begin{equation*} \boldsymbol {\theta }_{t+1} = \boldsymbol {\theta }_{t} - \eta \boldsymbol {F}(\boldsymbol {\theta }_{t})^{-1}\frac {\partial l(y_{t},\boldsymbol {x}_{t},\boldsymbol {\theta }_{t})}{\partial \boldsymbol {\theta }_{t}},\tag{59}\end{equation*}</tex-math>
+                     <span class="formula">
+                        <span class="link">View Source</span>
+                        <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                        <span class="tex tex2jax_ignore" style="display:none;">\begin{equation*} \boldsymbol {\theta }_{t+1} = \boldsymbol {\theta }_{t} - \eta \boldsymbol {F}(\boldsymbol {\theta }_{t})^{-1}\frac {\partial l(y_{t},\boldsymbol {x}_{t},\boldsymbol {\theta }_{t})}{\partial \boldsymbol {\theta }_{t}},\tag{59}\end{equation*}</span>
+                     </span>
+                  </disp-formula>
+                  where
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$\eta $</tex-math>
+                  </inline-formula>
+                  is the learning rate and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$\boldsymbol {F}(\boldsymbol {\theta }_{t})$</tex-math>
+                  </inline-formula>
+                  is the FIM at iteration
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$t$</tex-math>
+                  </inline-formula>
+                  . Compared to standard gradient descent method, the natural gradient method adds the inverse FIM item to the modification of parameters.
+               </p>
+               <p>
+                  From
+                  <a ref-type="disp-formula" anchor="deqn59" href="#deqn59" class="fulltext-link">(59)</a>
+                  , we can see that computing the inverse FIM plays a key role in natural gradient descent method. Unfortunately, it is very hard to obtain the analytical form of inverse FIM and directly computing the inverse FIM also requires enormous computation cost. This limits the application of natural gradient descent method. Then researchers proposed adaptive natural gradient descent method, which used an iteration formula to approximate the inverse FIM instead of directly computing it. Although computing the inverse of large dimension matrix still faces many difficulties, the analytical form of FIM can help us to investigate better approximation formula of inverse FIM, which will lead to a significant improvement of adaptive natural gradient descent algorithms.
+               </p>
+               <p>
+                  In this experiment, we aim to present the performance of natural gradient method by directly computing the inverse FIM based on the obtained analytical form. We choose the teacher model and student model both have 2 hidden nodes and the input dimension is 1, i.e.
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$M=2$</tex-math>
+                  </inline-formula>
+                  ,
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$k=2$</tex-math>
+                  </inline-formula>
+                  and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$n=1$</tex-math>
+                  </inline-formula>
+                  . Then the experiment results will be shown by comparing natural gradient descent (NGD) algorithm with standard gradient descent (SGD) algorithm, where three singular cases, including opposite singularity case, overlap singularity case and elimination singularity case, are investigated. Due to the difficulty in calculating the inverse FIM and the precision limitation of the computer, we set the initial state of part of student parameters to be optimal value, and only the rest part of student parameters need to be modified.
+               </p>
+               <p>
+                  <i>Case 1 (Opposite Singularity):</i>
+                  For this case, we only modify the student parameter
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$J_{1}$</tex-math>
+                  </inline-formula>
+                  and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$J_{2}$</tex-math>
+                  </inline-formula>
+                  ,
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$w_{1}$</tex-math>
+                  </inline-formula>
+                  and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$w_{2}$</tex-math>
+                  </inline-formula>
+                  are fixed to be the optimal value and remains unchanged, i.e.
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$w_{1}=v_{1}$</tex-math>
+                  </inline-formula>
+                  and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$w_{2}=v_{2}$</tex-math>
+                  </inline-formula>
+                  . We choose the teacher parameters are:
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$t_{1}=-0.49$</tex-math>
+                  </inline-formula>
+                  ,
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$t_{2}=-1.00$</tex-math>
+                  </inline-formula>
+                  ,
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$v_{1}=0.95$</tex-math>
+                  </inline-formula>
+                  , and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$v_{2}=-0.25$</tex-math>
+                  </inline-formula>
+                  . The initial state of student parameters are:
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$J_{1}^{(0)}=0.98$</tex-math>
+                  </inline-formula>
+                  ,
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$J_{2}^{(0)}=-0.20$</tex-math>
+                  </inline-formula>
+                  . The MLP is trained 200 epochs using NGD algorithm and 500 epochs using SGD algorithm, respectively. The experiment results are shown in
+                  <a ref-type="fig" anchor="fig6" class="fulltext-link">Fig. 6</a>
+                  , which represent the trajectories of inverse condition number of FIM, training error, and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$h_{2}(1,2)$</tex-math>
+                  </inline-formula>
+                  , respectively.
+                  <div class="figure figure-full" id="fig6">
+                     <!--
+          Workaround for combined images.Eg.- 1000116 Fig. 5
+        -->
+                     <div class="img-wrap">
+                        <a href="/mediastore_new/IEEE/content/media/6287639/9668973/9973293/li6-3227427-large.gif" data-fig-id="fig6">
+                           <img src="/mediastore_new/IEEE/content/media/6287639/9668973/9973293/li6-3227427-small.gif" alt="FIGURE 6. - Case 1 (Opposite singularity) with NGD algorithm and SGD algorithm (The final state of student parameters using SGD algorithm are &#xA;$J_{1} = -0.2022 $&#xA; and &#xA;$J_{2} = 0.1917$&#xA;. The final state of student parameters of NGD algorithm are &#xA;$J_{1} = -0.4945$&#xA; and &#xA;$J_{2} = -1.0379$&#xA;.)" />
+                           <div class="zoom" title="View Larger Image" />
+                        </a>
+                     </div>
+                     <div class="figcaption">
+                        <b class="title">FIGURE 6.</b>
+                        <fig>
+                           <p>
+                              Case 1 (Opposite singularity) with NGD algorithm and SGD algorithm (The final state of student parameters using SGD algorithm are
+                              <inline-formula id="">
+                                 <tex-math notation="LaTeX">$J_{1} = -0.2022 $</tex-math>
+                              </inline-formula>
+                              and
+                              <inline-formula id="">
+                                 <tex-math notation="LaTeX">$J_{2} = 0.1917$</tex-math>
+                              </inline-formula>
+                              . The final state of student parameters of NGD algorithm are
+                              <inline-formula id="">
+                                 <tex-math notation="LaTeX">$J_{1} = -0.4945$</tex-math>
+                              </inline-formula>
+                              and
+                              <inline-formula id="">
+                                 <tex-math notation="LaTeX">$J_{2} = -1.0379$</tex-math>
+                              </inline-formula>
+                              .)
+                           </p>
+                        </fig>
+                     </div>
+                     <p class="links">
+                        <a href="/document/9973293/all-figures" class="all">Show All</a>
+                     </p>
+                  </div>
+               </p>
+               <p>
+                  <i>Case 2 (Overlap Singularity):</i>
+                  For this case,
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$w_{1}$</tex-math>
+                  </inline-formula>
+                  and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$w_{2}$</tex-math>
+                  </inline-formula>
+                  are set to be the optimal value and we only modify the student parameter
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$J_{1}$</tex-math>
+                  </inline-formula>
+                  and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$J_{2}$</tex-math>
+                  </inline-formula>
+                  . We choose the teacher parameters are:
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$t_{1}=0.45$</tex-math>
+                  </inline-formula>
+                  ,
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$t_{2}=1.38$</tex-math>
+                  </inline-formula>
+                  ,
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$v_{1}=-0.56$</tex-math>
+                  </inline-formula>
+                  , and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$v_{2}=0.37$</tex-math>
+                  </inline-formula>
+                  . The initial state of student parameters are:
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$J_{1}^{(0)}= -0.99$</tex-math>
+                  </inline-formula>
+                  ,
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$J_{2}^{(0)}=-0.21$</tex-math>
+                  </inline-formula>
+                  . The MLP is trained 200 epochs using NGD algorithm and 500 epochs using SGD algorithm, respectively. The experiment results are shown in Fig. 11, which represent the trajectories of inverse condition number of FIM, training error, and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$h_{1}(1,2)$</tex-math>
+                  </inline-formula>
+                  , respectively.
+               </p>
+               <p>
+                  <i>Case 3 (Elimination Singularity):</i>
+                  For this case,
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$J_{2}$</tex-math>
+                  </inline-formula>
+                  and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$w_{2}$</tex-math>
+                  </inline-formula>
+                  remain invariable in the training process, i.e.
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$J_{2}=t_{2}$</tex-math>
+                  </inline-formula>
+                  and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$w_{2}=v_{2}$</tex-math>
+                  </inline-formula>
+                  . Only the student parameters
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$J_{1}$</tex-math>
+                  </inline-formula>
+                  and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$w_{1}$</tex-math>
+                  </inline-formula>
+                  are needed to be modified. We choose the teacher parameters are:
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$t_{1}=0.40$</tex-math>
+                  </inline-formula>
+                  ,
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$t_{2}=0.89$</tex-math>
+                  </inline-formula>
+                  ,
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$v_{1}=-0.32$</tex-math>
+                  </inline-formula>
+                  , and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$v_{2}=-0.90$</tex-math>
+                  </inline-formula>
+                  . The initial state of student parameters are:
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$J_{1}^{(0)}= 0.21$</tex-math>
+                  </inline-formula>
+                  ,
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$w_{1}^{(0)}=0.20$</tex-math>
+                  </inline-formula>
+                  . The MLP is trained 300 epochs using NGD algorithm and 1000 epochs using SGD algorithm, respectively. The experiment results are shown in Fig. 11, which represent the trajectories of inverse condition number of FIM, training error, and
+                  <inline-formula id="">
+                     <tex-math notation="LaTeX">$w_{1}$</tex-math>
+                  </inline-formula>
+                  , respectively.
+               </p>
+               <p>
+                  For case 1 and case 2, as can be seen from
+                  <a ref-type="fig" anchor="fig6" class="fulltext-link">Fig. 6</a>
+                  –
+                  <a ref-type="fig" anchor="fig7" class="fulltext-link">Fig. 7</a>
+                  , when using SGD algorithm to train the MLPs, the student parameters are trapped in opposite singularity or overlap singularity till the end. In sharp contrast, when using NGD algorithm to train the MLPs, the learning dynamics can easily escape the influence of opposite singularity and overlap singularity and converge to the global minimum. For case 3, from
+                  <a ref-type="fig" anchor="fig8" class="fulltext-link">Fig. 8</a>
+                  , we can see that the learning process is affected by elimination singularity. A plateau phenomenon can be observed in
+                  <a ref-type="fig" anchor="fig8" class="fulltext-link">Fig. 8(b)</a>
+                  for SGD algorithm case and the natural gradient algorithm can significantly reduce the influence of elimination singularity.
+                  <div class="figure figure-full" id="fig7">
+                     <!--
+          Workaround for combined images.Eg.- 1000116 Fig. 5
+        -->
+                     <div class="img-wrap">
+                        <a href="/mediastore_new/IEEE/content/media/6287639/9668973/9973293/li7-3227427-large.gif" data-fig-id="fig7">
+                           <img src="/mediastore_new/IEEE/content/media/6287639/9668973/9973293/li7-3227427-small.gif" alt="FIGURE 7. - Case 2 (Overlap singularity) with NGD algorithm and SGD algorithm (The final state of student parameters using SGD algorithm are &#xA;$J_{1} =-0.6318$&#xA; and &#xA;$J_{2} = -0.6024$&#xA;. The final state of student parameters using NGD algorithm are &#xA;$J_{1} = 0.4436$&#xA; and &#xA;$J_{2} = 1.3913$&#xA;.)" />
+                           <div class="zoom" title="View Larger Image" />
+                        </a>
+                     </div>
+                     <div class="figcaption">
+                        <b class="title">FIGURE 7.</b>
+                        <fig>
+                           <p>
+                              Case 2 (Overlap singularity) with NGD algorithm and SGD algorithm (The final state of student parameters using SGD algorithm are
+                              <inline-formula id="">
+                                 <tex-math notation="LaTeX">$J_{1} =-0.6318$</tex-math>
+                              </inline-formula>
+                              and
+                              <inline-formula id="">
+                                 <tex-math notation="LaTeX">$J_{2} = -0.6024$</tex-math>
+                              </inline-formula>
+                              . The final state of student parameters using NGD algorithm are
+                              <inline-formula id="">
+                                 <tex-math notation="LaTeX">$J_{1} = 0.4436$</tex-math>
+                              </inline-formula>
+                              and
+                              <inline-formula id="">
+                                 <tex-math notation="LaTeX">$J_{2} = 1.3913$</tex-math>
+                              </inline-formula>
+                              .)
+                           </p>
+                        </fig>
+                     </div>
+                     <p class="links">
+                        <a href="/document/9973293/all-figures" class="all">Show All</a>
+                     </p>
+                  </div>
+                  <div class="figure figure-full" id="fig8">
+                     <!--
+          Workaround for combined images.Eg.- 1000116 Fig. 5
+        -->
+                     <div class="img-wrap">
+                        <a href="/mediastore_new/IEEE/content/media/6287639/9668973/9973293/li8-3227427-large.gif" data-fig-id="fig8">
+                           <img src="/mediastore_new/IEEE/content/media/6287639/9668973/9973293/li8-3227427-small.gif" alt="FIGURE 8. - Case 3 (Elimination singularity) with NGD algorithm and SGD algorithm (The final state of student parameters using SGD algorithm are &#xA;$J_{1} =0.3606$&#xA; and &#xA;$w_{1} = -0.3547$&#xA;. The final state of student parameters using NGD algorithm are &#xA;$J_{1} = 0.4255 $&#xA; and &#xA;$w_{1} = -0.3049$&#xA;.)" />
+                           <div class="zoom" title="View Larger Image" />
+                        </a>
+                     </div>
+                     <div class="figcaption">
+                        <b class="title">FIGURE 8.</b>
+                        <fig>
+                           <p>
+                              Case 3 (Elimination singularity) with NGD algorithm and SGD algorithm (The final state of student parameters using SGD algorithm are
+                              <inline-formula id="">
+                                 <tex-math notation="LaTeX">$J_{1} =0.3606$</tex-math>
+                              </inline-formula>
+                              and
+                              <inline-formula id="">
+                                 <tex-math notation="LaTeX">$w_{1} = -0.3547$</tex-math>
+                              </inline-formula>
+                              . The final state of student parameters using NGD algorithm are
+                              <inline-formula id="">
+                                 <tex-math notation="LaTeX">$J_{1} = 0.4255 $</tex-math>
+                              </inline-formula>
+                              and
+                              <inline-formula id="">
+                                 <tex-math notation="LaTeX">$w_{1} = -0.3049$</tex-math>
+                              </inline-formula>
+                              .)
+                           </p>
+                        </fig>
+                     </div>
+                     <p class="links">
+                        <a href="/document/9973293/all-figures" class="all">Show All</a>
+                     </p>
+                  </div>
+               </p>
+               <p>
+                  All the experiment results of above three cases have illustrated the efficiency of FIM based natural gradient method to overcome the influence of singularities. Since the analytical form of FIM have obtained in
+                  <a ref-type="theorem" anchor="theorem1" class="fulltext-link">Theorem 1</a>
+                  , it is important to derive better approximation formula of inverse FIM based on
+                  <a ref-type="theorem" anchor="theorem1" class="fulltext-link">Theorem 1</a>
+                  in the future, which will facilitate the application of natural gradient method to high-dimensional systems.
+               </p>
+            </div>
+         </div>
+         <div class="section" id="sec5">
+            <div class="header article-hdr">
+               <div class="kicker">SECTION V.</div>
+               <h2>Conclusion and Discussions</h2>
+            </div>
+            <p>Multilayer perceptrons have been widely used in many field, however the singularities existed in the parameter space often seriously influence the learning dynamics. As Fisher information matrix degenerates on the singularities, the FIM plays a significant role in investigating the singular learning dynamics. In this paper, for MLPs with general Gaussian input, by choosing the bipolar error function as the activation function, we obtain the analytical form of FIM. In the experiment part, we have verified the correctness of the analytical form, and finally showed the efficiency of FIM-based NGD algorithm in comparison with SGD algorithm. In the future, based on the obtained analytical form of FIM, we aim to derive better approximation formulas of inverse FIM that can be applied to high-dimensional systems.</p>
+         </div>
+         <div class="section" id="app1">
+            <h2 />
+            <h1>
+               Appendix The Analytical Form of
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$Q_{1}(J_{i},J_{j})$</tex-math>
+               </inline-formula>
+               ,
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$Q_{2}(J_{i},J_{j})$</tex-math>
+               </inline-formula>
+               AND
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$Q_{3}(J_{i},J_{j})$</tex-math>
+               </inline-formula>
+            </h1>
+            <p>
+               From
+               <a ref-type="disp-formula" anchor="deqn2" href="#deqn2" class="fulltext-link">Eq. (2)</a>
+               , we have
+               <disp-formula id="deqnA-1" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{equation*} y-f_{0}(\boldsymbol {x})=\varepsilon \sim \mathcal {N}(0,\sigma _{0}^{2}),\tag{A-1}\end{equation*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{equation*} y-f_{0}(\boldsymbol {x})=\varepsilon \sim \mathcal {N}(0,\sigma _{0}^{2}),\tag{A-1}\end{equation*}</span>
+                  </span>
+               </disp-formula>
+               then
+               <disp-formula id="deqnA-2" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{align*}&amp;\hspace {-.5pc}\frac {1}{\sqrt {2\pi }\sigma _{0}}\int _{-\infty }^{+\infty }\exp \left ({-\frac {(y-f_{0}(\boldsymbol {x}))^{2} }{2\sigma _{0}^{2}}}\right)\mathrm {d}y \\&amp;=\frac {1}{\sqrt {2\pi \sigma _{0}}}\int _{-\infty }^{+\infty }\exp \left({-\dfrac {\varepsilon ^{2}}{2\sigma _{0}^{2}}}\right)\mathrm {d}\varepsilon =1.\tag{A-2}\end{align*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{align*}&amp;\hspace {-.5pc}\frac {1}{\sqrt {2\pi }\sigma _{0}}\int _{-\infty }^{+\infty }\exp \left ({-\frac {(y-f_{0}(\boldsymbol {x}))^{2} }{2\sigma _{0}^{2}}}\right)\mathrm {d}y \\&amp;=\frac {1}{\sqrt {2\pi \sigma _{0}}}\int _{-\infty }^{+\infty }\exp \left({-\dfrac {\varepsilon ^{2}}{2\sigma _{0}^{2}}}\right)\mathrm {d}\varepsilon =1.\tag{A-2}\end{align*}</span>
+                  </span>
+               </disp-formula>
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\boldsymbol {Q}_{1}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})$</tex-math>
+               </inline-formula>
+               ,
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\boldsymbol {Q}_{2}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})$</tex-math>
+               </inline-formula>
+               and
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$Q_{3}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})$</tex-math>
+               </inline-formula>
+               can be rewritten as:
+               <disp-formula id="deqnA-3-deqnA-5" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{align*}&amp;\hspace {-2pc}\boldsymbol {Q}_{1}(\boldsymbol {J}_{i},\boldsymbol {J}_{j}) \\=&amp;\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\!\!\!\int _{-\infty }^{+\infty }\!\!\!\int _{-\infty }^{+\infty }\!\!\!\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}}\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{j})}{\partial \boldsymbol {J}_{j}^{T}} \\&amp;\times \,\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}}\right) \\&amp;\times \frac {1}{\sqrt {2\pi }}\exp \left ({-\frac {1}{2}(y-f_{0}(\boldsymbol {x}))^{2}}\right)\mathrm {d}y\mathrm {d}\boldsymbol {x} \\=&amp;\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}}\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{j})}{\partial \boldsymbol {J}_{j}^{T}} \\&amp;\times \,\exp \!\left ({\!-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}\!}\right)\!\!\mathrm {d}\boldsymbol {x}. \tag{A-3}\\ \boldsymbol {Q}_{2}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\int _{-\infty }^{+\infty }\phi (\boldsymbol {x},\boldsymbol {J}_{j}) \\&amp;\times \,\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}}\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}}\right) \\&amp;\times \,\frac {1}{\sqrt {2\pi }}\exp \left ({-\frac {1}{2}(y-f_{0}(\boldsymbol {x}))^{2}}\right)\mathrm {d}y\mathrm {d}\boldsymbol {x} \\=&amp;\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}} \\&amp;\times \,\phi (\boldsymbol {x},\boldsymbol {J}_{j})\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x}. \tag{A-4}\\ {Q}_{3}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\int _{-\infty }^{+\infty }\phi (\boldsymbol {x},\boldsymbol {J}_{i}) \\&amp;\times \,\phi (\boldsymbol {x},\boldsymbol {J}_{j})\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}}\right) \\&amp;\times \,\frac {1}{\sqrt {2\pi }}\exp \left ({-\frac {(y-f_{0}(\boldsymbol {x}))^{2}}{2}}\right)\mathrm {d}y\mathrm {d}\boldsymbol {x} \\=&amp;\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\phi (\boldsymbol {x},\boldsymbol {J}_{i}) \\&amp;\times \,\phi (\boldsymbol {x},\boldsymbol {J}_{j})\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x}.\tag{A-5}\end{align*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{align*}&amp;\hspace {-2pc}\boldsymbol {Q}_{1}(\boldsymbol {J}_{i},\boldsymbol {J}_{j}) \\=&amp;\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\!\!\!\int _{-\infty }^{+\infty }\!\!\!\int _{-\infty }^{+\infty }\!\!\!\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}}\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{j})}{\partial \boldsymbol {J}_{j}^{T}} \\&amp;\times \,\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}}\right) \\&amp;\times \frac {1}{\sqrt {2\pi }}\exp \left ({-\frac {1}{2}(y-f_{0}(\boldsymbol {x}))^{2}}\right)\mathrm {d}y\mathrm {d}\boldsymbol {x} \\=&amp;\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}}\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{j})}{\partial \boldsymbol {J}_{j}^{T}} \\&amp;\times \,\exp \!\left ({\!-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}\!}\right)\!\!\mathrm {d}\boldsymbol {x}. \tag{A-3}\\ \boldsymbol {Q}_{2}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\int _{-\infty }^{+\infty }\phi (\boldsymbol {x},\boldsymbol {J}_{j}) \\&amp;\times \,\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}}\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}}\right) \\&amp;\times \,\frac {1}{\sqrt {2\pi }}\exp \left ({-\frac {1}{2}(y-f_{0}(\boldsymbol {x}))^{2}}\right)\mathrm {d}y\mathrm {d}\boldsymbol {x} \\=&amp;\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}} \\&amp;\times \,\phi (\boldsymbol {x},\boldsymbol {J}_{j})\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x}. \tag{A-4}\\ {Q}_{3}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\int _{-\infty }^{+\infty }\phi (\boldsymbol {x},\boldsymbol {J}_{i}) \\&amp;\times \,\phi (\boldsymbol {x},\boldsymbol {J}_{j})\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}}\right) \\&amp;\times \,\frac {1}{\sqrt {2\pi }}\exp \left ({-\frac {(y-f_{0}(\boldsymbol {x}))^{2}}{2}}\right)\mathrm {d}y\mathrm {d}\boldsymbol {x} \\=&amp;\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\phi (\boldsymbol {x},\boldsymbol {J}_{i}) \\&amp;\times \,\phi (\boldsymbol {x},\boldsymbol {J}_{j})\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x}.\tag{A-5}\end{align*}</span>
+                  </span>
+               </disp-formula>
+            </p>
+            <p>
+               We denote
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})^{-1}=\boldsymbol {\Sigma }^{-1}+\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}+\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T} $</tex-math>
+               </inline-formula>
+               and
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$\boldsymbol {B}(\boldsymbol {J}_{i})=\boldsymbol {\Sigma }^{-1}+\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T} $</tex-math>
+               </inline-formula>
+               , then we can have:
+               <disp-formula id="deqnA-6" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{align*} \boldsymbol {Q}_{1}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}} \\&amp;\times \,\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{j})}{\partial \boldsymbol {J}_{j}^{T}} \exp \!\left ({\!-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}\!}\right)\!\mathrm {d}\boldsymbol {x} \\=&amp;{\frac {2}{\pi }}\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\!\!\!\int _{-\infty }^{+\infty }\!\!\!\boldsymbol {x}\boldsymbol {x}^{T}\exp \!\!\left ({\!\!-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {x}\!}\right)\! \\&amp;\times \,\exp \!\left ({\!-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T}\boldsymbol {x}\!}\right)\! \exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;{\frac {2}{\pi }}\!\left ({\!\sqrt {2\pi }\!}\right)\!^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\!\!\int _{-\infty }^{+\infty }\!\!\boldsymbol {x}\boldsymbol {x}^{T} \\&amp;\times \exp \!\!\left ({\!\!-\frac {1}{2}\boldsymbol {x}^{T}(\boldsymbol {\Sigma }^{-1}+\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}+\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T})\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;{\frac {2}{\pi }}\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\boldsymbol {x}\boldsymbol {x}^{T} \\&amp;\times \,\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})^{-1}\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;{\frac {2}{\pi }}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}|\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})|^{\frac {1}{2}}\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})|^{-\frac {1}{2}} \\&amp;\times \int _{-\infty }^{+\infty }\boldsymbol {x}\boldsymbol {x}^{T}\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})^{-1}\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;\frac {2}{\pi }|\boldsymbol {\Sigma }|^{-\frac {1}{2}}|\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})|^{\frac {1}{2}}\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j}), \tag{A-6}\end{align*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {Q}_{1}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}} \\&amp;\times \,\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{j})}{\partial \boldsymbol {J}_{j}^{T}} \exp \!\left ({\!-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}\!}\right)\!\mathrm {d}\boldsymbol {x} \\=&amp;{\frac {2}{\pi }}\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\!\!\!\int _{-\infty }^{+\infty }\!\!\!\boldsymbol {x}\boldsymbol {x}^{T}\exp \!\!\left ({\!\!-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {x}\!}\right)\! \\&amp;\times \,\exp \!\left ({\!-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T}\boldsymbol {x}\!}\right)\! \exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;{\frac {2}{\pi }}\!\left ({\!\sqrt {2\pi }\!}\right)\!^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\!\!\int _{-\infty }^{+\infty }\!\!\boldsymbol {x}\boldsymbol {x}^{T} \\&amp;\times \exp \!\!\left ({\!\!-\frac {1}{2}\boldsymbol {x}^{T}(\boldsymbol {\Sigma }^{-1}+\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}+\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T})\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;{\frac {2}{\pi }}\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\boldsymbol {x}\boldsymbol {x}^{T} \\&amp;\times \,\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})^{-1}\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;{\frac {2}{\pi }}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}|\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})|^{\frac {1}{2}}\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})|^{-\frac {1}{2}} \\&amp;\times \int _{-\infty }^{+\infty }\boldsymbol {x}\boldsymbol {x}^{T}\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})^{-1}\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;\frac {2}{\pi }|\boldsymbol {\Sigma }|^{-\frac {1}{2}}|\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})|^{\frac {1}{2}}\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j}), \tag{A-6}\end{align*}</span>
+                  </span>
+               </disp-formula>
+               <disp-formula id="deqnA-7" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{align*} Q_{2}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}} \\&amp;\times \,\phi (\boldsymbol {x},\boldsymbol {J}_{j})\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;\sqrt {\frac {2}{\pi }}\!\left ({\!\sqrt {2\pi }\!}\right)\!^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\!\!\!\!\int _{-\infty }^{+\infty }\!\!\!\!\boldsymbol {x}\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {x}}\right) \\&amp;\times \,\phi (\boldsymbol {x},\boldsymbol {J}_{j})\exp \!\left ({\!-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}\!}\right)\!\mathrm {d}\boldsymbol {x} \\=&amp;\sqrt {\frac {2}{\pi }}\!\left ({\!\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\boldsymbol {x}\phi (\boldsymbol {x},\boldsymbol {J}_{j}) \\&amp;\times \,\exp \!\left ({\!-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {B}(\boldsymbol {J}_{i})\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;\sqrt {\frac {2}{\pi }}\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1} \\&amp;\times \,\int _{-\infty }^{+\infty }\phi (\boldsymbol {x},\boldsymbol {J}_{j})\mathrm {d}\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {B}(\boldsymbol {J}_{i})\boldsymbol {x}}\right) \\=&amp;\sqrt {\frac {2}{\pi }}\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1} \\&amp;\times \phi (\boldsymbol {x},\boldsymbol {J}_{j})\exp \left ({\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {B}(\boldsymbol {J}_{i})\boldsymbol {x}}\right)\Big \vert _{-\infty }^{+\infty } \\&amp;+\,\frac {2}{\pi }\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j} \\&amp;\times \,\!\!\!\int _{-\infty }^{+\infty }\!\!\!\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T}\boldsymbol {x}}\right) \\&amp;\exp \,\left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {B}(\boldsymbol {J}_{i})\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;\frac {2}{\pi }\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j} \\&amp;\times \,\int _{-\infty }^{+\infty }\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}(\boldsymbol {B}(\boldsymbol {J}_{i})+\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T})\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;\frac {2}{\pi }|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j}\left ({\sqrt {2\pi }}\right)^{-n} \\&amp;\times \,\int _{-\infty }^{+\infty }\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})^{-1}\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;\frac {2}{\pi }|\boldsymbol {\Sigma }|^{-\frac {1}{2}}|\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})|^{\frac {1}{2}}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j},\tag{A-7}\end{align*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} Q_{2}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\frac {\partial \phi (\boldsymbol {x},\boldsymbol {J}_{i})}{\partial \boldsymbol {J}_{i}} \\&amp;\times \,\phi (\boldsymbol {x},\boldsymbol {J}_{j})\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;\sqrt {\frac {2}{\pi }}\!\left ({\!\sqrt {2\pi }\!}\right)\!^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\!\!\!\!\int _{-\infty }^{+\infty }\!\!\!\!\boldsymbol {x}\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {x}}\right) \\&amp;\times \,\phi (\boldsymbol {x},\boldsymbol {J}_{j})\exp \!\left ({\!-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {\Sigma }^{-1}\boldsymbol {x}\!}\right)\!\mathrm {d}\boldsymbol {x} \\=&amp;\sqrt {\frac {2}{\pi }}\!\left ({\!\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int _{-\infty }^{+\infty }\boldsymbol {x}\phi (\boldsymbol {x},\boldsymbol {J}_{j}) \\&amp;\times \,\exp \!\left ({\!-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {B}(\boldsymbol {J}_{i})\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;\sqrt {\frac {2}{\pi }}\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1} \\&amp;\times \,\int _{-\infty }^{+\infty }\phi (\boldsymbol {x},\boldsymbol {J}_{j})\mathrm {d}\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {B}(\boldsymbol {J}_{i})\boldsymbol {x}}\right) \\=&amp;\sqrt {\frac {2}{\pi }}\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1} \\&amp;\times \phi (\boldsymbol {x},\boldsymbol {J}_{j})\exp \left ({\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {B}(\boldsymbol {J}_{i})\boldsymbol {x}}\right)\Big \vert _{-\infty }^{+\infty } \\&amp;+\,\frac {2}{\pi }\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j} \\&amp;\times \,\!\!\!\int _{-\infty }^{+\infty }\!\!\!\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T}\boldsymbol {x}}\right) \\&amp;\exp \,\left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {B}(\boldsymbol {J}_{i})\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;\frac {2}{\pi }\left ({\sqrt {2\pi }}\right)^{-n}|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j} \\&amp;\times \,\int _{-\infty }^{+\infty }\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}(\boldsymbol {B}(\boldsymbol {J}_{i})+\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T})\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;\frac {2}{\pi }|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j}\left ({\sqrt {2\pi }}\right)^{-n} \\&amp;\times \,\int _{-\infty }^{+\infty }\exp \left ({-\frac {1}{2}\boldsymbol {x}^{T}\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})^{-1}\boldsymbol {x}}\right)\mathrm {d}\boldsymbol {x} \\=&amp;\frac {2}{\pi }|\boldsymbol {\Sigma }|^{-\frac {1}{2}}|\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})|^{\frac {1}{2}}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j},\tag{A-7}\end{align*}</span>
+                  </span>
+               </disp-formula>
+               where:
+               <disp-formula id="deqnA-8-deqnA-9" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{align*} \boldsymbol {B}(\boldsymbol {J}_{i})^{-1}=&amp;\left ({\boldsymbol {\Sigma }^{-1}+\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}}\right)^{-1} \\=&amp;\boldsymbol {\Sigma }-\frac {\boldsymbol {\Sigma }\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }}{1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}. \tag{A-8}\\ \boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\left ({\boldsymbol {B}(\boldsymbol {J}_{i})+\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T}}\right)^{-1} \\=&amp;\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}-\frac {\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}}{1+\boldsymbol {J}_{j}^{T}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j}} \\=&amp;\boldsymbol {\Sigma }-\frac {\boldsymbol {\Sigma }\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }}{1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}} \\&amp;-\,\frac {\left ({\boldsymbol {\Sigma }-\frac {\boldsymbol {\Sigma }\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }}{1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}}\right)\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T}\left ({\boldsymbol {\Sigma }-\frac {\boldsymbol {\Sigma }\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }}{1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}}\right)}{1+\boldsymbol {J}_{j}^{T}\left ({\boldsymbol {\Sigma }-\frac {\boldsymbol {\Sigma }\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }}{1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}}\right)\boldsymbol {J}_{j}} \\=&amp;(\boldsymbol {\Sigma }^{-1}+\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}+\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T})^{-1} =\boldsymbol {\Sigma }-\boldsymbol {\Sigma } \\&amp;\times \left ({\frac {(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}+(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T}}{(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})-(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}}\right. \\&amp;\left.{-\frac {\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}(\boldsymbol {J}_{i}\boldsymbol {J}_{j}^{T}+\boldsymbol {J}_{j}\boldsymbol {J}_{i}^{T})}{(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})-(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}}\right)\boldsymbol {\Sigma }. \\{}\tag{A-9}\end{align*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} \boldsymbol {B}(\boldsymbol {J}_{i})^{-1}=&amp;\left ({\boldsymbol {\Sigma }^{-1}+\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}}\right)^{-1} \\=&amp;\boldsymbol {\Sigma }-\frac {\boldsymbol {\Sigma }\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }}{1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}. \tag{A-8}\\ \boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\left ({\boldsymbol {B}(\boldsymbol {J}_{i})+\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T}}\right)^{-1} \\=&amp;\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}-\frac {\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}}{1+\boldsymbol {J}_{j}^{T}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j}} \\=&amp;\boldsymbol {\Sigma }-\frac {\boldsymbol {\Sigma }\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }}{1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}} \\&amp;-\,\frac {\left ({\boldsymbol {\Sigma }-\frac {\boldsymbol {\Sigma }\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }}{1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}}\right)\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T}\left ({\boldsymbol {\Sigma }-\frac {\boldsymbol {\Sigma }\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }}{1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}}\right)}{1+\boldsymbol {J}_{j}^{T}\left ({\boldsymbol {\Sigma }-\frac {\boldsymbol {\Sigma }\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }}{1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}}\right)\boldsymbol {J}_{j}} \\=&amp;(\boldsymbol {\Sigma }^{-1}+\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}+\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T})^{-1} =\boldsymbol {\Sigma }-\boldsymbol {\Sigma } \\&amp;\times \left ({\frac {(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}+(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T}}{(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})-(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}}\right. \\&amp;\left.{-\frac {\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}(\boldsymbol {J}_{i}\boldsymbol {J}_{j}^{T}+\boldsymbol {J}_{j}\boldsymbol {J}_{i}^{T})}{(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})-(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}}\right)\boldsymbol {\Sigma }. \\{}\tag{A-9}\end{align*}</span>
+                  </span>
+               </disp-formula>
+               According to the matrix determinant lemma:
+               <disp-formula id="deqnA-10-deqnA-12" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{align*} |\boldsymbol {B}(\boldsymbol {J}_{i})|=&amp;|\boldsymbol {\Sigma }^{-1}+\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}|=(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})|\boldsymbol {\Sigma }|^{-1}. \\{}\tag{A-10}\\ |\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})|^{-1}=&amp;|\boldsymbol {B}(\boldsymbol {J}_{i})+\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T}| =(1+\boldsymbol {J}_{j}^{T}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j})|\boldsymbol {B}(\boldsymbol {J}_{i})| \\=&amp;(1\!+\!\boldsymbol {J}_{j}^{T}\!\left ({\!\boldsymbol {\Sigma }\!-\!\frac {\boldsymbol {\Sigma }\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }}{1\!+\!\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}\!}\right)\!(1\!+\!\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})|\boldsymbol {\Sigma }|^{-1} \\=&amp;((1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}) \\&amp;-\!(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2})|\boldsymbol {\Sigma }|^{-1}. \tag{A-11}\\ |\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j}|=&amp;\frac {|\boldsymbol {\Sigma }|}{(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})-(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}. \\{}\tag{A-12}\end{align*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} |\boldsymbol {B}(\boldsymbol {J}_{i})|=&amp;|\boldsymbol {\Sigma }^{-1}+\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}|=(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})|\boldsymbol {\Sigma }|^{-1}. \\{}\tag{A-10}\\ |\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})|^{-1}=&amp;|\boldsymbol {B}(\boldsymbol {J}_{i})+\boldsymbol {J}_{j}\boldsymbol {J}_{j}^{T}| =(1+\boldsymbol {J}_{j}^{T}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j})|\boldsymbol {B}(\boldsymbol {J}_{i})| \\=&amp;(1\!+\!\boldsymbol {J}_{j}^{T}\!\left ({\!\boldsymbol {\Sigma }\!-\!\frac {\boldsymbol {\Sigma }\boldsymbol {J}_{i}\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }}{1\!+\!\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}\!}\right)\!(1\!+\!\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})|\boldsymbol {\Sigma }|^{-1} \\=&amp;((1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}) \\&amp;-\!(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2})|\boldsymbol {\Sigma }|^{-1}. \tag{A-11}\\ |\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j}|=&amp;\frac {|\boldsymbol {\Sigma }|}{(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})-(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}. \\{}\tag{A-12}\end{align*}</span>
+                  </span>
+               </disp-formula>
+            </p>
+            <p>
+               Then we calculate
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$Q_{3}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})$</tex-math>
+               </inline-formula>
+               .
+               <disp-formula id="deqnA-13" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{align*} Q_{3}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\int \boldsymbol {Q}_{2}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})\,\mathrm {d}\boldsymbol {J}_{i} \\=&amp;\int \frac {2}{\pi }|\boldsymbol {\Sigma }|^{-\frac {1}{2}}|\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})|^{\frac {1}{2}}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j}\,\mathrm {d}\boldsymbol {J}_{i} \\=&amp;\frac {2}{\pi }|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int \boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j} \\&amp;\times \,\frac {|\boldsymbol {\Sigma }|^{\frac {1}{2}}}{\sqrt {(1\!+\!\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})-(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}}\,\mathrm {d}\boldsymbol {J}_{i} \\=&amp;\frac {2}{\pi }\int \frac {1}{\sqrt {1-\frac {(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}{(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})}}} \\&amp;\times \,\frac {\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j}}{\sqrt {1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}\sqrt {1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}}\,\mathrm {d}\boldsymbol {J}_{i} \\=&amp;\frac {2}{\pi }\int \frac {1}{\sqrt {1-\frac {(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}{(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})}}} \\&amp;\times \,\mathrm {d}\frac {\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}{\sqrt {1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}\sqrt {1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}} \\=&amp;\frac {2}{\pi }\left ({\arcsin \frac {\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}{\sqrt {1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}\sqrt {1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}}\!+\!C_{0}}\right). \\{}\tag{A-13}\end{align*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} Q_{3}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=&amp;\int \boldsymbol {Q}_{2}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})\,\mathrm {d}\boldsymbol {J}_{i} \\=&amp;\int \frac {2}{\pi }|\boldsymbol {\Sigma }|^{-\frac {1}{2}}|\boldsymbol {A}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})|^{\frac {1}{2}}\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j}\,\mathrm {d}\boldsymbol {J}_{i} \\=&amp;\frac {2}{\pi }|\boldsymbol {\Sigma }|^{-\frac {1}{2}}\int \boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j} \\&amp;\times \,\frac {|\boldsymbol {\Sigma }|^{\frac {1}{2}}}{\sqrt {(1\!+\!\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})-(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}}\,\mathrm {d}\boldsymbol {J}_{i} \\=&amp;\frac {2}{\pi }\int \frac {1}{\sqrt {1-\frac {(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}{(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})}}} \\&amp;\times \,\frac {\boldsymbol {B}(\boldsymbol {J}_{i})^{-1}\boldsymbol {J}_{j}}{\sqrt {1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}\sqrt {1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}}\,\mathrm {d}\boldsymbol {J}_{i} \\=&amp;\frac {2}{\pi }\int \frac {1}{\sqrt {1-\frac {(\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})^{2}}{(1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i})(1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j})}}} \\&amp;\times \,\mathrm {d}\frac {\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}{\sqrt {1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}\sqrt {1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}} \\=&amp;\frac {2}{\pi }\left ({\arcsin \frac {\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}{\sqrt {1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}\sqrt {1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}}\!+\!C_{0}}\right). \\{}\tag{A-13}\end{align*}</span>
+                  </span>
+               </disp-formula>
+            </p>
+            <p>
+               As
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$Q_{3}(\boldsymbol {0},\boldsymbol {0})=0 $</tex-math>
+               </inline-formula>
+               , we can get
+               <inline-formula id="">
+                  <tex-math notation="LaTeX">$C_{0} = 0$</tex-math>
+               </inline-formula>
+               , then we have:
+               <disp-formula id="deqnA-14" class="display-formula">
+                  <tex-math notation="LaTeX">\begin{align*} Q_{3}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=\frac {2}{\pi }\arcsin \frac {\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}{\sqrt {1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}\sqrt {1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}}. \\{}\tag{A-14}\end{align*}</tex-math>
+                  <span class="formula">
+                     <span class="link">View Source</span>
+                     <img aria-describedby="qtip-0" style="display:inline;" title="Right-click on figure or equation for MathML and additional features." data-hasqtip="0" class="qtooltip moreInfo" alt="Right-click on figure for MathML and additional features." src="/assets/img/icon.support.gif" border="0" height="20" width="24" />
+                     <span class="tex tex2jax_ignore" style="display:none;">\begin{align*} Q_{3}(\boldsymbol {J}_{i},\boldsymbol {J}_{j})=\frac {2}{\pi }\arcsin \frac {\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}{\sqrt {1+\boldsymbol {J}_{i}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{i}}\sqrt {1+\boldsymbol {J}_{j}^{T}\boldsymbol {\Sigma }\boldsymbol {J}_{j}}}. \\{}\tag{A-14}\end{align*}</span>
+                  </span>
+               </disp-formula>
+            </p>
+         </div>
+      </div>
+   </div>
+</response>
