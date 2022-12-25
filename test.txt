@@ -1,0 +1,1 @@
+Beamforming, user scheduling and transmit power on existing interference management schemes in multi-cell mmWave networks have been independently controlled due to the high computational complexity of the problem. In this paper, we formulate a long-term utility maximization problem where beam activation, user scheduling and transmit power are incorporated in a single framework.
