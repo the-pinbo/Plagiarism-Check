@@ -12,7 +12,7 @@ available methods
 - [some say it is extrmely difficult(2 ans in the given link)](https://stackoverflow.com/questions/15173225/calculate-cosine-similarity-given-2-sentence-strings/15173821#15173821)		
 - using cosine formula implementation 	
 
-Then I found doc2vec which generates vectors for documents
+### Then I found doc2vec which generates vectors for documents
 > ## Doc2vec
 - [Sentence / Document Similarity](https://stackoverflow.com/questions/22129943/how-to-calculate-the-sentence-similarity-using-word2vec-model-of-gensim-with-pyt)		
 - [Refecence](https://towardsdatascience.com/calculating-document-similarities-using-bert-and-other-models-b2c1a29c9630)
