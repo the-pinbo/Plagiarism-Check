@@ -5,4 +5,4 @@ Create a TURNITIN equivalent free software to do plagiarism checking of research
 ---
 
 _This project is still under in progress_
-Please refer to the (flask_api branch)[https://github.com/the-pinbo/Plagiarism-Check/tree/flask_api] to see WIP
+Please refer to the [flask_api branch](https://github.com/the-pinbo/Plagiarism-Check/tree/flask_api) to see WIP
